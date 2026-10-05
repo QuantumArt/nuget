@@ -103,7 +103,7 @@ for i in $(seq 1 40); do
 done
 
 # ── Шаг 3. Скачать пакеты с исходного фида ───────────────────────────────────
-echo "⬇️  Step 3: Downloading packages from $SOURCE_FEED"
+echo "⬇️  Step 3: Downloading packages from $ORIGIN_HOST (pinned to $ORIGIN_IP)"
 mkdir -p "$NUPKG_DIR"
 cd "$NUPKG_DIR"
 
@@ -184,12 +184,18 @@ STATUS=$(curl -s -o /dev/null -w '%{http_code}' "$FEED_URL/v3/index.json")
 echo "   v3/index.json -> $STATUS"
 # smoke-тест на скачивание реального пакета, а не только на код главной:
 # главная отдаётся SPA-оболочкой даже при пустом фиде.
+#
+# Пакет берётся ПЕРВЫМ из манифеста, а не захардкоженным qa.core: на
+# урезанном манифесте (например, из двух пакетов для проверки скрипта)
+# захардкоженный qa.core даёт 404 и роняет прогон, хотя всё отработало.
+SMOKE_ID=$(head -1 "$PACKAGE_LIST" | sed -E 's#.*/v3/package/([^/]+)/([^/]+)/.*#\1#')
+SMOKE_VER=$(head -1 "$PACKAGE_LIST" | sed -E 's#.*/v3/package/([^/]+)/([^/]+)/.*#\2#')
 SMOKE=$(curl -s -o /tmp/smoke.nupkg -w '%{http_code}' \
-    "$FEED_URL/v3/package/qa.core/3.6.2/qa.core.3.6.2.nupkg")
+    "$FEED_URL/v3/package/${SMOKE_ID}/${SMOKE_VER}/${SMOKE_ID}.${SMOKE_VER}.nupkg")
 if [ "$SMOKE" = "200" ] && unzip -tqq /tmp/smoke.nupkg >/dev/null 2>&1; then
-    echo "   ✅ qa.core 3.6.2 отдаётся валидным архивом"
+    echo "   ✅ $SMOKE_ID $SMOKE_VER отдаётся валидным архивом"
 else
-    echo "   ❌ smoke-тест не прошёл (код $SMOKE)"
+    echo "   ❌ smoke-тест не прошёл для $SMOKE_ID $SMOKE_VER (код $SMOKE)"
     exit 1
 fi
 # 404 тоже проверяем: сломанный error_page иначе не заметен до первого
