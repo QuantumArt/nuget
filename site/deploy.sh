@@ -273,12 +273,45 @@ echo "📤 Step 4: Pushing packages into the local feed..."
 # ключом — это не ошибка, а штатный способ заливки без аутентификации.
 # Повторная заливка той же версии вернёт ошибку: AllowPackageOverwrites=false.
 # Это НЕ поломка, такой пакет просто уже в фиде.
+# Что уже лежит в фиде, спрашиваем ОДИН раз на пакет, а не HEAD на каждую
+# версию: /v3/registration/<id>/index.json отдаёт все версии сразу. Это 85
+# запросов вместо 629, и — важнее — исключает историю, когда HEAD отвечал
+# не-200, скрипт проваливался в PUT и выгружал 20-МБ файлы ради 409.
+# На живом боевом сервере из-за этого шаг шёл многие минуты.
+PRESENT="$NUPKG_DIR/.present"
+python3 - "$FEED_URL" "$PACKAGE_LIST" > "$PRESENT" <<'PYEOF'
+import json, ssl, sys, urllib.request, urllib.error
+feed, manifest = sys.argv[1:3]
+ids = []
+for line in open(manifest):
+    u = line.strip()
+    if not u:
+        continue
+    parts = u.split('/v3/package/')
+    if len(parts) == 2:
+        pid = parts[1].split('/')[0]
+        if pid not in ids:
+            ids.append(pid)
+present = set()
+for pid in ids:
+    try:
+        d = json.loads(urllib.request.urlopen(
+            f"{feed}/v3/registration/{pid}/index.json", timeout=60).read())
+    except Exception:
+        continue                      # пакет не найден — зальём целиком
+    for page in d.get('items', []):
+        for it in page.get('items', []):
+            ce = it.get('catalogEntry', {})
+            v = ce.get('version') or (it.get('@id', '').rsplit('/', 1)[-1].replace('.json', ''))
+            if v:
+                present.add(f"{pid}/{v.lower()}")
+for k in sorted(present):
+    print(k)
+PYEOF
+PRESENT_COUNT=$(wc -l < "$PRESENT")
+
 PUSHED=0
 SKIPPED=0
-# Идём по МАНИФЕСТУ, а не по файлам в каталоге: в URL манифеста id и версия
-# уже разделены. По имени файла их восстановить нельзя — идентификаторы
-# содержат цифры (qp8.infrastucture, qp8backendapi.interaction), и разбор по
-# первому числовому сегменту давал id='qp', ver='8.infrastucture.1.0.0'.
 while IFS= read -r url; do
     [ -n "$url" ] || continue
     name="$(basename "$url")"
@@ -288,15 +321,14 @@ while IFS= read -r url; do
         continue
     fi
     path="${url#*nuget.qsupport.ru}"
-    # Сначала спрашиваем фид: есть ли уже эта версия. Без этой проверки
-    # повторный запуск выгружал бы заново все файлы (некоторые по 20+ МБ)
-    # ради 409. HEAD стоит копейки.
-    code=$(curl -s -o /dev/null -w '%{http_code}' -I --max-time 30 \
-        "$FEED_URL${path}")
-    if [ "$code" = "200" ]; then
+    pid_ver="${path#/v3/package/}"
+    pid_ver="${pid_ver%/*}"                      # отбрасываем имя файла
+    if grep -qxF "$pid_ver" "$PRESENT"; then
         SKIPPED=$((SKIPPED+1))
         continue
     fi
+    # Хост из манифеста не используем: вместо него ставим ORIGIN_HOST, а адрес
+    # закрепляем через --resolve на ORIGIN_IP.
     if curl -sS -f --max-time 300 -X PUT \
         -H "X-NuGet-ApiKey: $NUPKG_KEY" \
         -F "package=@$f" \
@@ -308,6 +340,10 @@ while IFS= read -r url; do
     [ $(( (PUSHED+SKIPPED) % 25 )) -eq 0 ] && echo "   ... $((PUSHED+SKIPPED)) обработано (залито $PUSHED, уже было $SKIPPED)"
 done < "$PACKAGE_LIST"
 echo "   залито: $PUSHED, уже было в фиде: $SKIPPED"
+if [ "$SKIPPED" -gt 0 ] && [ "$PUSHED" -eq 0 ]; then
+    echo "   ✅ ничего заливать не потребовалось"
+fi
+rm -f "$PRESENT"
 
 # ── Шаг 5. Проверка ─────────────────────────────────────────────────────────
 echo "🔍 Step 5: Verifying..."
