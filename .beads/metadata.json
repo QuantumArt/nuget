@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "nuget",
+  "project_id": "edba4de1-ecc3-480f-a7aa-faaae02c4d65"
+}
