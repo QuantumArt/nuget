@@ -7,8 +7,9 @@
 *.gate.lock*
 
 # BaGet local instance
-baget-data-v2/
-baget-data-v3/
+# nupkgs/ больше не игнорируется: это рабочая копия, из которой пакеты
+# кладутся в packages/ для коммита. Одноимённая копия в packages/ —
+# источник правды, её в git держим намеренно.
 baget-data/
 nupkgs/
 
