@@ -31,6 +31,7 @@ import os
 import socket
 import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -91,12 +92,34 @@ def make_resolve_opener(resolve_ip, ctx):
     return opener
 
 
-def fetch(url, ctx, opener=None):
-    req = urllib.request.Request(url, headers={"User-Agent": "baget-verify/1"})
-    if opener is not None:
-        return opener.open(req, timeout=60).read()
-    with urllib.request.urlopen(req, context=ctx, timeout=60) as r:
-        return r.read()
+def fetch(url, ctx, opener=None, retries=4):
+    """Забрать URL с повторами.
+
+    Повторы обязательны: приёмка ходит по 629 версиям, и одна транзиентная
+    сетевая ошибка иначе обрушивает весь прогон. Наблюдалось на живом боевом
+    домене — версия qp8.entityframework6/1.3.5 вернула сетевую ошибку, при
+    этом четыре подряд запроса подряд отдали 200 с верным sha256.
+
+    404 и прочие 4xx повторами не повторяются: это окончательный ответ,
+    так версия либо есть, либо её нет.
+    """
+    last = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "baget-verify/1"})
+            if opener is not None:
+                return opener.open(req, timeout=90).read()
+            with urllib.request.urlopen(req, context=ctx, timeout=90) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if 400 <= e.code < 500:      # 404 и прочие — ответ окончательный
+                raise
+            last = e
+        except (urllib.error.URLError, OSError, ssl.SSLError) as e:
+            last = e
+        if attempt < retries - 1:
+            time.sleep(1.5 * (attempt + 1))
+    raise last
 
 
 def sha256(data):
