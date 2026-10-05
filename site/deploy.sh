@@ -58,6 +58,31 @@ COMPOSE_FILE="$SCRIPT_DIR/docker-compose.production.yml"
 NUPKG_DIR="$PROJECT_DIR/nupkgs"
 CONTAINER="nuget-baget"
 
+# ── Защита от случайной загрузки полной истории ─────────────────────────────
+# Фид живёт на 629 версиях (по 11 на пакет). Манифест packages-full.txt
+# содержит все 5870 и весит вчетверо больше — запускать его нужно осознанно.
+# Без этой проверки одна опечатка или команда из старой инструкции молча
+# запускала получасовую загрузку, которую потом приходилось прерывать.
+DEFAULT_LINES=$(wc -l < "$SCRIPT_DIR/packages-11x.txt")
+TOTAL=$(wc -l < "$PACKAGE_LIST")
+if [ "$TOTAL" -gt $(( DEFAULT_LINES * 2 )) ] && [ -z "${ASSUME_YES:-}" ]; then
+    echo "⚠️  В манифесте $TOTAL версий, а по умолчанию $DEFAULT_LINES."
+    echo "   Это примерно $(( TOTAL * 30 / 1024 )) МБ и долгий прогон."
+    echo "   Фид сейчас полон на $DEFAULT_LINES версиях; доливка нужна только"
+    echo "   если сборки падают на версиях старше 11 от последней."
+    if [ -t 0 ]; then
+        printf "   Продолжить? напишите yes: "
+        read -r ans
+        if [ "$ans" != "yes" ]; then
+            echo "Отменено."
+            exit 1
+        fi
+    else
+        echo "   Неинтерактивный режим. Для подтверждения задайте ASSUME_YES=1."
+        exit 2
+    fi
+fi
+
 cd "$SCRIPT_DIR"
 
 echo "🚀 Starting NuGet feed deploy..."
@@ -128,7 +153,7 @@ cd "$NUPKG_DIR"
 
 # Манифест уже содержит готовые URL к .nupkg — регистрацию перебирать не нужно.
 # Источник отдаёт nupkg анонимно, без токена.
-TOTAL=$(wc -l < "$PACKAGE_LIST")
+# TOTAL уже посчитан выше — там же сработала защита от полной истории.
 GOT=0
 while IFS= read -r url; do
     [ -n "$url" ] || continue
