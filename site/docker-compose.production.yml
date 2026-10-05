@@ -1,3 +1,17 @@
+# Имя проекта compose — обязательно задано явно.
+#
+# Без него compose берёт имя из basename каталога с compose-файлом. У этого
+# проекта каталог `site/`, и у проекта downloads каталог ТОЖЕ `site/`, поэтому
+# оба проект назывались `site`. Из-за этого docker compose считал контейнер
+# downloads-web «сиротой»:
+#
+#   WARN[0000] Found orphan containers (downloads-web) for this project.
+#
+# Сама по себе надпись безобидна, но опасна в действии: `docker compose down
+# --remove-orphans` (или `up -d --remove-orphans`) в ~/nuget/site снёс бы
+# контейнер downloads-web — то есть уронил боевой downloads.quantumart.ru.
+name: nuget
+
 services:
   baget:
     image: loicsharma/baget:latest
