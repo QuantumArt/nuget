@@ -61,13 +61,25 @@ fi
 
 if git rev-parse --git-dir >/dev/null 2>&1; then
     echo "📥 Step 1: Pulling latest changes..."
-    GH_HELPER='!f() { echo username=x-access-token; echo password="$GH_TOKEN"; }; f'
+    # Репозиторий публичный, поэтому токен не обязателен. Но глобальный
+    # credential.helper=store на этом VPS отдаёт токен ДРУГОГО репозитория и
+    # перебивает всё, включая анонимный доступ. Общий /root/.git-credentials
+    # не трогаем — он обслуживает другие проекты.
+    if [ -n "${GH_TOKEN:-}" ]; then
+        GH_HELPER='!f() { echo username=x-access-token; echo password="$GH_TOKEN"; }; f'
+        PULL_CMD=(git -c credential.helper="$GH_HELPER")
+    else
+        echo "   (токена нет — тянем анонимно, репозиторий публичный)"
+        PULL_CMD=(git -c credential.helper=)
+    fi
     if GIT_CONFIG_GLOBAL=/dev/null GIT_CONFIG_SYSTEM=/dev/null \
-        git -c credential.helper="$GH_HELPER" pull --ff-only; then
+        "${PULL_CMD[@]}" pull --ff-only; then
         echo "   ok"
     else
-        # Репозиторий может быть пустым при первом деплое — это не повод падать.
+        # Публичный репозиторий отдаёт 403, только если сработал чужой store.
+        # Не повод падать: дальше всё работает из текущей рабочей копии.
         echo "   ⚠️  pull не удался, деплою из текущей рабочей копии"
+        echo "      (проверь авторизацию по DEPLOY-SPEC §3.3, если нужен свежий код)"
     fi
 fi
 
