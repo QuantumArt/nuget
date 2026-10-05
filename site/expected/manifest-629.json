@@ -1,0 +1,3237 @@
+{
+ "count": 629,
+ "packages": [
+  "allurecsharpcommons",
+  "configurationhelper",
+  "fakeapiservicemanager",
+  "googleanalyticsmp",
+  "maildirectsender",
+  "nlog.quantumart.prtgmonitoring",
+  "nunit3allureadapter",
+  "portable.xaml",
+  "qa.allure",
+  "qa.allure.elasticsearch",
+  "qa.allure.nunitadapter",
+  "qa.captcha.default.client",
+  "qa.configuration",
+  "qa.core",
+  "qa.core.cache",
+  "qa.core.data",
+  "qa.core.engine",
+  "qa.core.engine.fakeimpl",
+  "qa.core.engine.qpdata",
+  "qa.core.linq",
+  "qa.core.logger",
+  "qa.core.service",
+  "qa.core.service.interaction",
+  "qa.core.servicebaselifetime",
+  "qa.core.throws",
+  "qa.core.web",
+  "qa.dotnetcore.caching",
+  "qa.dotnetcore.caching.distributed",
+  "qa.dotnetcore.caching.hostedservice",
+  "qa.dotnetcore.engine.abstractions",
+  "qa.dotnetcore.engine.abtesting",
+  "qa.dotnetcore.engine.abtesting.configuration",
+  "qa.dotnetcore.engine.cachetags",
+  "qa.dotnetcore.engine.cachetags.configuration",
+  "qa.dotnetcore.engine.caching.hostedservice",
+  "qa.dotnetcore.engine.onscreen",
+  "qa.dotnetcore.engine.persistent.configuration",
+  "qa.dotnetcore.engine.persistent.dapper",
+  "qa.dotnetcore.engine.persistent.interfaces",
+  "qa.dotnetcore.engine.qpdata",
+  "qa.dotnetcore.engine.qpdata.configuration",
+  "qa.dotnetcore.engine.reflection",
+  "qa.dotnetcore.engine.routing",
+  "qa.dotnetcore.engine.targeting",
+  "qa.dotnetcore.engine.widgets",
+  "qa.dotnetcore.engine.xml",
+  "qa.dotnetcore.engine.xml.configuration",
+  "qa.emulator.json",
+  "qa.integration.jsonapiservices",
+  "qa.limitscounter.client",
+  "qa.redis",
+  "qa.validation.xaml",
+  "qa.validation.xaml.extensions",
+  "qa.visitstatistic",
+  "qa.visitstatistic.helper",
+  "qp.configurationservice.client",
+  "qp8.entityframework6",
+  "qp8.entityframework6.aspnetcore",
+  "qp8.entityframework6.legacy",
+  "qp8.entityframeworkcore",
+  "qp8.infrastructure",
+  "qp8.infrastructure.logging",
+  "qp8.infrastructure.logging.autofac",
+  "qp8.infrastructure.logging.prtgmonitoring",
+  "qp8.infrastructure.logging.prtgmonitoring.unity",
+  "qp8.infrastructure.logging.unity",
+  "qp8.infrastructure.testtools",
+  "qp8.infrastructure.web",
+  "qp8.infrastructure.web.aspnet",
+  "qp8.infrastucture",
+  "qp8.infrastucture.testtools",
+  "qp8.plugins.contract",
+  "qp8backendapi.interaction",
+  "qpdatalayer",
+  "quantumart",
+  "quantumart.aspnetcore",
+  "quantumart.qp8.assembling",
+  "quantumart.qp8.assembling.t4",
+  "quantumart.qp8.bll",
+  "quantumart.workflow",
+  "quantumart.workflow.integration.qp",
+  "quantumart.workflow.taskservice",
+  "seleniumextension",
+  "servernameheadermodule",
+  "websphere.mq.net"
+ ],
+ "versions": {
+  "allurecsharpcommons/0.2.1": {
+   "file": "allurecsharpcommons.0.2.1.nupkg",
+   "sha256": "b2929f895d2141696d6a42979aa020ef6c4a28754fe6d72ac824dbb84712c2f0",
+   "size": 18098
+  },
+  "allurecsharpcommons/0.2.2": {
+   "file": "allurecsharpcommons.0.2.2.nupkg",
+   "sha256": "97e8b724dec5b59717d279ab459503c01fc631a7a26a05aadfeca0b88c278e67",
+   "size": 18280
+  },
+  "allurecsharpcommons/0.2.3": {
+   "file": "allurecsharpcommons.0.2.3.nupkg",
+   "sha256": "f99687cac52c360969b21d026ea2d58fda403b5583ec9d93438d7ff298ab71d3",
+   "size": 20204
+  },
+  "allurecsharpcommons/0.2.4": {
+   "file": "allurecsharpcommons.0.2.4.nupkg",
+   "sha256": "14853677ca675bd3ef5cb030fd0b00c8f7f97e18705bf1b152e93f0358c404c9",
+   "size": 19831
+  },
+  "allurecsharpcommons/0.2.5": {
+   "file": "allurecsharpcommons.0.2.5.nupkg",
+   "sha256": "856c4e163e224e66d9f0fa469ec2a3ea8dd1b334e0de99f120faa3204106446d",
+   "size": 18383
+  },
+  "configurationhelper/1.0.0": {
+   "file": "configurationhelper.1.0.0.nupkg",
+   "sha256": "7af2531e1ee43247d22ea855cc68f4be28e6034bc892fbacb33e514dab4da267",
+   "size": 5258
+  },
+  "configurationhelper/1.0.0.1": {
+   "file": "configurationhelper.1.0.0.1.nupkg",
+   "sha256": "21fdcd00349a681139028ead9a5450ae69eb481cea89fe6beb7928b280465d9d",
+   "size": 5280
+  },
+  "fakeapiservicemanager/1.0.0": {
+   "file": "fakeapiservicemanager.1.0.0.nupkg",
+   "sha256": "cba6d9832d253dbb20651f04d7346247b88936eeb52e66b4fe67adaa3dd1e796",
+   "size": 5439
+  },
+  "fakeapiservicemanager/1.0.1": {
+   "file": "fakeapiservicemanager.1.0.1.nupkg",
+   "sha256": "a81801af3bca937ac29827bf90ca428b49752684984aeb254f47f3ff764d1b60",
+   "size": 5576
+  },
+  "googleanalyticsmp/1.0.13": {
+   "file": "googleanalyticsmp.1.0.13.nupkg",
+   "sha256": "0663bf2e9584cf164ec70ca871631d2d9b1fa5038d54c5d6b8cad60b9edb7826",
+   "size": 23033
+  },
+  "googleanalyticsmp/1.0.14": {
+   "file": "googleanalyticsmp.1.0.14.nupkg",
+   "sha256": "f0ad6371589acce4d800923f885643a704e1aef1c117a31f8ff37857d0b754cd",
+   "size": 23465
+  },
+  "googleanalyticsmp/1.0.15": {
+   "file": "googleanalyticsmp.1.0.15.nupkg",
+   "sha256": "3be308db592698a0995a022944380908573c1c6076e84d5ec620da4d775208fc",
+   "size": 23446
+  },
+  "maildirectsender/1.1.0": {
+   "file": "maildirectsender.1.1.0.nupkg",
+   "sha256": "b8a1db74c017f4a6209160e6adcd4b1d4c3d3f6cca99454ac8f05cfe1ffd4efe",
+   "size": 7385
+  },
+  "maildirectsender/1.1.0.1": {
+   "file": "maildirectsender.1.1.0.1.nupkg",
+   "sha256": "283070d52a1f9bd3b7d737c356460b9d91d8bffeb237e327bd01bb2a0b147664",
+   "size": 7394
+  },
+  "maildirectsender/1.1.0.2": {
+   "file": "maildirectsender.1.1.0.2.nupkg",
+   "sha256": "db7eb75802087d2f0eecfcf923d54d54f37cc90121a5c1f266e9543c9f04ce93",
+   "size": 8723
+  },
+  "nlog.quantumart.prtgmonitoring/1.0.0": {
+   "file": "nlog.quantumart.prtgmonitoring.1.0.0.nupkg",
+   "sha256": "cbbb5d6123d1cec72be55c8c39ab3a82837cb58d71f3bf18de7902b32ef0f030",
+   "size": 9552
+  },
+  "nlog.quantumart.prtgmonitoring/1.1.0": {
+   "file": "nlog.quantumart.prtgmonitoring.1.1.0.nupkg",
+   "sha256": "83eb741c7cff26a933fe534aa18c47c6896c6c0da4e941fcacd8e4bff29ddcc9",
+   "size": 9689
+  },
+  "nlog.quantumart.prtgmonitoring/1.1.1": {
+   "file": "nlog.quantumart.prtgmonitoring.1.1.1.nupkg",
+   "sha256": "b6f63ba39e20838b0e6b23fff9293146e2037ef017f03101a840d702e6c0ac36",
+   "size": 9578
+  },
+  "nunit3allureadapter/1.0.0": {
+   "file": "nunit3allureadapter.1.0.0.nupkg",
+   "sha256": "47f39038bd7c391a6a65ee29e2cc4d9bb444d871162fab8f12896533cb7988fb",
+   "size": 2698
+  },
+  "nunit3allureadapter/1.0.1": {
+   "file": "nunit3allureadapter.1.0.1.nupkg",
+   "sha256": "b7f4127f5ec5c7818020bf013d7af2e44891f25c24acd91b0e02ca16c1bff522",
+   "size": 6987
+  },
+  "nunit3allureadapter/1.0.2": {
+   "file": "nunit3allureadapter.1.0.2.nupkg",
+   "sha256": "b0e3a79b704d7774529774d9ddd5b169874c1cbe691d0a54532c4b70aee859ad",
+   "size": 6981
+  },
+  "nunit3allureadapter/1.0.3": {
+   "file": "nunit3allureadapter.1.0.3.nupkg",
+   "sha256": "14cc15204e9d2432179c85292023c7e2c0f8f8f5ffa94e0ff60094902c2fb63a",
+   "size": 7576
+  },
+  "nunit3allureadapter/1.0.4": {
+   "file": "nunit3allureadapter.1.0.4.nupkg",
+   "sha256": "ab8ed57dda61d01c4543055f052b1f3ce54a23847632ed68d820480571b1446f",
+   "size": 7544
+  },
+  "nunit3allureadapter/1.0.5": {
+   "file": "nunit3allureadapter.1.0.5.nupkg",
+   "sha256": "cbc96dad132deb62f477d09ae257a55c66a66c0b16f81459a574c1fd66f16115",
+   "size": 7548
+  },
+  "nunit3allureadapter/1.0.6": {
+   "file": "nunit3allureadapter.1.0.6.nupkg",
+   "sha256": "e0eb271ae9188eba62b458fe09684a4b682701dbde226c2082a0b55ef738e4f5",
+   "size": 7549
+  },
+  "portable.xaml/0.30.0": {
+   "file": "portable.xaml.0.30.0.nupkg",
+   "sha256": "0bf8473665f8a72a06e45f95c41c9a622864c75f16cceae6a992610b9ceb81e3",
+   "size": 101582
+  },
+  "portable.xaml/0.30.0-beta38": {
+   "file": "portable.xaml.0.30.0-beta38.nupkg",
+   "sha256": "fdb96fb0563ab7b6ece81a08de70a3e14528710e4bed008226191faf4df7ba5a",
+   "size": 100721
+  },
+  "portable.xaml/0.30.0-beta39": {
+   "file": "portable.xaml.0.30.0-beta39.nupkg",
+   "sha256": "93711398d615301ac9fcf0c4eaa2e0f113f52dd2d3026024e71518ffbb902ad2",
+   "size": 100755
+  },
+  "portable.xaml/0.30.0-beta40": {
+   "file": "portable.xaml.0.30.0-beta40.nupkg",
+   "sha256": "51a950adc453f5638994ee37268d9366d589976468083041be79b3da7f8fbe41",
+   "size": 101592
+  },
+  "qa.allure.elasticsearch/1.0.0": {
+   "file": "qa.allure.elasticsearch.1.0.0.nupkg",
+   "sha256": "3d20f1f5a6dbe393039cae5423ce34102773530ca17164144945c74caaa185bc",
+   "size": 6422
+  },
+  "qa.allure.elasticsearch/1.0.1": {
+   "file": "qa.allure.elasticsearch.1.0.1.nupkg",
+   "sha256": "8e4358524e2718a6dc17da7fe600608b9990ceff5a265de0485c537030edd239",
+   "size": 6763
+  },
+  "qa.allure.elasticsearch/1.0.2": {
+   "file": "qa.allure.elasticsearch.1.0.2.nupkg",
+   "sha256": "8dcce45023673cc511689484ed1cc6de5c34886ba85983a506abe34f3ce3aa4d",
+   "size": 6819
+  },
+  "qa.allure.elasticsearch/1.0.3": {
+   "file": "qa.allure.elasticsearch.1.0.3.nupkg",
+   "sha256": "8316ddb12fe6dc2e6600b169d5ce6390baf30f01400d35e2f0a17bd2186bc8f2",
+   "size": 7151
+  },
+  "qa.allure.elasticsearch/1.0.4": {
+   "file": "qa.allure.elasticsearch.1.0.4.nupkg",
+   "sha256": "8abb14f8f9fc89fd0237db0b4c228e9ab28821ee25f62086b8ce4e281c9836ff",
+   "size": 7106
+  },
+  "qa.allure.elasticsearch/1.0.5": {
+   "file": "qa.allure.elasticsearch.1.0.5.nupkg",
+   "sha256": "681ee30ce7c046ccb5c1b0591c3d14fd612efd71a5d68a14f0b951001e4a7d31",
+   "size": 7016
+  },
+  "qa.allure.elasticsearch/1.1.0": {
+   "file": "qa.allure.elasticsearch.1.1.0.nupkg",
+   "sha256": "8eb973770629da5d0775aaabb1f980e64b9f1601e1302821bc13f24eb650185e",
+   "size": 8065
+  },
+  "qa.allure.elasticsearch/1.1.1": {
+   "file": "qa.allure.elasticsearch.1.1.1.nupkg",
+   "sha256": "82b2221bf3a6540801710940d9e2e8901fdb8489d981d7d0b511d2a006e7e091",
+   "size": 8770
+  },
+  "qa.allure.nunitadapter/1.0.0": {
+   "file": "qa.allure.nunitadapter.1.0.0.nupkg",
+   "sha256": "31a4f5baae2aee31dd43ee206e67f78df5c461bbf486a036c22e161f5f44727a",
+   "size": 9463
+  },
+  "qa.allure.nunitadapter/1.0.1": {
+   "file": "qa.allure.nunitadapter.1.0.1.nupkg",
+   "sha256": "ad2b4aed0898f99d7064b19bd21d66d3c9c5b02e1d882ffeefebed0acf3cfef0",
+   "size": 9466
+  },
+  "qa.allure.nunitadapter/1.0.2": {
+   "file": "qa.allure.nunitadapter.1.0.2.nupkg",
+   "sha256": "7988bafd8dc31c01d1090b861be23b10f26f811946c07a453fd052fab76059f0",
+   "size": 9483
+  },
+  "qa.allure.nunitadapter/1.0.3": {
+   "file": "qa.allure.nunitadapter.1.0.3.nupkg",
+   "sha256": "52bc8f29502af1cf1f5e43dccbd8a69494a3abae24013bb9e33cd49843aff040",
+   "size": 9712
+  },
+  "qa.allure.nunitadapter/1.0.4": {
+   "file": "qa.allure.nunitadapter.1.0.4.nupkg",
+   "sha256": "919363f3d4404ec045e9dd699d37034da3a4ab8610a67837e28b77b7ba0756da",
+   "size": 9778
+  },
+  "qa.allure.nunitadapter/1.0.5": {
+   "file": "qa.allure.nunitadapter.1.0.5.nupkg",
+   "sha256": "d2c4de73a17efbe8e0fe2bb2b4d8d221e55a8648bf1fdccd475e6a0d76eb39da",
+   "size": 9780
+  },
+  "qa.allure/1.0.0": {
+   "file": "qa.allure.1.0.0.nupkg",
+   "sha256": "c55991c06b5e341ddf2ae975099f7b3bc152db5de5b7430d6e8b429adaeb2e7b",
+   "size": 9330
+  },
+  "qa.allure/1.0.1": {
+   "file": "qa.allure.1.0.1.nupkg",
+   "sha256": "1ff97bd8499f69b99cc262e6aa5a26d53fc2e427ffd4bf1d0dccf2ec660d08e8",
+   "size": 9492
+  },
+  "qa.allure/1.0.2": {
+   "file": "qa.allure.1.0.2.nupkg",
+   "sha256": "8bee8c7b07e5061ab854b7764d2e17e08bf6318632c74ac7f47d959652f72063",
+   "size": 9489
+  },
+  "qa.captcha.default.client/1.1.0.8": {
+   "file": "qa.captcha.default.client.1.1.0.8.nupkg",
+   "sha256": "3dd1c1b41ca0e0b9d2f7b11540bd9af324090166d3b814616fedeab68a8460b9",
+   "size": 9690
+  },
+  "qa.captcha.default.client/1.1.0.9": {
+   "file": "qa.captcha.default.client.1.1.0.9.nupkg",
+   "sha256": "35fc7cb548d94e696b8dd73d07e6539203f7aa47485ebc1ec946e43768e411e0",
+   "size": 9670
+  },
+  "qa.configuration/1.0.1": {
+   "file": "qa.configuration.1.0.1.nupkg",
+   "sha256": "9bfc6e08f25c6d6effdf4b20cdfbd9d53af58f3594abeb233592f37850acb32b",
+   "size": 12494
+  },
+  "qa.configuration/1.0.2": {
+   "file": "qa.configuration.1.0.2.nupkg",
+   "sha256": "456736adadd65367710a293e1bb86c544a8fc0a1c3b50d7cec32703df85ee946",
+   "size": 11613
+  },
+  "qa.configuration/1.1.0": {
+   "file": "qa.configuration.1.1.0.nupkg",
+   "sha256": "25793b895d06d0651e122aa4e2b55d2e3a2ecbdc17bc5e20d70e9f5aeffee773",
+   "size": 19839
+  },
+  "qa.configuration/1.1.0-portable8": {
+   "file": "qa.configuration.1.1.0-portable8.nupkg",
+   "sha256": "a372ff64ed4605672fe31d207571aa922833d2716139fbd43cd260a2ddcbb9bd",
+   "size": 18293
+  },
+  "qa.configuration/1.1.0-portable86": {
+   "file": "qa.configuration.1.1.0-portable86.nupkg",
+   "sha256": "2df6d8ecddc077c447d608842cee0bcd9e924abe7c51e6b20d845e7be97cc504",
+   "size": 19781
+  },
+  "qa.configuration/1.1.1": {
+   "file": "qa.configuration.1.1.1.nupkg",
+   "sha256": "64cc670a25d5418a5072c429cf9d10823cd250584a5c9f3cffbe33cbb98502eb",
+   "size": 19983
+  },
+  "qa.configuration/1.1.1-beta1": {
+   "file": "qa.configuration.1.1.1-beta1.nupkg",
+   "sha256": "7094fda7155e26845321c2b9d3d061b425b8fca0db4eba14e00bfe143eb9efaf",
+   "size": 20032
+  },
+  "qa.configuration/1.1.1-beta2": {
+   "file": "qa.configuration.1.1.1-beta2.nupkg",
+   "sha256": "e77e0e40f3770140c88ab233498d5fbe1b3025d0414cf74ba179fb0e423de143",
+   "size": 20054
+  },
+  "qa.configuration/1.1.1-beta3": {
+   "file": "qa.configuration.1.1.1-beta3.nupkg",
+   "sha256": "8c68a3839cb2b5e724b49e0ac75ba422769328be1a7db646295db2637ac4d10e",
+   "size": 20027
+  },
+  "qa.configuration/1.2.0": {
+   "file": "qa.configuration.1.2.0.nupkg",
+   "sha256": "210a73355cb90dd7966e933354d8e84710c0084731d956cca6f33dc0c9b31644",
+   "size": 10829
+  },
+  "qa.configuration/1.3.0": {
+   "file": "qa.configuration.1.3.0.nupkg",
+   "sha256": "5169d8b738f99a85e71e9615add0a294aa6edac1a80827a94907461e56d357d2",
+   "size": 10989
+  },
+  "qa.core.cache/3.5.2": {
+   "file": "qa.core.cache.3.5.2.nupkg",
+   "sha256": "3ee705336a3bad0d2de50953a764860e07f921dcabe1dd7d7f3f4d341e49af00",
+   "size": 12735
+  },
+  "qa.core.cache/3.5.3": {
+   "file": "qa.core.cache.3.5.3.nupkg",
+   "sha256": "24e3d10a4a0bd167766ece41ca9b6a5d8bc344ec4fa96ca583873b5e5e178783",
+   "size": 12803
+  },
+  "qa.core.cache/3.5.4": {
+   "file": "qa.core.cache.3.5.4.nupkg",
+   "sha256": "1861ddecd3c824d3a761bff416e2536e030df68ab5a272bdf528f2f18a13265e",
+   "size": 12302
+  },
+  "qa.core.cache/3.5.4.1": {
+   "file": "qa.core.cache.3.5.4.1.nupkg",
+   "sha256": "c809b94fd6116e0c4efa5ff8e2c0218bb1f2ba6424c97c89bff591e7047f5c8a",
+   "size": 12353
+  },
+  "qa.core.cache/3.5.4.2": {
+   "file": "qa.core.cache.3.5.4.2.nupkg",
+   "sha256": "f5f7d8a7038704c0f3f51033d59d7621e8e8b0472c8d116115125c6db94233fe",
+   "size": 12357
+  },
+  "qa.core.cache/3.5.5": {
+   "file": "qa.core.cache.3.5.5.nupkg",
+   "sha256": "b5c6f0c98f752e6565e0abcfb03859523afa8fd9ddaf909e31ca02fbd6c7e57e",
+   "size": 12348
+  },
+  "qa.core.cache/3.6.0": {
+   "file": "qa.core.cache.3.6.0.nupkg",
+   "sha256": "6b3479075e953b0f7bb0883319a26b05516bbf2a6c20c338bb06b61ea6605118",
+   "size": 12237
+  },
+  "qa.core.cache/3.6.1": {
+   "file": "qa.core.cache.3.6.1.nupkg",
+   "sha256": "43a0348321271b60cf2be3073baed2463969dd608f95c422687f790433abe3a4",
+   "size": 12421
+  },
+  "qa.core.cache/3.6.1-beta1": {
+   "file": "qa.core.cache.3.6.1-beta1.nupkg",
+   "sha256": "09cd020bd407177cfbb4b70aeb92239540eb829a5835f3606474094d6bbfda9f",
+   "size": 12452
+  },
+  "qa.core.cache/3.6.2": {
+   "file": "qa.core.cache.3.6.2.nupkg",
+   "sha256": "5ac9d3ad9b7dc1bb5919f4b27afc76b8d7a596ac469c7a6e981d0f0d89f9e119",
+   "size": 12430
+  },
+  "qa.core.cache/3.6.2-beta": {
+   "file": "qa.core.cache.3.6.2-beta.nupkg",
+   "sha256": "341c6a83ab43c70b22bd80119af5f107556d4f827240ae9e17a2b987756afa15",
+   "size": 12445
+  },
+  "qa.core.data/3.5.2": {
+   "file": "qa.core.data.3.5.2.nupkg",
+   "sha256": "37d406a810c8fc5a72e7cab0146039905022790e486aab7bd8fc638e74240cc8",
+   "size": 29949
+  },
+  "qa.core.data/3.5.3": {
+   "file": "qa.core.data.3.5.3.nupkg",
+   "sha256": "960517cd0e73c2cc804a93fa232c621834a90015fc6def7053985d9001f4dfb5",
+   "size": 30046
+  },
+  "qa.core.data/3.5.4": {
+   "file": "qa.core.data.3.5.4.nupkg",
+   "sha256": "3ed11a300328ab63895e968cf3cf5de6df7576e4de5a6d634499001fcf43a8db",
+   "size": 30046
+  },
+  "qa.core.data/3.5.4.1": {
+   "file": "qa.core.data.3.5.4.1.nupkg",
+   "sha256": "4f929ff3fd3f933aad4efe4167a6463aa5689946e3ddd0a35eb530b70b216ecd",
+   "size": 29902
+  },
+  "qa.core.data/3.5.4.2": {
+   "file": "qa.core.data.3.5.4.2.nupkg",
+   "sha256": "def6f7bb1876c198614ab4ba756b664f49609d58dba1a5bc4132e34fa4a7a472",
+   "size": 29908
+  },
+  "qa.core.data/3.5.5": {
+   "file": "qa.core.data.3.5.5.nupkg",
+   "sha256": "0ef565c408257190d76e3e9622fea568920c66ad0684335e66b2c8cfaaac2c1f",
+   "size": 29902
+  },
+  "qa.core.data/3.6.0": {
+   "file": "qa.core.data.3.6.0.nupkg",
+   "sha256": "e949213b668b08fd366bfa9eef195c3a842826ac1307049e841f704ef71f8f47",
+   "size": 30005
+  },
+  "qa.core.data/3.6.1": {
+   "file": "qa.core.data.3.6.1.nupkg",
+   "sha256": "3454bd40df1cfe5641c2e3f16fc740bc3d061e6cdbe363d0d50b1784ace1f4e1",
+   "size": 30434
+  },
+  "qa.core.data/3.6.1-beta1": {
+   "file": "qa.core.data.3.6.1-beta1.nupkg",
+   "sha256": "3b8ef67d24ee30d1d8f5ac9d0d4d5c03a7d02395b37deb846b1d51be216b583c",
+   "size": 30478
+  },
+  "qa.core.data/3.6.2": {
+   "file": "qa.core.data.3.6.2.nupkg",
+   "sha256": "e6b8f26cffe7209b13d533e1438a239aeb8fbcb5f7768b918efd2cf01d8b35f5",
+   "size": 30446
+  },
+  "qa.core.data/3.6.2-beta": {
+   "file": "qa.core.data.3.6.2-beta.nupkg",
+   "sha256": "f82fc0f65f61f8c5b729c3e3dadbfaecfc982c062b8d98ae1fa41cb2f77dedb5",
+   "size": 30476
+  },
+  "qa.core.engine.fakeimpl/2.0.0": {
+   "file": "qa.core.engine.fakeimpl.2.0.0.nupkg",
+   "sha256": "112179376278b02c248c9e6f8301fa38c6b3ba16998877921613c0b36344350f",
+   "size": 28082
+  },
+  "qa.core.engine.fakeimpl/2.0.1": {
+   "file": "qa.core.engine.fakeimpl.2.0.1.nupkg",
+   "sha256": "e7074c4f66e7f614e24e6961c0b52f87463ef0e41729095c4761aabac6344aef",
+   "size": 28086
+  },
+  "qa.core.engine.fakeimpl/2.0.2": {
+   "file": "qa.core.engine.fakeimpl.2.0.2.nupkg",
+   "sha256": "563cb7f316e6b82a6f0e4adc3799231b81275163653255e3ef291e13b22405f6",
+   "size": 28342
+  },
+  "qa.core.engine.fakeimpl/2.0.3": {
+   "file": "qa.core.engine.fakeimpl.2.0.3.nupkg",
+   "sha256": "5d6c5d9ee457e751a9aa21aaff2fbb33c5c40eada69a4bca7d19f093360798fd",
+   "size": 28437
+  },
+  "qa.core.engine.fakeimpl/2.1.0": {
+   "file": "qa.core.engine.fakeimpl.2.1.0.nupkg",
+   "sha256": "3135152ce14e43b9e45628e0faf0e2a87b2848ed9604a58d72c60904e188845a",
+   "size": 28445
+  },
+  "qa.core.engine.fakeimpl/2.1.1": {
+   "file": "qa.core.engine.fakeimpl.2.1.1.nupkg",
+   "sha256": "103d2eb056f47b511635f0b95eff40c57cda1ebadf219256257b54d261bdf91d",
+   "size": 27476
+  },
+  "qa.core.engine.fakeimpl/2.2.0": {
+   "file": "qa.core.engine.fakeimpl.2.2.0.nupkg",
+   "sha256": "d16a48eff7a26c79fe40daee51121a58191b34539f5ea580a0e8d814876584f7",
+   "size": 27734
+  },
+  "qa.core.engine.fakeimpl/2.3.0": {
+   "file": "qa.core.engine.fakeimpl.2.3.0.nupkg",
+   "sha256": "834c9a823e287a5baebbeafddb419dee21c66532577c35a145b754ff32bd459c",
+   "size": 27052
+  },
+  "qa.core.engine.qpdata/2.0.0": {
+   "file": "qa.core.engine.qpdata.2.0.0.nupkg",
+   "sha256": "b4f1c5570466aad2c4efcd9f044cbd8f98f7100878557caba2c3acdc8ec409fd",
+   "size": 49009
+  },
+  "qa.core.engine.qpdata/2.0.1": {
+   "file": "qa.core.engine.qpdata.2.0.1.nupkg",
+   "sha256": "b50f325b3279a6d74741b6a42deae1b4b4611640a47bbf74e26540613ce5a2db",
+   "size": 49016
+  },
+  "qa.core.engine.qpdata/2.0.2": {
+   "file": "qa.core.engine.qpdata.2.0.2.nupkg",
+   "sha256": "b88d26b8b25d50030667f4c38277cccacaf2480d540d37c940f65694a5f44256",
+   "size": 49996
+  },
+  "qa.core.engine.qpdata/2.1.0": {
+   "file": "qa.core.engine.qpdata.2.1.0.nupkg",
+   "sha256": "deac9c6d56f39735b22fa97ab8b6f4c887bd4854c472997210e41e655c2fae27",
+   "size": 49989
+  },
+  "qa.core.engine.qpdata/2.1.1": {
+   "file": "qa.core.engine.qpdata.2.1.1.nupkg",
+   "sha256": "14606a804a1a622cf9e47aa14d800cfd3931ac102e7c6be5f5d38a795bd236a2",
+   "size": 50059
+  },
+  "qa.core.engine.qpdata/2.1.3": {
+   "file": "qa.core.engine.qpdata.2.1.3.nupkg",
+   "sha256": "939c352928586ef2de7a8ab68a29f3e594acb83f9c31d4cedd44ef62374e04ac",
+   "size": 48864
+  },
+  "qa.core.engine.qpdata/2.1.4": {
+   "file": "qa.core.engine.qpdata.2.1.4.nupkg",
+   "sha256": "a6efe2825e805abec639312ed86ad95ba57999eeb8287d4f0f345aa0cc34c4aa",
+   "size": 48881
+  },
+  "qa.core.engine.qpdata/2.2.0": {
+   "file": "qa.core.engine.qpdata.2.2.0.nupkg",
+   "sha256": "9c8b5dbbb2ce8f8f950fa92b35131bc02bbcb856eb3fbeb57dcb08cc30507bc8",
+   "size": 49139
+  },
+  "qa.core.engine.qpdata/2.3.0": {
+   "file": "qa.core.engine.qpdata.2.3.0.nupkg",
+   "sha256": "be127b2faa82e31c48acb6fa9e059aa8e2fd7837f8777bb0fe5e71116475b016",
+   "size": 46494
+  },
+  "qa.core.engine/2.0.0": {
+   "file": "qa.core.engine.2.0.0.nupkg",
+   "sha256": "8bfaccba93992b8ec88aa562411ca4bfee2b6c28504e4626e8d17ffa328c601b",
+   "size": 84055
+  },
+  "qa.core.engine/2.0.1": {
+   "file": "qa.core.engine.2.0.1.nupkg",
+   "sha256": "c8949654e4aa7c49b924229e6fcd210deaf8865364d54cdd074eda64ebe214f0",
+   "size": 84061
+  },
+  "qa.core.engine/2.0.2": {
+   "file": "qa.core.engine.2.0.2.nupkg",
+   "sha256": "79b5a8f7e6a87c25b8a01d954a864234b3d9d295fb3678b5f83f63272d5fe287",
+   "size": 86118
+  },
+  "qa.core.engine/2.1.0": {
+   "file": "qa.core.engine.2.1.0.nupkg",
+   "sha256": "d54b6c12f4839796ce27b69aff5c28d3e3202d3506349e4175e6866df68e05fb",
+   "size": 87492
+  },
+  "qa.core.engine/2.1.1": {
+   "file": "qa.core.engine.2.1.1.nupkg",
+   "sha256": "6cd4da05013880dc78d7736906db31e7ad34b0d0bbf5a678171351a31c0472e9",
+   "size": 87440
+  },
+  "qa.core.engine/2.1.2": {
+   "file": "qa.core.engine.2.1.2.nupkg",
+   "sha256": "af9e5054f274564ac34876990dc8b4d7b5079aade67a12dad6085465e3c6703b",
+   "size": 87320
+  },
+  "qa.core.engine/2.2.0": {
+   "file": "qa.core.engine.2.2.0.nupkg",
+   "sha256": "d0d7c395d3e78bf9a56430d9a5bee350275052bd0729e869b9dc3e814da2e53b",
+   "size": 87382
+  },
+  "qa.core.engine/2.3.0": {
+   "file": "qa.core.engine.2.3.0.nupkg",
+   "sha256": "2e12a94275019baefe7faa33bdd526c523299e63282d0af5826e70942a83feaa",
+   "size": 71190
+  },
+  "qa.core.linq/3.5.1": {
+   "file": "qa.core.linq.3.5.1.nupkg",
+   "sha256": "8f06150a97d03f3d0f017eb800448307002258e503dffcc897a792182d016b0d",
+   "size": 6827
+  },
+  "qa.core.linq/3.5.2": {
+   "file": "qa.core.linq.3.5.2.nupkg",
+   "sha256": "deb9cf3599896730775823fbc6a1b87d8f0efa53ab45022756433a7aa3f0bc3d",
+   "size": 7025
+  },
+  "qa.core.linq/3.5.3": {
+   "file": "qa.core.linq.3.5.3.nupkg",
+   "sha256": "55f4adc074567c578324871c80e86490b0226bc125fa9bc3b458c663d4c1ab2e",
+   "size": 7101
+  },
+  "qa.core.linq/3.5.4": {
+   "file": "qa.core.linq.3.5.4.nupkg",
+   "sha256": "48b7cdda9bcdee8c798af27786c337ab5fa7e447598b5f78edd53fb78ce1cb48",
+   "size": 6893
+  },
+  "qa.core.linq/3.5.4.2": {
+   "file": "qa.core.linq.3.5.4.2.nupkg",
+   "sha256": "e68cdbc8f06f8301256c159d42e0f4c4e305b79c8b390db995fda5729b91de79",
+   "size": 6828
+  },
+  "qa.core.linq/3.5.5": {
+   "file": "qa.core.linq.3.5.5.nupkg",
+   "sha256": "8bc81a7a2147ddc7a3eaad263ce9857e90b65a04fffe7a20d0c1e6d8b5ea6df3",
+   "size": 6822
+  },
+  "qa.core.linq/3.6.0": {
+   "file": "qa.core.linq.3.6.0.nupkg",
+   "sha256": "f48a79def34226ba0fcb420f1127bb234b2929019f19acff516b44846a289f10",
+   "size": 6813
+  },
+  "qa.core.linq/3.6.1": {
+   "file": "qa.core.linq.3.6.1.nupkg",
+   "sha256": "412980e7c3043b711297ce865ae35e2d89f7b7dd9751360b5f8bf303329ed6d5",
+   "size": 7015
+  },
+  "qa.core.linq/3.6.1-beta1": {
+   "file": "qa.core.linq.3.6.1-beta1.nupkg",
+   "sha256": "4dd48b1991ddae1f4808c06aef823b3c83925842d77fd533113b313c30d49267",
+   "size": 7041
+  },
+  "qa.core.linq/3.6.2": {
+   "file": "qa.core.linq.3.6.2.nupkg",
+   "sha256": "9525c8b93b9de697a2f27505d75dac2bb37a896c03044a23f372b7beb482620c",
+   "size": 7028
+  },
+  "qa.core.linq/3.6.2-beta": {
+   "file": "qa.core.linq.3.6.2-beta.nupkg",
+   "sha256": "060c06c8937f920b5d69adc290e32e5e04254a8764484852c3210a82193401a4",
+   "size": 7044
+  },
+  "qa.core.logger/3.5.1": {
+   "file": "qa.core.logger.3.5.1.nupkg",
+   "sha256": "84637363b43a2f30fd13cb72e7807da9671f37d4d81fd9ab5344a8bbaad2c08b",
+   "size": 10002
+  },
+  "qa.core.logger/3.5.2": {
+   "file": "qa.core.logger.3.5.2.nupkg",
+   "sha256": "cd3122afdf42446e79cb9768f31e333129a4cbe7368429a750a153b43262642f",
+   "size": 10280
+  },
+  "qa.core.logger/3.5.3": {
+   "file": "qa.core.logger.3.5.3.nupkg",
+   "sha256": "67348ffecb8ce2a03e62e139930d742b0a032585f8d79e4b384a579faf87339f",
+   "size": 10332
+  },
+  "qa.core.logger/3.5.4": {
+   "file": "qa.core.logger.3.5.4.nupkg",
+   "sha256": "3bd67399e7415045c246c2c31525b04482319a46195fe4aad81c39558f4ad4e6",
+   "size": 10065
+  },
+  "qa.core.logger/3.5.4.2": {
+   "file": "qa.core.logger.3.5.4.2.nupkg",
+   "sha256": "58af6181758e05cdcf597e2da845b7767d8a7f185f6502148c9ec61e80970a48",
+   "size": 10011
+  },
+  "qa.core.logger/3.5.5": {
+   "file": "qa.core.logger.3.5.5.nupkg",
+   "sha256": "8702bdf0c15180273bb9cc2ba5f204f349f9e073ccadd791fa49e09f6f1e5d6f",
+   "size": 10006
+  },
+  "qa.core.logger/3.6.0": {
+   "file": "qa.core.logger.3.6.0.nupkg",
+   "sha256": "8869ffc675a755f51cc9d80e5aed32518430e9fca18ea7cb43f15dc629cd5816",
+   "size": 9994
+  },
+  "qa.core.logger/3.6.1": {
+   "file": "qa.core.logger.3.6.1.nupkg",
+   "sha256": "6249aabb92fb202c4f41cd055267af574acbb3b745581a29dd0bb73ca8f773d3",
+   "size": 10193
+  },
+  "qa.core.logger/3.6.1-beta1": {
+   "file": "qa.core.logger.3.6.1-beta1.nupkg",
+   "sha256": "2486bd7ef06bc9d1d2411a4c154ce2faca6d1922ab6b16f378ab48ecaffccdff",
+   "size": 10212
+  },
+  "qa.core.logger/3.6.2": {
+   "file": "qa.core.logger.3.6.2.nupkg",
+   "sha256": "eea0a720c07ff416931f0efa384fc1b2e4dd2122e4b1f14a5f7820ee3a742f94",
+   "size": 10201
+  },
+  "qa.core.logger/3.6.2-beta": {
+   "file": "qa.core.logger.3.6.2-beta.nupkg",
+   "sha256": "7af958c22fc0ff276456e2592c04e8875d5441a61ec43d88583ca4c72b33ccde",
+   "size": 10216
+  },
+  "qa.core.service.interaction/3.5.1": {
+   "file": "qa.core.service.interaction.3.5.1.nupkg",
+   "sha256": "76d113fbe409cd1dfcce2241e1354e8a90f8bf0fa697cd93b002519d44cdac79",
+   "size": 16842
+  },
+  "qa.core.service.interaction/3.5.2": {
+   "file": "qa.core.service.interaction.3.5.2.nupkg",
+   "sha256": "5d6a7502046593dfdc851662f3338a86555506e871d85ab35e6a4b3350ede1c0",
+   "size": 16892
+  },
+  "qa.core.service.interaction/3.5.3": {
+   "file": "qa.core.service.interaction.3.5.3.nupkg",
+   "sha256": "e0facc7cf7ba55fb65c976ad04ae3a566c8157a246740bea22b70a0a8c7a5139",
+   "size": 17019
+  },
+  "qa.core.service.interaction/3.5.4": {
+   "file": "qa.core.service.interaction.3.5.4.nupkg",
+   "sha256": "de6f93227de43ae7011a8d13e00d25521f740b58ae6f53f6fd3f6d0212cb1732",
+   "size": 17018
+  },
+  "qa.core.service.interaction/3.5.4.2": {
+   "file": "qa.core.service.interaction.3.5.4.2.nupkg",
+   "sha256": "afb4e03e3f0c2b812d7cfb1c5d22185fe9f48f26c6ad7723b18ddbffb679275b",
+   "size": 16840
+  },
+  "qa.core.service.interaction/3.5.5": {
+   "file": "qa.core.service.interaction.3.5.5.nupkg",
+   "sha256": "ba10ec34420ed2a8206fce3bb341ef6f4ae9d71a904c7bf7d912f4c17e9395a4",
+   "size": 16837
+  },
+  "qa.core.service.interaction/3.6.0": {
+   "file": "qa.core.service.interaction.3.6.0.nupkg",
+   "sha256": "23bba82b84e70389e6d66f5900047cdfa5527f1476c5f8262f4fc7748796b267",
+   "size": 16811
+  },
+  "qa.core.service.interaction/3.6.1": {
+   "file": "qa.core.service.interaction.3.6.1.nupkg",
+   "sha256": "591da40229212505cc4570571a6af7bb1fa669274509569299ad725982482dbf",
+   "size": 17233
+  },
+  "qa.core.service.interaction/3.6.1-beta1": {
+   "file": "qa.core.service.interaction.3.6.1-beta1.nupkg",
+   "sha256": "2c1541776c6a10103d0256dd29ff1a8dee0e6bb6d03837cf5fb3d231a169ff83",
+   "size": 17280
+  },
+  "qa.core.service.interaction/3.6.2": {
+   "file": "qa.core.service.interaction.3.6.2.nupkg",
+   "sha256": "d665b4e9af23f9e8c5ee83a3b1709bd3396b5c5f2286427ceaf8e16e9079e029",
+   "size": 17245
+  },
+  "qa.core.service.interaction/3.6.2-beta": {
+   "file": "qa.core.service.interaction.3.6.2-beta.nupkg",
+   "sha256": "bd6fd1677078708cfacd3fd179dfcef9413cc74af34108e1d1c0df3b6c1ee1d5",
+   "size": 17260
+  },
+  "qa.core.service/3.5.1": {
+   "file": "qa.core.service.3.5.1.nupkg",
+   "sha256": "ff9b1a7ef83f196a86cae84e2746ee2eb548e0470bce10bf33be4a2af95d9461",
+   "size": 8023
+  },
+  "qa.core.service/3.5.2": {
+   "file": "qa.core.service.3.5.2.nupkg",
+   "sha256": "24c355b635e72c30ad9f15253117518ba35bc5209e06471180007884a0353a91",
+   "size": 8078
+  },
+  "qa.core.service/3.5.3": {
+   "file": "qa.core.service.3.5.3.nupkg",
+   "sha256": "07ff6450c7a4bd35efbdc21672a2435f958e5bbd8ee13f6605280c1c988ed69f",
+   "size": 8207
+  },
+  "qa.core.service/3.5.4": {
+   "file": "qa.core.service.3.5.4.nupkg",
+   "sha256": "765020fea292a5b4a59a4e51b73806071cc1c6bdf42009bc5adcaef9b9109fde",
+   "size": 8208
+  },
+  "qa.core.service/3.5.4.2": {
+   "file": "qa.core.service.3.5.4.2.nupkg",
+   "sha256": "9846d9264110d171dacd16154702f6bcb21cf411c776f20b77008d5c54ae23d5",
+   "size": 8029
+  },
+  "qa.core.service/3.5.5": {
+   "file": "qa.core.service.3.5.5.nupkg",
+   "sha256": "0b2a8031d2eb06a9881599d938f660ec22694ce8a97a4ba706eef88f9a85ee91",
+   "size": 8020
+  },
+  "qa.core.service/3.6.0": {
+   "file": "qa.core.service.3.6.0.nupkg",
+   "sha256": "ef78481b80ea0ee1e7c61404b0b2b026d247c53ac109a797cc6d445cc54e942b",
+   "size": 7992
+  },
+  "qa.core.service/3.6.1": {
+   "file": "qa.core.service.3.6.1.nupkg",
+   "sha256": "f47fdca9545a2b484ffe8225def9e1b4bd1d055fe7dd1a6e31b3af0214c0410d",
+   "size": 8423
+  },
+  "qa.core.service/3.6.1-beta1": {
+   "file": "qa.core.service.3.6.1-beta1.nupkg",
+   "sha256": "d3fb0f86882fd40a3c73f1cf32f793e9656261b59ce4f2a7db97eb1f2acd5b8b",
+   "size": 8459
+  },
+  "qa.core.service/3.6.2": {
+   "file": "qa.core.service.3.6.2.nupkg",
+   "sha256": "cce5737c1a65c2cf6e07bb13c4497ef18048835909c64fdcde7aa18a81307990",
+   "size": 8435
+  },
+  "qa.core.service/3.6.2-beta": {
+   "file": "qa.core.service.3.6.2-beta.nupkg",
+   "sha256": "693cc9346d06c05d3edb9bcf10d8207ff1afaa9e6c04a28f0fe61c2f57699eb4",
+   "size": 8451
+  },
+  "qa.core.servicebaselifetime/0.1.1": {
+   "file": "qa.core.servicebaselifetime.0.1.1.nupkg",
+   "sha256": "f194e910545f08d47921bc68dd93f2f54f24c7c40e11e04854c70366dbc0594d",
+   "size": 5233
+  },
+  "qa.core.throws/3.5.1": {
+   "file": "qa.core.throws.3.5.1.nupkg",
+   "sha256": "0196b651cfa369c5a3463296ed0aae9fbb2482ba1f2de02357bb2aa8993bddf8",
+   "size": 7373
+  },
+  "qa.core.throws/3.5.2": {
+   "file": "qa.core.throws.3.5.2.nupkg",
+   "sha256": "fd49c94b70711fbe92d31c3f3f419b0e01b248d7f8bc7fc3faa2e9818f6c7b31",
+   "size": 7610
+  },
+  "qa.core.throws/3.5.3": {
+   "file": "qa.core.throws.3.5.3.nupkg",
+   "sha256": "afce5c355cfe41f5c3fc89a4da8834b6679e94238227911979bbcd3ab05b7aa7",
+   "size": 7663
+  },
+  "qa.core.throws/3.5.4": {
+   "file": "qa.core.throws.3.5.4.nupkg",
+   "sha256": "00fd0390fe05eeeeef52e87ee2fa3c2966355424b21627448cb097875962dfb0",
+   "size": 7420
+  },
+  "qa.core.throws/3.5.4.2": {
+   "file": "qa.core.throws.3.5.4.2.nupkg",
+   "sha256": "a430bc054f2eb45a408e9b4ecc4fe6dd60cc9143c5bc0bdd25f5169b900eb41e",
+   "size": 7375
+  },
+  "qa.core.throws/3.5.5": {
+   "file": "qa.core.throws.3.5.5.nupkg",
+   "sha256": "3bb9a83199fbc80b71f5b820805e6e813322c6bfd50ec0cb9412af4b8334dc44",
+   "size": 7370
+  },
+  "qa.core.throws/3.6.0": {
+   "file": "qa.core.throws.3.6.0.nupkg",
+   "sha256": "e5108076eeb87c138231cfdf14743c13f10aba79c91f76aa27d0c376a32628e9",
+   "size": 7358
+  },
+  "qa.core.throws/3.6.1": {
+   "file": "qa.core.throws.3.6.1.nupkg",
+   "sha256": "4672fc36d3a2ed140ca3e80e284e838d21f3669653157da24e26844a244451a9",
+   "size": 7538
+  },
+  "qa.core.throws/3.6.1-beta1": {
+   "file": "qa.core.throws.3.6.1-beta1.nupkg",
+   "sha256": "ec14ad030e4c8df86a86d24aba6ae0a0d539a1e756e77fb676e6566780d35b78",
+   "size": 7559
+  },
+  "qa.core.throws/3.6.2": {
+   "file": "qa.core.throws.3.6.2.nupkg",
+   "sha256": "012255f5080cb218d4cd1c6c96d055054e28bf4c9f310f56b60eb2f5705c6298",
+   "size": 7545
+  },
+  "qa.core.throws/3.6.2-beta": {
+   "file": "qa.core.throws.3.6.2-beta.nupkg",
+   "sha256": "4aa52b0d0c2a7ab4fbfa2c9009111afb85fecacc94879dec3e3aa6e21248aad1",
+   "size": 7562
+  },
+  "qa.core.web/3.5.1": {
+   "file": "qa.core.web.3.5.1.nupkg",
+   "sha256": "8e340deeeee575d5c2e46ee777e768daf1c39e9b0f3f975435bbcfceaf9dea95",
+   "size": 52138
+  },
+  "qa.core.web/3.5.2": {
+   "file": "qa.core.web.3.5.2.nupkg",
+   "sha256": "79d24449757d7ee9c5bb6be949085dcd3855c515c65194d833b6558b13fbbe6a",
+   "size": 55199
+  },
+  "qa.core.web/3.5.3": {
+   "file": "qa.core.web.3.5.3.nupkg",
+   "sha256": "ce1efe0fbd550afac1cafb0a91d731f44027bfb197a77d218dd382e48bfbc511",
+   "size": 55249
+  },
+  "qa.core.web/3.5.4": {
+   "file": "qa.core.web.3.5.4.nupkg",
+   "sha256": "78f1d538a125f976080882126308e8ace14811bf2513bd2bedbc7a3f0e43734d",
+   "size": 52135
+  },
+  "qa.core.web/3.5.4.2": {
+   "file": "qa.core.web.3.5.4.2.nupkg",
+   "sha256": "fb5b002a71bfe0658a150bf7d8d582bbeda4ddb8b5bb3b8c042d4fb898cd7998",
+   "size": 52075
+  },
+  "qa.core.web/3.5.5": {
+   "file": "qa.core.web.3.5.5.nupkg",
+   "sha256": "2cf92ee146ac8efc6f604584165f3753f60dcc350e8dc87d92b11847c1638462",
+   "size": 52117
+  },
+  "qa.core.web/3.6.0": {
+   "file": "qa.core.web.3.6.0.nupkg",
+   "sha256": "6af7d171075e57072296da5279038ce76f80213767e0f3183833cba3147de098",
+   "size": 52071
+  },
+  "qa.core.web/3.6.1": {
+   "file": "qa.core.web.3.6.1.nupkg",
+   "sha256": "28a9430f802a530a403c22d3da60495d115aeca82313f38f462889b19e3e4afe",
+   "size": 52323
+  },
+  "qa.core.web/3.6.1-beta1": {
+   "file": "qa.core.web.3.6.1-beta1.nupkg",
+   "sha256": "9725b36c3faa360f4c21cf46f970b231edb7213cbf93f20d829e4804f3e8674f",
+   "size": 52359
+  },
+  "qa.core.web/3.6.2": {
+   "file": "qa.core.web.3.6.2.nupkg",
+   "sha256": "8c9308af19dc5aec1a306c0cc3621790d657b99659041a6e752dfe5acccf3987",
+   "size": 52327
+  },
+  "qa.core.web/3.6.2-beta": {
+   "file": "qa.core.web.3.6.2-beta.nupkg",
+   "sha256": "15a1b5abae30b3b2b7bc2ed543c73189e4deca9fb47bd5dd49302ceeb6c67a52",
+   "size": 52344
+  },
+  "qa.core/3.5.1": {
+   "file": "qa.core.3.5.1.nupkg",
+   "sha256": "edfcaf625ac2e8315a640a14c9193e46123d12c00d83a360de486f0a3fc88df8",
+   "size": 41098
+  },
+  "qa.core/3.5.2": {
+   "file": "qa.core.3.5.2.nupkg",
+   "sha256": "ec12649e8212b4ae1182c5fddc065cd6a649329dfe967960c83b87d221c38a20",
+   "size": 40821
+  },
+  "qa.core/3.5.3": {
+   "file": "qa.core.3.5.3.nupkg",
+   "sha256": "58bddd111d06f9cbffa7471c414fb3f30092a9a4da6fd01d05c058d90ce7dafc",
+   "size": 43680
+  },
+  "qa.core/3.5.4": {
+   "file": "qa.core.3.5.4.nupkg",
+   "sha256": "fe72e5c4a8628c4790178d9fbf6fb174a37542fdcc634046b17c72ac7a95b684",
+   "size": 40838
+  },
+  "qa.core/3.5.4.2": {
+   "file": "qa.core.3.5.4.2.nupkg",
+   "sha256": "58c8a1e3b3c71fa74aa91eba92a30da73b29d57bc605880ae25f4ef4e56ae81e",
+   "size": 40784
+  },
+  "qa.core/3.5.5": {
+   "file": "qa.core.3.5.5.nupkg",
+   "sha256": "50d393be8871a96eb9009fcab9f445ff6401b7f15470cb8e193e0678d090df93",
+   "size": 41073
+  },
+  "qa.core/3.6.0": {
+   "file": "qa.core.3.6.0.nupkg",
+   "sha256": "a786d4a81316a54d28bf244f2acdd95ccfd9d49b920c800c5b8331e812efda1b",
+   "size": 79543
+  },
+  "qa.core/3.6.1": {
+   "file": "qa.core.3.6.1.nupkg",
+   "sha256": "249a3a8bacdd48bc344fefea92edfeba764a12a9429f42c5f0663efc6fb787f9",
+   "size": 79800
+  },
+  "qa.core/3.6.1-beta1": {
+   "file": "qa.core.3.6.1-beta1.nupkg",
+   "sha256": "cecfc1d80102cd93bfa332e35c07584ee96fe1309375cd6967bba41c280697a3",
+   "size": 79840
+  },
+  "qa.core/3.6.2": {
+   "file": "qa.core.3.6.2.nupkg",
+   "sha256": "5b14ed820e1527a5ab10a13e51c7426cad2955948e7ba69d75975cddd5cd404d",
+   "size": 79164
+  },
+  "qa.core/3.6.2-beta": {
+   "file": "qa.core.3.6.2-beta.nupkg",
+   "sha256": "d62312d09ec6e331040fd94032065844e07beb29d61e10db0b15402b6dafc217",
+   "size": 79191
+  },
+  "qa.dotnetcore.caching.distributed/3.3.2": {
+   "file": "qa.dotnetcore.caching.distributed.3.3.2.nupkg",
+   "sha256": "0059190287ac88c8d7d2e7f04a24cf9dbc3e6dc5694ee9e80f8237587e27b465",
+   "size": 25634
+  },
+  "qa.dotnetcore.caching.distributed/3.3.2-beta2": {
+   "file": "qa.dotnetcore.caching.distributed.3.3.2-beta2.nupkg",
+   "sha256": "7086ecbbaaf7e361b5c85bd8426c85f34d9fbe0776ea740af6d1a68dc4ff220e",
+   "size": 25653
+  },
+  "qa.dotnetcore.caching.distributed/3.3.2-beta3": {
+   "file": "qa.dotnetcore.caching.distributed.3.3.2-beta3.nupkg",
+   "sha256": "5b7a8287eba4b94b5c44f3605e6ff0b20e404172ead1fcdea2020f89b482bcbe",
+   "size": 25652
+  },
+  "qa.dotnetcore.caching.distributed/3.3.2-beta4": {
+   "file": "qa.dotnetcore.caching.distributed.3.3.2-beta4.nupkg",
+   "sha256": "158b49fb30844dd130eb08b08e5facd3cd79decd9d9dc9624f8d46d17e3a25da",
+   "size": 25650
+  },
+  "qa.dotnetcore.caching.distributed/3.3.3": {
+   "file": "qa.dotnetcore.caching.distributed.3.3.3.nupkg",
+   "sha256": "bc88c054c3846f881f3100869d5b3a1d5bee23dba256b10b5eea4c827efdea5e",
+   "size": 25639
+  },
+  "qa.dotnetcore.caching.distributed/3.3.3-beta1": {
+   "file": "qa.dotnetcore.caching.distributed.3.3.3-beta1.nupkg",
+   "sha256": "39f28be1193fca0058c11eb04ab871cc9388dfe1523bfe43b58122afa994983b",
+   "size": 25655
+  },
+  "qa.dotnetcore.caching.distributed/3.4.0": {
+   "file": "qa.dotnetcore.caching.distributed.3.4.0.nupkg",
+   "sha256": "ef02ce8a6824a2aaeaadf82ec733f57f214a52289cb3fa12cc28b7d7a1ae556f",
+   "size": 25495
+  },
+  "qa.dotnetcore.caching.distributed/3.4.0-beta1": {
+   "file": "qa.dotnetcore.caching.distributed.3.4.0-beta1.nupkg",
+   "sha256": "f8c2d6afa06185a6138ac9c5b4707dd441896256d896ab413613c7ec53b6db7e",
+   "size": 25512
+  },
+  "qa.dotnetcore.caching.distributed/3.4.1": {
+   "file": "qa.dotnetcore.caching.distributed.3.4.1.nupkg",
+   "sha256": "4a8dc454b5d89f868d3bcb572fcd6ae5d575f3da2a6e22c0804d51b6a8f4f86e",
+   "size": 25500
+  },
+  "qa.dotnetcore.caching.distributed/3.4.1-beta1": {
+   "file": "qa.dotnetcore.caching.distributed.3.4.1-beta1.nupkg",
+   "sha256": "248499dc5881326ad760e05c784a2a93a34febef1ad71c4b7ff70e752d6154a1",
+   "size": 25513
+  },
+  "qa.dotnetcore.caching.distributed/3.5.0": {
+   "file": "qa.dotnetcore.caching.distributed.3.5.0.nupkg",
+   "sha256": "9c21dc63d3e015d9c758bc18f58548ed945b69eada63411d7ac62f76f8c12764",
+   "size": 25489
+  },
+  "qa.dotnetcore.caching.hostedservice/2.1.7": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.1.7.nupkg",
+   "sha256": "f0cf1c8eb21fff7fd3af3935612d7f76e10885a3262df0bb41e37d88d0ce76cd",
+   "size": 8567
+  },
+  "qa.dotnetcore.caching.hostedservice/2.2.0": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.2.0.nupkg",
+   "sha256": "f329dcf238ee2e632528c13efae97e9ebd51e3c1950921501cac43184cebfd45",
+   "size": 8556
+  },
+  "qa.dotnetcore.caching.hostedservice/2.2.0-beta1": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.2.0-beta1.nupkg",
+   "sha256": "7356c6b250eeef073b709c578037d8e0ea80312e03dceb73c21667c00aaf0838",
+   "size": 8570
+  },
+  "qa.dotnetcore.caching.hostedservice/2.2.0-beta2": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.2.0-beta2.nupkg",
+   "sha256": "bf7d3907f143a034b306a9ab3eaa1df612bf3201dab5c403424cb87b3e592fac",
+   "size": 8576
+  },
+  "qa.dotnetcore.caching.hostedservice/2.2.1": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.2.1.nupkg",
+   "sha256": "02d3f6b5f8f5eaba34125306a73d5c06505a5f9c7f25e9236951b1f5b8ddf4ac",
+   "size": 8560
+  },
+  "qa.dotnetcore.caching.hostedservice/2.2.1-beta1": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.2.1-beta1.nupkg",
+   "sha256": "bcf2d7835199076977033a5b58723daac17f3ffacf07a045f1f7dd953e0f2ff9",
+   "size": 8583
+  },
+  "qa.dotnetcore.caching.hostedservice/2.3.0": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.3.0.nupkg",
+   "sha256": "32ec55484d7eccedd3cc895ed1e7102d8aceae01190b787cc6b382624923b57d",
+   "size": 8550
+  },
+  "qa.dotnetcore.caching.hostedservice/2.3.0-beta1": {
+   "file": "qa.dotnetcore.caching.hostedservice.2.3.0-beta1.nupkg",
+   "sha256": "e646a93cadbc13dce336da624b16d1245c58ed2c7dd6a0e2dd1135604265bce5",
+   "size": 8561
+  },
+  "qa.dotnetcore.caching.hostedservice/3.0.0": {
+   "file": "qa.dotnetcore.caching.hostedservice.3.0.0.nupkg",
+   "sha256": "b3a1252435a89a54e6cd6f07874dd1cdea09a0c5b620d7799a40f5e57417ec26",
+   "size": 8626
+  },
+  "qa.dotnetcore.caching.hostedservice/3.0.0-beta1": {
+   "file": "qa.dotnetcore.caching.hostedservice.3.0.0-beta1.nupkg",
+   "sha256": "049210b27bcc05e92aa28eef72f93c47c4761dc4e0db498c20abe4576b25b3c4",
+   "size": 8651
+  },
+  "qa.dotnetcore.caching.hostedservice/3.1.0-beta1": {
+   "file": "qa.dotnetcore.caching.hostedservice.3.1.0-beta1.nupkg",
+   "sha256": "d6cb2468ad8cad7c24a852d9818a44c0f631fbd6cc1d492d94ba85c7d9e9779c",
+   "size": 10376
+  },
+  "qa.dotnetcore.caching/3.3.2": {
+   "file": "qa.dotnetcore.caching.3.3.2.nupkg",
+   "sha256": "e0598b09c5cc8ab2f75cbdfc1f78c6b7382bc3c465505697e313860e30cc1b09",
+   "size": 19011
+  },
+  "qa.dotnetcore.caching/3.3.2-beta2": {
+   "file": "qa.dotnetcore.caching.3.3.2-beta2.nupkg",
+   "sha256": "c371ba0e7e649b88d21163ea8be8ba3865cb51890649083397e7979ecc692acb",
+   "size": 19068
+  },
+  "qa.dotnetcore.caching/3.3.2-beta3": {
+   "file": "qa.dotnetcore.caching.3.3.2-beta3.nupkg",
+   "sha256": "f2cb8255658be713cea6f06378cc8ef8e43fd11969c5eaf0318f2c85bbcc4a5a",
+   "size": 19069
+  },
+  "qa.dotnetcore.caching/3.3.2-beta4": {
+   "file": "qa.dotnetcore.caching.3.3.2-beta4.nupkg",
+   "sha256": "561307abf2eb82391a68545c6fcbae207c883d7cfc966d95ca97ff178a12619d",
+   "size": 19038
+  },
+  "qa.dotnetcore.caching/3.3.3": {
+   "file": "qa.dotnetcore.caching.3.3.3.nupkg",
+   "sha256": "5f567213b227154fb7ed44977d5af58325849e0baf7c836d6e2dc41d85f999e7",
+   "size": 19018
+  },
+  "qa.dotnetcore.caching/3.3.3-beta1": {
+   "file": "qa.dotnetcore.caching.3.3.3-beta1.nupkg",
+   "sha256": "c7d07a9f49eb7d8ab4430e0331f03f17690867f3a10057d321c4feace2360741",
+   "size": 19031
+  },
+  "qa.dotnetcore.caching/3.4.0": {
+   "file": "qa.dotnetcore.caching.3.4.0.nupkg",
+   "sha256": "3686625045354925cad3b768ffe875b4c452e513b418a63418e7435087fbb0cb",
+   "size": 18874
+  },
+  "qa.dotnetcore.caching/3.4.0-beta1": {
+   "file": "qa.dotnetcore.caching.3.4.0-beta1.nupkg",
+   "sha256": "0b61a7544eb681351450ac83fde03afb0a1e205b464510afc5992dc63c8422dd",
+   "size": 18891
+  },
+  "qa.dotnetcore.caching/3.4.1": {
+   "file": "qa.dotnetcore.caching.3.4.1.nupkg",
+   "sha256": "755e850b5523e9f73b5c96b3ba30d5fc635082f3efc88bdabc399ff2db0337c5",
+   "size": 18871
+  },
+  "qa.dotnetcore.caching/3.4.1-beta1": {
+   "file": "qa.dotnetcore.caching.3.4.1-beta1.nupkg",
+   "sha256": "2764c26fd34c9dd82dc4e67dc6eaecb0121f85f0ffd9e9cf645175974faf1d49",
+   "size": 18888
+  },
+  "qa.dotnetcore.caching/3.5.0": {
+   "file": "qa.dotnetcore.caching.3.5.0.nupkg",
+   "sha256": "7bccc298d57b1c5c4d0a097731568a88e37607780976e4bb081985a2bc4e7a58",
+   "size": 18870
+  },
+  "qa.dotnetcore.engine.abstractions/3.3.2": {
+   "file": "qa.dotnetcore.engine.abstractions.3.3.2.nupkg",
+   "sha256": "8e61132777a5d8b38c5450bd145221571dba6c8302a2d2f8c9ba0dac6adb4e48",
+   "size": 17584
+  },
+  "qa.dotnetcore.engine.abstractions/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.abstractions.3.3.2-beta2.nupkg",
+   "sha256": "3900dee66809cf5feafe7ca18c2f3d9823c3010c19d4ebba05e0cf4ec10f71d0",
+   "size": 17606
+  },
+  "qa.dotnetcore.engine.abstractions/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.abstractions.3.3.2-beta3.nupkg",
+   "sha256": "f1ee3120c457a9655c559e6dcbcc38a329cbd878d5d5b56b72aea76267fa9381",
+   "size": 17611
+  },
+  "qa.dotnetcore.engine.abstractions/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.abstractions.3.3.2-beta4.nupkg",
+   "sha256": "8af431d29525cf503f43a37b8fdbb8d72b62e2704fdd2a8242de983438ab46bf",
+   "size": 17607
+  },
+  "qa.dotnetcore.engine.abstractions/3.3.3": {
+   "file": "qa.dotnetcore.engine.abstractions.3.3.3.nupkg",
+   "sha256": "20aba1856b9ad1e54b7f2f7fdae8a4ef908b3c73630dc732a9c84b15ee8538d5",
+   "size": 17703
+  },
+  "qa.dotnetcore.engine.abstractions/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.abstractions.3.3.3-beta1.nupkg",
+   "sha256": "a1f807bfe192391d6b4bed95d55b601fc81090210cd56b0f118784c8859fa548",
+   "size": 17719
+  },
+  "qa.dotnetcore.engine.abstractions/3.4.0": {
+   "file": "qa.dotnetcore.engine.abstractions.3.4.0.nupkg",
+   "sha256": "1f79dcb26f9a0c982f5e9d8b0fa3fd147f95dc3330984307afe6c97f022c4329",
+   "size": 17563
+  },
+  "qa.dotnetcore.engine.abstractions/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.abstractions.3.4.0-beta1.nupkg",
+   "sha256": "a1942c53190aadfa2e58dbc6814c01e4ddea5a83f52245aca7200bb17f05b947",
+   "size": 17585
+  },
+  "qa.dotnetcore.engine.abstractions/3.4.1": {
+   "file": "qa.dotnetcore.engine.abstractions.3.4.1.nupkg",
+   "sha256": "e8940095b979068d9d2af12cce54e553941b45ebce0cc50e3f747b1dfbf7f443",
+   "size": 17571
+  },
+  "qa.dotnetcore.engine.abstractions/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.abstractions.3.4.1-beta1.nupkg",
+   "sha256": "d7dac6f8ee99e1a35a86f7fc9a10811ffbf11941479603790e7a374ff0ae84cc",
+   "size": 17591
+  },
+  "qa.dotnetcore.engine.abstractions/3.5.0": {
+   "file": "qa.dotnetcore.engine.abstractions.3.5.0.nupkg",
+   "sha256": "f733895a9f7ca1434b8d11898146b657d438b1a788d9a38718a2e28d292f5ef2",
+   "size": 17567
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.3.2": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.3.2.nupkg",
+   "sha256": "841b5acb8521187764b243a42091175383167cb69c1d1184a3de32e66b0ca8d9",
+   "size": 7305
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.3.2-beta2.nupkg",
+   "sha256": "9c3aebfee64edd9e8208332793da7c303cd01082b07c5a9073a636887f878c57",
+   "size": 7329
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.3.2-beta3.nupkg",
+   "sha256": "510003a6aec6ff6f3b5f02ebe07870f345d8c24b0dd5219165c1308641152dfb",
+   "size": 7326
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.3.2-beta4.nupkg",
+   "sha256": "330a48d1932261886a16b6147475e67d12ca69ebf5792fbbd8907edfe5a5b458",
+   "size": 7325
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.3.3": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.3.3.nupkg",
+   "sha256": "5db0dd99f791577f66045b9137a3d2f115ffe23cf991c1569491765c12ed3bb8",
+   "size": 7302
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.3.3-beta1.nupkg",
+   "sha256": "131a4a1b854028f642cf0a59d035c8ee3602bb1feb8f2c416e3a81a696b6b3fa",
+   "size": 7321
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.4.0": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.4.0.nupkg",
+   "sha256": "ce6fc3970c11438399c0b9f7dc05fa4ecf902af36086830e3442ef0c7cee6b9e",
+   "size": 7121
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.4.0-beta1.nupkg",
+   "sha256": "7dded80b319070385c5266a923d2b5a00fdb24b30895d489a72840f4b62d4b72",
+   "size": 7142
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.4.1": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.4.1.nupkg",
+   "sha256": "3e59990697943a4e599397ab44c551253711f4c7b5b508035128c94ebe932dbc",
+   "size": 7113
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.4.1-beta1.nupkg",
+   "sha256": "a2cdecfa763828047fba3163ef2db70450944553a69dec78b66a9f8c3d12087e",
+   "size": 7134
+  },
+  "qa.dotnetcore.engine.abtesting.configuration/3.5.0": {
+   "file": "qa.dotnetcore.engine.abtesting.configuration.3.5.0.nupkg",
+   "sha256": "8e3f507b5f8213fbda23cd9453b103cc4e7c55632e54777c86a71832fef515da",
+   "size": 7113
+  },
+  "qa.dotnetcore.engine.abtesting/3.3.2": {
+   "file": "qa.dotnetcore.engine.abtesting.3.3.2.nupkg",
+   "sha256": "aee096c2791dc626e6f0b0f25b67b6af3a364faf4f4271e7897c722e943698ce",
+   "size": 15446
+  },
+  "qa.dotnetcore.engine.abtesting/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.abtesting.3.3.2-beta2.nupkg",
+   "sha256": "bba13673c631cddd6b0cd47587cc8dad320987f4b42af5326cca1c3ad39cace8",
+   "size": 15469
+  },
+  "qa.dotnetcore.engine.abtesting/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.abtesting.3.3.2-beta3.nupkg",
+   "sha256": "5c273aa1ad18e74a9098b6e26ff010688051fb6b191cc7670cbee46b10b90d52",
+   "size": 15469
+  },
+  "qa.dotnetcore.engine.abtesting/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.abtesting.3.3.2-beta4.nupkg",
+   "sha256": "7335af1115429e3464298a2bbb526535bdaaef590d9177ec5d65ae18cfb5cdb5",
+   "size": 15467
+  },
+  "qa.dotnetcore.engine.abtesting/3.3.3": {
+   "file": "qa.dotnetcore.engine.abtesting.3.3.3.nupkg",
+   "sha256": "e7397edf7525a746a1be243f8cb19ad9fcdb378f757f58930680e8e11195b14a",
+   "size": 15445
+  },
+  "qa.dotnetcore.engine.abtesting/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.abtesting.3.3.3-beta1.nupkg",
+   "sha256": "2581f2a547a7cd6c9855a37dd91c50cdcfdd5af0f259445155df2880c8e4075d",
+   "size": 15463
+  },
+  "qa.dotnetcore.engine.abtesting/3.4.0": {
+   "file": "qa.dotnetcore.engine.abtesting.3.4.0.nupkg",
+   "sha256": "8679fb89f3d87a7b881b8c25c2db111d031dc0803215a02fe9fd16617ce75406",
+   "size": 15328
+  },
+  "qa.dotnetcore.engine.abtesting/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.abtesting.3.4.0-beta1.nupkg",
+   "sha256": "df6836003bdde0bf699e81a5188f2ea9d732cc59e6714ce0aa598d84fb912ff7",
+   "size": 15343
+  },
+  "qa.dotnetcore.engine.abtesting/3.4.1": {
+   "file": "qa.dotnetcore.engine.abtesting.3.4.1.nupkg",
+   "sha256": "8a3356102f8e04b2b8474b3ee2307e7b9887177780f826217d25dc7e1cb49f41",
+   "size": 15322
+  },
+  "qa.dotnetcore.engine.abtesting/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.abtesting.3.4.1-beta1.nupkg",
+   "sha256": "dbf598d50f83b5b7ad8976d96a6ed82f565c63d35b48f60b501f2380cc4a3443",
+   "size": 15342
+  },
+  "qa.dotnetcore.engine.abtesting/3.5.0": {
+   "file": "qa.dotnetcore.engine.abtesting.3.5.0.nupkg",
+   "sha256": "c2ef684e577536d64700e6d8e8c88729a9b6d004c2e82b15802e322907fc7809",
+   "size": 15316
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.3.2": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.3.2.nupkg",
+   "sha256": "b166aff1b8bc57a0820f5a786f2c949e64a0a756d2953eb58b9239a79ca69b81",
+   "size": 9639
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.3.2-beta2.nupkg",
+   "sha256": "faea330093f0a431a3d4f7ad2814d646bfb1b7245f4dbd1dcf8e16843e4378fa",
+   "size": 9692
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.3.2-beta3.nupkg",
+   "sha256": "f6c963621d7b88b332915f5f47395435cf910932d7f41d88e6f6d9f4b89a2091",
+   "size": 9669
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.3.2-beta4.nupkg",
+   "sha256": "8fdc9893d4e613a215d969c9356461f8730b873550f47852a35f3e3de29d9aaa",
+   "size": 9668
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.3.3": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.3.3.nupkg",
+   "sha256": "1f6f3ce48a084d6c9c6d5f1954ad7b6be4332e6654d839244ef315d65db05cc4",
+   "size": 9646
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.3.3-beta1.nupkg",
+   "sha256": "aa413fd091764894ee53f759cc7bb6487febc9e835a73f7fdeff763ae05a0722",
+   "size": 9668
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.4.0": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.4.0.nupkg",
+   "sha256": "c8952965e6ccc8a0f2302a3a82c47bd76740a064f4ec7dfb7ea8d1db3674dea1",
+   "size": 9504
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.4.0-beta1.nupkg",
+   "sha256": "481be9e9cd62177051b192b8e5d983b2ea150e0cfab53bef514f7df4dd00dc36",
+   "size": 9526
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.4.1": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.4.1.nupkg",
+   "sha256": "9cf4ea0b6a7afe551ae6a289a18b32043cf2ac620f46494d0311f1254fda005b",
+   "size": 9504
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.4.1-beta1.nupkg",
+   "sha256": "a56a9646fe242e64473076e658d35ef670f2f2712b6fe1388bee7a4681a4ca4e",
+   "size": 9521
+  },
+  "qa.dotnetcore.engine.cachetags.configuration/3.5.0": {
+   "file": "qa.dotnetcore.engine.cachetags.configuration.3.5.0.nupkg",
+   "sha256": "e68d7160a81839a40662a42c8627107d37475d95c3ae7c9b081a5597f399018b",
+   "size": 9494
+  },
+  "qa.dotnetcore.engine.cachetags/3.3.2": {
+   "file": "qa.dotnetcore.engine.cachetags.3.3.2.nupkg",
+   "sha256": "0904c4fb43b7db972488979a00a4415a5b954c3068e70644e5c484234c54c215",
+   "size": 6293
+  },
+  "qa.dotnetcore.engine.cachetags/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.cachetags.3.3.2-beta2.nupkg",
+   "sha256": "fc16b66a230f6d3535d552acf8b986e7583acc0014194f1aa97773f85bfc2641",
+   "size": 6311
+  },
+  "qa.dotnetcore.engine.cachetags/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.cachetags.3.3.2-beta3.nupkg",
+   "sha256": "8958b87d60966e3d89260a5582c605ed3a473d5def875a06eca83ebdb192a615",
+   "size": 6311
+  },
+  "qa.dotnetcore.engine.cachetags/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.cachetags.3.3.2-beta4.nupkg",
+   "sha256": "70f3d7f0c7f8018870f34a4354e16377c4d5695cdd75ec37554e3724ff76a10c",
+   "size": 6309
+  },
+  "qa.dotnetcore.engine.cachetags/3.3.3": {
+   "file": "qa.dotnetcore.engine.cachetags.3.3.3.nupkg",
+   "sha256": "27a1618d5acb51d4139bcaeb42f958e4f7136374829f67b66efd039054b86c08",
+   "size": 6291
+  },
+  "qa.dotnetcore.engine.cachetags/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.cachetags.3.3.3-beta1.nupkg",
+   "sha256": "74a5b75fb8df1ce8a4eb74ec7ae3a9720fccada9476cb69ead3e1cdbb6e7d9a9",
+   "size": 6303
+  },
+  "qa.dotnetcore.engine.cachetags/3.4.0": {
+   "file": "qa.dotnetcore.engine.cachetags.3.4.0.nupkg",
+   "sha256": "343959666d17a85d299b2d11ca42b34f34c0fbfaf8bfd0ddd84107c5c2288226",
+   "size": 6381
+  },
+  "qa.dotnetcore.engine.cachetags/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.cachetags.3.4.0-beta1.nupkg",
+   "sha256": "f3a3944b684b130f7b33fda275a9a6fe33068afb95d8a47e151e06366f18a5ae",
+   "size": 6398
+  },
+  "qa.dotnetcore.engine.cachetags/3.4.1": {
+   "file": "qa.dotnetcore.engine.cachetags.3.4.1.nupkg",
+   "sha256": "d40aaa4170698a650554d086f79f44e5960a62d5f42acd0b13218b0f768b1ed1",
+   "size": 6373
+  },
+  "qa.dotnetcore.engine.cachetags/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.cachetags.3.4.1-beta1.nupkg",
+   "sha256": "7725612d9f6bbb3911ad7339759f322b5b59e56bc42eb32ad3324f29a53c7d93",
+   "size": 6391
+  },
+  "qa.dotnetcore.engine.cachetags/3.5.0": {
+   "file": "qa.dotnetcore.engine.cachetags.3.5.0.nupkg",
+   "sha256": "401840f11fbf79bb81dd4e0377254618bbeb58729668da0946f75f679d0ce807",
+   "size": 6372
+  },
+  "qa.dotnetcore.engine.caching.hostedservice/2.1.0-beta1": {
+   "file": "qa.dotnetcore.engine.caching.hostedservice.2.1.0-beta1.nupkg",
+   "sha256": "13703f88b2dae42eca2d74b4ecd83d8978711a9ae1a36eb0313140f78b37a3ab",
+   "size": 7334
+  },
+  "qa.dotnetcore.engine.onscreen/3.3.2": {
+   "file": "qa.dotnetcore.engine.onscreen.3.3.2.nupkg",
+   "sha256": "263c59a6baff7a44229281831cd3757d171d557c4e46c7f83629b6166b562185",
+   "size": 13308
+  },
+  "qa.dotnetcore.engine.onscreen/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.onscreen.3.3.2-beta2.nupkg",
+   "sha256": "a4c32a04ef91c8a464f28d445bb01c1cf64f60b77851c7f9a53705c5dc720f32",
+   "size": 13336
+  },
+  "qa.dotnetcore.engine.onscreen/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.onscreen.3.3.2-beta3.nupkg",
+   "sha256": "f38968f4331569220a089a0f0c9fb930d84c63988e96fc811ae5a590dc6953bd",
+   "size": 13337
+  },
+  "qa.dotnetcore.engine.onscreen/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.onscreen.3.3.2-beta4.nupkg",
+   "sha256": "8a3c3b3497d7aade26bf64713d59dbebc6f08e295f2a3e512269d8166dd7ce6f",
+   "size": 13332
+  },
+  "qa.dotnetcore.engine.onscreen/3.3.3": {
+   "file": "qa.dotnetcore.engine.onscreen.3.3.3.nupkg",
+   "sha256": "d3adca34a501cafe9c64598d8304637f06d74939680b2c475109f69d844c68b1",
+   "size": 13313
+  },
+  "qa.dotnetcore.engine.onscreen/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.onscreen.3.3.3-beta1.nupkg",
+   "sha256": "f9b6873cde8a7b2f13bb8b5f9993944d669e6fc691ea430901b26b311e84b3ac",
+   "size": 13329
+  },
+  "qa.dotnetcore.engine.onscreen/3.4.0": {
+   "file": "qa.dotnetcore.engine.onscreen.3.4.0.nupkg",
+   "sha256": "3cefa91fd7efc1fb6dc98515545f1db5830f2eafd5751d3cea4e4e6930cd9aab",
+   "size": 11902
+  },
+  "qa.dotnetcore.engine.onscreen/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.onscreen.3.4.0-beta1.nupkg",
+   "sha256": "24f66ccf658d6d855942cc07bdea2d5b7b19166830ab11bd04f6a1bdd1309668",
+   "size": 11920
+  },
+  "qa.dotnetcore.engine.onscreen/3.4.1": {
+   "file": "qa.dotnetcore.engine.onscreen.3.4.1.nupkg",
+   "sha256": "c6e46efab759b1b6c5100d08cbccd1949086b113ddaacc1bf1d17d484fcf1ab3",
+   "size": 11895
+  },
+  "qa.dotnetcore.engine.onscreen/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.onscreen.3.4.1-beta1.nupkg",
+   "sha256": "1d1999974bc1bbe15a301dfbcac537a218b48d733b2d1f8a1a3b4d92d6214537",
+   "size": 11911
+  },
+  "qa.dotnetcore.engine.onscreen/3.5.0": {
+   "file": "qa.dotnetcore.engine.onscreen.3.5.0.nupkg",
+   "sha256": "17ebd65f2d3a194b859d3ae890cae2781e2c73ef1eefa0dbb2edb8d4b54fe43e",
+   "size": 11889
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.3.2": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.3.2.nupkg",
+   "sha256": "01d89cff6474db4cc37b4dd177dd09b46214c3f3905e1cf1fd350ea18f7603f4",
+   "size": 5047
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.3.2-beta2.nupkg",
+   "sha256": "69d1afc6e980b044826015414081b59ffa3a86693445ea0748457ba27ab4d628",
+   "size": 5074
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.3.2-beta3.nupkg",
+   "sha256": "82ca8a7599cb639016058d619cb4a388d14d5393f31957c70f1ed5224d4c0fe4",
+   "size": 5078
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.3.2-beta4.nupkg",
+   "sha256": "e5b25659a734a613774041da5ebe6a194e3f86295d268a4d5705d194fa5d98c5",
+   "size": 5074
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.3.3": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.3.3.nupkg",
+   "sha256": "e173ec33ac6fd6359d17e4a4f55a80602e7a5b3c9fe6fce6b65492e17600a69f",
+   "size": 5051
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.3.3-beta1.nupkg",
+   "sha256": "31ecb71a8ff08f9fe2b064ea8716c69137fbc364e58794f78018009d725f0e25",
+   "size": 5072
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.4.0": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.4.0.nupkg",
+   "sha256": "d4da2b0caa9ee4a359d8e16325859f67f9514d94db124a0fae040308d8c94a31",
+   "size": 4881
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.4.0-beta1.nupkg",
+   "sha256": "5322fda4937e9f3e13027d79d9e5ddd39fbf3616225b8bfffc7b78b9d529105b",
+   "size": 4899
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.4.1": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.4.1.nupkg",
+   "sha256": "465710a3980675cc6a6b849cb359efc1b3a5db887c49557f7d0e86ffe20d624a",
+   "size": 4879
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.4.1-beta1.nupkg",
+   "sha256": "2189701bf8aae6129d49b907dc52f134f62eae549d310092700cfa08defae4dc",
+   "size": 4892
+  },
+  "qa.dotnetcore.engine.persistent.configuration/3.5.0": {
+   "file": "qa.dotnetcore.engine.persistent.configuration.3.5.0.nupkg",
+   "sha256": "1b53476be5d0f5cc540407f6e7624e792114b7161ec5568ba18c10eef1c8a6a9",
+   "size": 4871
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.3.2": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.3.2.nupkg",
+   "sha256": "760ab62f02833d47ddfbafa5d416751b2ce25ade1221105246829ece0022c495",
+   "size": 23553
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.3.2-beta2.nupkg",
+   "sha256": "7d8b1b93b706ab2ed40eaafd420f551594ba3a67e6680fbbe3d2ec34792a4baa",
+   "size": 23576
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.3.2-beta3.nupkg",
+   "sha256": "df6697c14d9f03334c5d1c4b1cd34a34cc3f8e890e4c7d14060107d46c2c52c1",
+   "size": 23580
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.3.2-beta4.nupkg",
+   "sha256": "3f025791448c4b9e10777df18c8ba027e7a196abe92938934adc4f4f037fa05f",
+   "size": 23583
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.3.3": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.3.3.nupkg",
+   "sha256": "923539d5ba6a6541e707ebacd0223da04b302bb61a4e795167ae72b095545ec7",
+   "size": 23549
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.3.3-beta1.nupkg",
+   "sha256": "55c68121e8f572b7555b3922ecb3f9cabfd286c637902cc0f113850f62cf2f3d",
+   "size": 23575
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.4.0": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.4.0.nupkg",
+   "sha256": "30905dd4b3d7bf2a5c3291a956bdaf8dfb08890f5060d5fc8b216705fe3bff3c",
+   "size": 23393
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.4.0-beta1.nupkg",
+   "sha256": "a9c7842402f4a76a61573b7b7329e0063f1d3fbd97d0f89f8726f4763cd3aca0",
+   "size": 23414
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.4.1": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.4.1.nupkg",
+   "sha256": "d470045e98797b43d82a5da232c7c1e6072967e82801f4982a952eee78e35a82",
+   "size": 23393
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.4.1-beta1.nupkg",
+   "sha256": "4c7ab3e87809cc336841d4144ac6e0f6f29d8af1ba17404ac5cac51e5b797d94",
+   "size": 23407
+  },
+  "qa.dotnetcore.engine.persistent.dapper/3.5.0": {
+   "file": "qa.dotnetcore.engine.persistent.dapper.3.5.0.nupkg",
+   "sha256": "3b5f1376b960966b9c2baa4f6e068deb9cbd64d30484b7c5dc5eeb759bcc0cfc",
+   "size": 23390
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.3.2": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.3.2.nupkg",
+   "sha256": "295e17bb5e661f22977053c5ce59383177e92c46bb2111e052020ca667ff5f5c",
+   "size": 13417
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.3.2-beta2.nupkg",
+   "sha256": "8409b372ec9ecebf2834815fef5eac08fce0a370b5bd8798ea3e4362db1911b8",
+   "size": 13445
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.3.2-beta3.nupkg",
+   "sha256": "06d40ffd4f94ad32b13dc4fd70f25f054cdca7352fec37530876bfb637aa8f7e",
+   "size": 13450
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.3.2-beta4.nupkg",
+   "sha256": "e70e1e7a6e13e77d71b0bb0a7bec55c65c9c3d1e11acbd189e733027b117553a",
+   "size": 13450
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.3.3": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.3.3.nupkg",
+   "sha256": "901059fc3a38634bcce2eef3e871c629836793a783c3aca2e1d23db45db21f03",
+   "size": 13423
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.3.3-beta1.nupkg",
+   "sha256": "d80fecfb89e2b3f2d445e7e0f54b3eecae495393640a023db00420e3c30b60f6",
+   "size": 13442
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.4.0": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.4.0.nupkg",
+   "sha256": "b24a03d30ce6f1957178b22bb5b367fa389d5d69b3dede415294f4314a411491",
+   "size": 13497
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.4.0-beta1.nupkg",
+   "sha256": "a1ddaf4820b190639cec101fef56c6b4f28b75940670d1c35375da8521beb25a",
+   "size": 13518
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.4.1": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.4.1.nupkg",
+   "sha256": "430fa6bcba5de091e6afa2f824d93ddb75584bbe80c0772a00fca20e36db3bff",
+   "size": 13488
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.4.1-beta1.nupkg",
+   "sha256": "d2b0a443bfa043bf3b2c370e51b29bad83f0f9a2bf08d6d707414a3521d43676",
+   "size": 13511
+  },
+  "qa.dotnetcore.engine.persistent.interfaces/3.5.0": {
+   "file": "qa.dotnetcore.engine.persistent.interfaces.3.5.0.nupkg",
+   "sha256": "dd182b54910c67cb09ea1e566a0c4d23e5b93b998354df0e5fc95f285f566ead",
+   "size": 13487
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.3.2": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.3.2.nupkg",
+   "sha256": "83d39fe78563cc9c467748d5116c711ca5402b7d57f389c9da029ea1d49ab4b6",
+   "size": 10128
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.3.2-beta2.nupkg",
+   "sha256": "ca33f41c63e25b419a878aaf119d15106dad5ca0f6d6f468fe24118be044f22a",
+   "size": 10149
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.3.2-beta3.nupkg",
+   "sha256": "360984b35ade1bec9abbab5a2eb67dac517a092b5d03522bb910554bcf2bc8fa",
+   "size": 10156
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.3.2-beta4.nupkg",
+   "sha256": "f66d0685f1820462114cbb5c7cd9027200b8bf9f388ab0583573401cb916a266",
+   "size": 10150
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.3.3": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.3.3.nupkg",
+   "sha256": "6efa1d4d1a37350a03bab626f901258db95cd0e4f20fe32e0ef3af4b5f9b610a",
+   "size": 10123
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.3.3-beta1.nupkg",
+   "sha256": "47df545e30be38b03044a58118bb36f129a856c973bc3c9b62b81e037f7e2512",
+   "size": 10148
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.4.0": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.4.0.nupkg",
+   "sha256": "24c2b5917af04b55bd97f2a76fd1e1c742ae4497a765260fa5bb4711bc5d5611",
+   "size": 9943
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.4.0-beta1.nupkg",
+   "sha256": "510275d9606dc07914bb163095eb7d39c22496300d8496f4ec9ec8281ec1af35",
+   "size": 9963
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.4.1": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.4.1.nupkg",
+   "sha256": "c95bb0cbe35b9a6b51614ccb2b59ecb46b7618fe66484a4e46603697d9056e06",
+   "size": 9937
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.4.1-beta1.nupkg",
+   "sha256": "edba32d114aa185bbb884ebf7c7c997367ff2c0c77c7188ff854309d4b119e80",
+   "size": 9957
+  },
+  "qa.dotnetcore.engine.qpdata.configuration/3.5.0": {
+   "file": "qa.dotnetcore.engine.qpdata.configuration.3.5.0.nupkg",
+   "sha256": "0b975c2793eeac1f80a95fdbe0934292f0ca3172485661d97f13eb3865ee7b41",
+   "size": 9933
+  },
+  "qa.dotnetcore.engine.qpdata/3.3.2": {
+   "file": "qa.dotnetcore.engine.qpdata.3.3.2.nupkg",
+   "sha256": "79e65e56cf47a33ffdf4c10aa4814863f4dbed2612ab00c5dc3a678f8874f008",
+   "size": 26404
+  },
+  "qa.dotnetcore.engine.qpdata/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.qpdata.3.3.2-beta2.nupkg",
+   "sha256": "8b3b95859543c20d1aa00cd590b2a4ccdc2c5fdfa7ec85d75ab996bcd00d3d5b",
+   "size": 26418
+  },
+  "qa.dotnetcore.engine.qpdata/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.qpdata.3.3.2-beta3.nupkg",
+   "sha256": "4d67f6d62fa44d41e91ace03f213dc49ef1d6c364f2e2025d0effc41e6b05d9a",
+   "size": 26419
+  },
+  "qa.dotnetcore.engine.qpdata/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.qpdata.3.3.2-beta4.nupkg",
+   "sha256": "81b2358dbc82910644bcce9656589ae7088476669fac84e867b11d45a0822e30",
+   "size": 26433
+  },
+  "qa.dotnetcore.engine.qpdata/3.3.3": {
+   "file": "qa.dotnetcore.engine.qpdata.3.3.3.nupkg",
+   "sha256": "fe523b300cf7972f0593c3642ff0a89521fe7ca6eda9afe71d4b140607db6865",
+   "size": 26480
+  },
+  "qa.dotnetcore.engine.qpdata/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.qpdata.3.3.3-beta1.nupkg",
+   "sha256": "b10a9ebc31ef8bc1125084220f1c53b2a814b6a0f3f03e25c260e34dd3f5da5d",
+   "size": 26497
+  },
+  "qa.dotnetcore.engine.qpdata/3.4.0": {
+   "file": "qa.dotnetcore.engine.qpdata.3.4.0.nupkg",
+   "sha256": "5ccf28981a206f3148c33d990b89d1c772f8f1edb728864bed59b5645d515b8d",
+   "size": 26428
+  },
+  "qa.dotnetcore.engine.qpdata/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.qpdata.3.4.0-beta1.nupkg",
+   "sha256": "244aa53a157385edd5a5cad97ee42f92f486df055e3430ad6b8c0ce69f1d8536",
+   "size": 26439
+  },
+  "qa.dotnetcore.engine.qpdata/3.4.1": {
+   "file": "qa.dotnetcore.engine.qpdata.3.4.1.nupkg",
+   "sha256": "cf1d81239f1b815cc2dab10ff25e762caf034e663d9f6b0a575d134bef111acd",
+   "size": 26417
+  },
+  "qa.dotnetcore.engine.qpdata/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.qpdata.3.4.1-beta1.nupkg",
+   "sha256": "251663f7c4af5590d3a8d96d5af1cac425eee8e95fae93cb8b1c4d9bc4df3dae",
+   "size": 26420
+  },
+  "qa.dotnetcore.engine.qpdata/3.5.0": {
+   "file": "qa.dotnetcore.engine.qpdata.3.5.0.nupkg",
+   "sha256": "3415cb19d8ae2d453d126d4955f8b02baae8b0a8bddc5cf13e6313d4356899fd",
+   "size": 26406
+  },
+  "qa.dotnetcore.engine.reflection/3.3.2": {
+   "file": "qa.dotnetcore.engine.reflection.3.3.2.nupkg",
+   "sha256": "b797879e97c2f8fc6fe5ab61d8cad66e59e58120ee8ce9f252cb500494d643ef",
+   "size": 5429
+  },
+  "qa.dotnetcore.engine.reflection/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.reflection.3.3.2-beta2.nupkg",
+   "sha256": "755e4cf0a347d6a8dff6f457ed8f1af368d974317c5fdd7822490edb0f9c204a",
+   "size": 5458
+  },
+  "qa.dotnetcore.engine.reflection/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.reflection.3.3.2-beta3.nupkg",
+   "sha256": "2d0248eb3a8a247231cbaefbc892618ff1cfecb8e64dc1aef011ddef423b4f0f",
+   "size": 5458
+  },
+  "qa.dotnetcore.engine.reflection/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.reflection.3.3.2-beta4.nupkg",
+   "sha256": "d1b8582ab6cbc8398ec1ac88c267a161cafd299bc376deceab5c9c6bd28eadc7",
+   "size": 5452
+  },
+  "qa.dotnetcore.engine.reflection/3.3.3": {
+   "file": "qa.dotnetcore.engine.reflection.3.3.3.nupkg",
+   "sha256": "6542616313757387c97d43beab0e841f21a88fb810dfbb1cddbed0c71aaa1eb7",
+   "size": 5428
+  },
+  "qa.dotnetcore.engine.reflection/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.reflection.3.3.3-beta1.nupkg",
+   "sha256": "642034979d42f9c6c027f83512676fb344c39778c4c89670caaeec85ddc66253",
+   "size": 5444
+  },
+  "qa.dotnetcore.engine.reflection/3.4.0": {
+   "file": "qa.dotnetcore.engine.reflection.3.4.0.nupkg",
+   "sha256": "463d7ed54fefa1e22ac1e8891d16a79bb1499d9d726890b9f1dde001838d47fa",
+   "size": 5515
+  },
+  "qa.dotnetcore.engine.reflection/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.reflection.3.4.0-beta1.nupkg",
+   "sha256": "2cb1cb6a27826c2dd3efc7da5422bb605c0c63b22646b120c71e0749cde6003a",
+   "size": 5534
+  },
+  "qa.dotnetcore.engine.reflection/3.4.1": {
+   "file": "qa.dotnetcore.engine.reflection.3.4.1.nupkg",
+   "sha256": "973405e9f99d541ec4d9e7c02f384447cf1b69c5f4c8c53c18f120e0b8844d66",
+   "size": 5511
+  },
+  "qa.dotnetcore.engine.reflection/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.reflection.3.4.1-beta1.nupkg",
+   "sha256": "64dce4d4f5bd2279a0cc9d0fd2faa8c9ce238e4d71e0b77982f81969ab3b33c2",
+   "size": 5529
+  },
+  "qa.dotnetcore.engine.reflection/3.5.0": {
+   "file": "qa.dotnetcore.engine.reflection.3.5.0.nupkg",
+   "sha256": "cb48a7172f326ff6fb1c7a7ce4f0a0c5aaf8e71732432e5608875b85397994e2",
+   "size": 5506
+  },
+  "qa.dotnetcore.engine.routing/3.3.2": {
+   "file": "qa.dotnetcore.engine.routing.3.3.2.nupkg",
+   "sha256": "bbfe870e71c773ee51400b05182b0175d18d11801b532d5d052052c45f82e8d4",
+   "size": 24594
+  },
+  "qa.dotnetcore.engine.routing/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.routing.3.3.2-beta2.nupkg",
+   "sha256": "952d7d4400a1543b560991889e441e8d977bdb7faea86ef50132b8b9688eb6dc",
+   "size": 24627
+  },
+  "qa.dotnetcore.engine.routing/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.routing.3.3.2-beta3.nupkg",
+   "sha256": "183290b14f799849dd98e29af13ebc720dfebbb071ac0a3890f54a416a0a5438",
+   "size": 24625
+  },
+  "qa.dotnetcore.engine.routing/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.routing.3.3.2-beta4.nupkg",
+   "sha256": "1584e9c8d3998f11c943a24864773e3540be637ce3707a94bbc8694f042ce1a9",
+   "size": 24623
+  },
+  "qa.dotnetcore.engine.routing/3.3.3": {
+   "file": "qa.dotnetcore.engine.routing.3.3.3.nupkg",
+   "sha256": "4da3f33c58ac01ecd98f302270f3abdda536e581ed751fbb9f652c98a6068628",
+   "size": 24599
+  },
+  "qa.dotnetcore.engine.routing/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.routing.3.3.3-beta1.nupkg",
+   "sha256": "8e2cf270ba5323ecf6dce2eb90313f2e38feacb6363f131237412313094e24a6",
+   "size": 24617
+  },
+  "qa.dotnetcore.engine.routing/3.4.0": {
+   "file": "qa.dotnetcore.engine.routing.3.4.0.nupkg",
+   "sha256": "a93231a5723db23c1a53927407fc43309f804532f52b23581ae6c43400c29367",
+   "size": 24701
+  },
+  "qa.dotnetcore.engine.routing/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.routing.3.4.0-beta1.nupkg",
+   "sha256": "f19ac548918a27ce2d7ebbfaa2cc1dc7c73635e35ad5abf7b54d9cd24ae13100",
+   "size": 24719
+  },
+  "qa.dotnetcore.engine.routing/3.4.1": {
+   "file": "qa.dotnetcore.engine.routing.3.4.1.nupkg",
+   "sha256": "48fae24dc276c70dd2c88c4fb9c487a3a9b29afda4ccdc566f2dcae82ad77f0f",
+   "size": 24703
+  },
+  "qa.dotnetcore.engine.routing/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.routing.3.4.1-beta1.nupkg",
+   "sha256": "664b99c6b577ed9f0f3b6cdb8363951b2df13fee581f771b31c0dbd01888b670",
+   "size": 24722
+  },
+  "qa.dotnetcore.engine.routing/3.5.0": {
+   "file": "qa.dotnetcore.engine.routing.3.5.0.nupkg",
+   "sha256": "ed655015e37080e29c79e3ebde3357665d7df2ddd991a5cfe0ed4a07f4e721f1",
+   "size": 24697
+  },
+  "qa.dotnetcore.engine.targeting/3.3.2": {
+   "file": "qa.dotnetcore.engine.targeting.3.3.2.nupkg",
+   "sha256": "89e8a414643b6362d3f889cf20f72e412a3431d13c843b0f5a38ab90348b6960",
+   "size": 13011
+  },
+  "qa.dotnetcore.engine.targeting/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.targeting.3.3.2-beta2.nupkg",
+   "sha256": "01bd19eb44b784258538dfec57cd7c9b8708239bfbee05c13fbee33737d215b8",
+   "size": 13039
+  },
+  "qa.dotnetcore.engine.targeting/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.targeting.3.3.2-beta3.nupkg",
+   "sha256": "b28c0ef9dc15e2ba9dccd8a2f8ab6756585873e056a27d058bb52ef2a069e562",
+   "size": 13040
+  },
+  "qa.dotnetcore.engine.targeting/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.targeting.3.3.2-beta4.nupkg",
+   "sha256": "2eb0cae5d0994a13e78594d58d69a384887006e6c8c6a893031b961551021f23",
+   "size": 13035
+  },
+  "qa.dotnetcore.engine.targeting/3.3.3": {
+   "file": "qa.dotnetcore.engine.targeting.3.3.3.nupkg",
+   "sha256": "b715cbebf497acb6cbf7a74081f6c67338387b429adb41558129bf430771c098",
+   "size": 13010
+  },
+  "qa.dotnetcore.engine.targeting/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.targeting.3.3.3-beta1.nupkg",
+   "sha256": "a28b267b25552beaaf2b15706f766ec2ada7f7b030764e5c5b1d0010876386a7",
+   "size": 13027
+  },
+  "qa.dotnetcore.engine.targeting/3.4.0": {
+   "file": "qa.dotnetcore.engine.targeting.3.4.0.nupkg",
+   "sha256": "8455a2ed8aa35bb0e0106ec83a6131b92b6b9c79b50b417e66ce60561835699c",
+   "size": 13132
+  },
+  "qa.dotnetcore.engine.targeting/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.targeting.3.4.0-beta1.nupkg",
+   "sha256": "e749c2b0254b9a850b959d4135ea92c3f0371e34afdf55d96081d83951c75e65",
+   "size": 13142
+  },
+  "qa.dotnetcore.engine.targeting/3.4.1": {
+   "file": "qa.dotnetcore.engine.targeting.3.4.1.nupkg",
+   "sha256": "72786b722882f1549d9507e2aaa4c19a08cf975a5009d2b3deeebf8415727db4",
+   "size": 13117
+  },
+  "qa.dotnetcore.engine.targeting/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.targeting.3.4.1-beta1.nupkg",
+   "sha256": "397b88fc18b5660b61bcc03755dba0d6af17fc20e11b05a4b5ced67442f9a0ce",
+   "size": 13138
+  },
+  "qa.dotnetcore.engine.targeting/3.5.0": {
+   "file": "qa.dotnetcore.engine.targeting.3.5.0.nupkg",
+   "sha256": "26154a6248996d18e8c9c5390f6c6280fbe5d3f2179c16f0f27090ca3e6313bf",
+   "size": 13117
+  },
+  "qa.dotnetcore.engine.widgets/3.3.2": {
+   "file": "qa.dotnetcore.engine.widgets.3.3.2.nupkg",
+   "sha256": "29c4a6b4fb1c98b6776343092043be86a445841c9dc8dd9a610c38318a5e2b7e",
+   "size": 11716
+  },
+  "qa.dotnetcore.engine.widgets/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.widgets.3.3.2-beta2.nupkg",
+   "sha256": "4cf894ab8c744b501848bdd673b16a826269d4890c44497b3d176dd3f899759e",
+   "size": 11738
+  },
+  "qa.dotnetcore.engine.widgets/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.widgets.3.3.2-beta3.nupkg",
+   "sha256": "bddd87342d410a7504b1fa23212ce7fd9ffb24505a8dbbbed15650dfa517d781",
+   "size": 11736
+  },
+  "qa.dotnetcore.engine.widgets/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.widgets.3.3.2-beta4.nupkg",
+   "sha256": "ecc2e9efaaa4152d87979f85eb7543d335b1f596c5f9b2e75d16926fa250b561",
+   "size": 11739
+  },
+  "qa.dotnetcore.engine.widgets/3.3.3": {
+   "file": "qa.dotnetcore.engine.widgets.3.3.3.nupkg",
+   "sha256": "ce8c698dcd301110c19ab400525240d13da8b16ef86bdaca25263a97632bfe34",
+   "size": 11719
+  },
+  "qa.dotnetcore.engine.widgets/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.widgets.3.3.3-beta1.nupkg",
+   "sha256": "2789c2ab5b8e8be8fc8e9448929a93c847f61a943b795412433200a57be97f39",
+   "size": 11734
+  },
+  "qa.dotnetcore.engine.widgets/3.4.0": {
+   "file": "qa.dotnetcore.engine.widgets.3.4.0.nupkg",
+   "sha256": "a5e67e7fc4541b4077948f5c8673e144e92345facd9ab4e63a427d49857b8c41",
+   "size": 11606
+  },
+  "qa.dotnetcore.engine.widgets/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.widgets.3.4.0-beta1.nupkg",
+   "sha256": "3162543250011d44e881bc4ac9f3f9f7cda2787b547d5e200cec97509a2f8de4",
+   "size": 11628
+  },
+  "qa.dotnetcore.engine.widgets/3.4.1": {
+   "file": "qa.dotnetcore.engine.widgets.3.4.1.nupkg",
+   "sha256": "87938b7e42116088fd7d7cc58e10729dcf60ed6ee77725bcd31b1772eca93fde",
+   "size": 11601
+  },
+  "qa.dotnetcore.engine.widgets/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.widgets.3.4.1-beta1.nupkg",
+   "sha256": "7fe03561a5f10bddfb9066a49faf20935e71cf83b52a71958fcd9c3034e3a3cd",
+   "size": 11617
+  },
+  "qa.dotnetcore.engine.widgets/3.5.0": {
+   "file": "qa.dotnetcore.engine.widgets.3.5.0.nupkg",
+   "sha256": "2479dbe9731b7f36748216d1dabc52f699073bb805adf81412600e9c1e4f5ccd",
+   "size": 11599
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.3.2": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.3.2.nupkg",
+   "sha256": "5d5a56a00e02461641b0bc78c9225fbb6ce0c4a6d9846d495114d83c5d897dd5",
+   "size": 5914
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.3.2-beta2.nupkg",
+   "sha256": "62010e1ca2b9f61c8dc13c33ee68766df92e5c3fd392923d8e127fd8aa333ee8",
+   "size": 5938
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.3.2-beta3.nupkg",
+   "sha256": "25e2d3cf7e30ae9a49e0ede5c7fc521a097a623cda4c24b6903cb818ece75f3d",
+   "size": 5936
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.3.2-beta4.nupkg",
+   "sha256": "9d8153f170f1231e67f3783ed0281b938349751f09e8307dd701a51277f5c902",
+   "size": 5939
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.3.3": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.3.3.nupkg",
+   "sha256": "768797f5aaad90aca951029791a11e57c65320383b47cd4be8c14e936a453c0a",
+   "size": 5903
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.3.3-beta1.nupkg",
+   "sha256": "354fc410f7c9e06bcbabf548dd050fc7494e169f54cb71700c80ef224780e194",
+   "size": 5926
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.4.0": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.4.0.nupkg",
+   "sha256": "377392befc0e4efb614e21f7eb0eed8cbe9352c9a7dac729b1ee15937d7e7de3",
+   "size": 5709
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.4.0-beta1.nupkg",
+   "sha256": "81db2204df2ca34758402ac2dc29c4f8fc682b15076057922e4090014386e7fe",
+   "size": 5731
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.4.1": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.4.1.nupkg",
+   "sha256": "f21bc693ef57ad0f8b42e04c7e786f91bbb51b736efbcff343ad5d61bc1cf011",
+   "size": 5699
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.4.1-beta1.nupkg",
+   "sha256": "014125300f769b8e3c9b8e00d3344ae914ca83d7b81d426cec86da18d5ce791a",
+   "size": 5717
+  },
+  "qa.dotnetcore.engine.xml.configuration/3.5.0": {
+   "file": "qa.dotnetcore.engine.xml.configuration.3.5.0.nupkg",
+   "sha256": "67780c3356cd8904f8b0b4467456b0188c08ade39abf32b745a5b82e04b27174",
+   "size": 5696
+  },
+  "qa.dotnetcore.engine.xml/3.3.2": {
+   "file": "qa.dotnetcore.engine.xml.3.3.2.nupkg",
+   "sha256": "b4524ba53d338ba6c77cd2ec87533a87c38b50c3f252254aad3675a531844dfa",
+   "size": 7678
+  },
+  "qa.dotnetcore.engine.xml/3.3.2-beta2": {
+   "file": "qa.dotnetcore.engine.xml.3.3.2-beta2.nupkg",
+   "sha256": "5d41251524e7e5f9121a4bdd9af87bf9a40e1c9a1cee58915b6eb189668935fa",
+   "size": 7709
+  },
+  "qa.dotnetcore.engine.xml/3.3.2-beta3": {
+   "file": "qa.dotnetcore.engine.xml.3.3.2-beta3.nupkg",
+   "sha256": "e435164dd49a012f7f1e1167560c52a83c90fb31dd8f1e2ee9b08c8708ce6fc9",
+   "size": 7706
+  },
+  "qa.dotnetcore.engine.xml/3.3.2-beta4": {
+   "file": "qa.dotnetcore.engine.xml.3.3.2-beta4.nupkg",
+   "sha256": "2d729abfa3d50b15d21287018532bc86d27d0c940bef766afd05d96fa9be6d2c",
+   "size": 7703
+  },
+  "qa.dotnetcore.engine.xml/3.3.3": {
+   "file": "qa.dotnetcore.engine.xml.3.3.3.nupkg",
+   "sha256": "c1f3d31c11e85586ec36971e4e82e65567612a0c5516d7cd13deada43a505d25",
+   "size": 7680
+  },
+  "qa.dotnetcore.engine.xml/3.3.3-beta1": {
+   "file": "qa.dotnetcore.engine.xml.3.3.3-beta1.nupkg",
+   "sha256": "6487134c78d479256e142d02354025284d13723a2f8ede20e40b002232a4d4f3",
+   "size": 7698
+  },
+  "qa.dotnetcore.engine.xml/3.4.0": {
+   "file": "qa.dotnetcore.engine.xml.3.4.0.nupkg",
+   "sha256": "3380ccef93c2a8a930ed8cba816bc23218fa1fd23f8c66bf70bb35bab0908eca",
+   "size": 7724
+  },
+  "qa.dotnetcore.engine.xml/3.4.0-beta1": {
+   "file": "qa.dotnetcore.engine.xml.3.4.0-beta1.nupkg",
+   "sha256": "f1a6aac620de13b28c37bd5381474d21387d0b71ca6dc9a88d17cc566848996e",
+   "size": 7741
+  },
+  "qa.dotnetcore.engine.xml/3.4.1": {
+   "file": "qa.dotnetcore.engine.xml.3.4.1.nupkg",
+   "sha256": "3eba31f6dcff648f47e52e08e9ad4e05c4b0a166865d0ee1f256679fd4b56aab",
+   "size": 7721
+  },
+  "qa.dotnetcore.engine.xml/3.4.1-beta1": {
+   "file": "qa.dotnetcore.engine.xml.3.4.1-beta1.nupkg",
+   "sha256": "a3f8b5a2854f9ea8088251f4d99f3720086287d2bbd8141cb4b1d2217f27e0a3",
+   "size": 7733
+  },
+  "qa.dotnetcore.engine.xml/3.5.0": {
+   "file": "qa.dotnetcore.engine.xml.3.5.0.nupkg",
+   "sha256": "c7c834560b16688f3a9a9849f37b64b01e2be12158b66706346e407a51ce7d85",
+   "size": 7716
+  },
+  "qa.emulator.json/1.0.0": {
+   "file": "qa.emulator.json.1.0.0.nupkg",
+   "sha256": "32de3f26bf5ac4f472d86ec5fef97dc8e31eaa0dc678909d8c2dd64451ab0026",
+   "size": 5763
+  },
+  "qa.integration.jsonapiservices/1.0.0": {
+   "file": "qa.integration.jsonapiservices.1.0.0.nupkg",
+   "sha256": "3c442a512754504b767982d2b817838e4da3cec462bbde79a9185ec37bad6903",
+   "size": 18044
+  },
+  "qa.integration.jsonapiservices/1.0.1": {
+   "file": "qa.integration.jsonapiservices.1.0.1.nupkg",
+   "sha256": "19d1f01c55bc6e136b3996d69c7c420a9f35ccd066549b7a60e902b1e106b11e",
+   "size": 18304
+  },
+  "qa.integration.jsonapiservices/1.0.14": {
+   "file": "qa.integration.jsonapiservices.1.0.14.nupkg",
+   "sha256": "27ad9f6975a468019a6810c95eb33705bd603401443bd02f5805306d17c92baa",
+   "size": 45311
+  },
+  "qa.integration.jsonapiservices/1.0.15": {
+   "file": "qa.integration.jsonapiservices.1.0.15.nupkg",
+   "sha256": "17779b411d93e6d2592a5eea45cdd032b8e8738b6e0f6bfb435297cb66c9e564",
+   "size": 46904
+  },
+  "qa.integration.jsonapiservices/1.0.16": {
+   "file": "qa.integration.jsonapiservices.1.0.16.nupkg",
+   "sha256": "d88e3f22a49586844e70e63c261df55a2de507edbcbc9ca708fe84cabd38af62",
+   "size": 84024
+  },
+  "qa.integration.jsonapiservices/1.0.17": {
+   "file": "qa.integration.jsonapiservices.1.0.17.nupkg",
+   "sha256": "79c8d6dfa0862179cf6b4c851be4a955d362913c61f5480ced16d8cf2a81e7e2",
+   "size": 84278
+  },
+  "qa.integration.jsonapiservices/1.0.4": {
+   "file": "qa.integration.jsonapiservices.1.0.4.nupkg",
+   "sha256": "f09f7fde8caa1b82506dc3126642dc532e9f17150298be0682d78d32fc8da8db",
+   "size": 17339
+  },
+  "qa.integration.jsonapiservices/1.0.5": {
+   "file": "qa.integration.jsonapiservices.1.0.5.nupkg",
+   "sha256": "fa7bdce0d3b7524f579aa4e52aa659cf72d8aafa9b1e1ee8f6d50345b0ddc514",
+   "size": 38592
+  },
+  "qa.integration.jsonapiservices/1.1.0": {
+   "file": "qa.integration.jsonapiservices.1.1.0.nupkg",
+   "sha256": "bb62d81abf0f3badc3d77c0608c51a58d8e8bc84ea40988891080865b10c67a7",
+   "size": 39442
+  },
+  "qa.integration.jsonapiservices/1.1.1": {
+   "file": "qa.integration.jsonapiservices.1.1.1.nupkg",
+   "sha256": "1001a7e93261896b87db0d1003882e5a6d3d8a8db911f4121c620696d1dc69c0",
+   "size": 41192
+  },
+  "qa.integration.jsonapiservices/2.0.0-beta6": {
+   "file": "qa.integration.jsonapiservices.2.0.0-beta6.nupkg",
+   "sha256": "36e08f0e8faf586e50cd925e4d90eddf35f3486a7595aa4fc81e20ddcd545618",
+   "size": 71364
+  },
+  "qa.limitscounter.client/1.0.0.1": {
+   "file": "qa.limitscounter.client.1.0.0.1.nupkg",
+   "sha256": "f560c71822946b5086a0870d2d8c00cc12a6bd2ed67fbf0a5b4c53540a398025",
+   "size": 5774
+  },
+  "qa.limitscounter.client/1.0.0.2": {
+   "file": "qa.limitscounter.client.1.0.0.2.nupkg",
+   "sha256": "77f3ea38feb647d4032ce94ba879958cbf6fa0a02523b11bc77b4d38d25c4cb8",
+   "size": 5772
+  },
+  "qa.redis/1.0.0": {
+   "file": "qa.redis.1.0.0.nupkg",
+   "sha256": "044ece10b0c71b9c31f86dcef581af62e50bdea663c532db71781d4400a5782a",
+   "size": 10721
+  },
+  "qa.redis/1.0.1": {
+   "file": "qa.redis.1.0.1.nupkg",
+   "sha256": "81d8d1be9ba6043bdffe7d594bef3e3cdb3301a61e6699abc83ae977962b06cb",
+   "size": 10735
+  },
+  "qa.redis/1.0.2": {
+   "file": "qa.redis.1.0.2.nupkg",
+   "sha256": "b2e3b6674091269508753a250bf3d98d965402aa8f9fb5926784635b401bc116",
+   "size": 10705
+  },
+  "qa.redis/1.0.3": {
+   "file": "qa.redis.1.0.3.nupkg",
+   "sha256": "586cc3f962203c5e7baa55af231c6be4aac1c26965e7b5c6a1792a12d0a5503c",
+   "size": 10703
+  },
+  "qa.validation.xaml.extensions/1.0.4": {
+   "file": "qa.validation.xaml.extensions.1.0.4.nupkg",
+   "sha256": "d9ee1446dd73fa38485f8d44b06f5a09d537986a8668e656e0d4e4c590137a2c",
+   "size": 13229
+  },
+  "qa.validation.xaml.extensions/1.1.0": {
+   "file": "qa.validation.xaml.extensions.1.1.0.nupkg",
+   "sha256": "dbe85846691ebce754b9245c124e95ed432d375ee87ee000fc75fb2e49e945da",
+   "size": 13434
+  },
+  "qa.validation.xaml.extensions/1.2.0": {
+   "file": "qa.validation.xaml.extensions.1.2.0.nupkg",
+   "sha256": "fc883f9bee1b31ca116a67cf696531df2c72fad5249ff9cf55c3f62429d005a9",
+   "size": 13441
+  },
+  "qa.validation.xaml.extensions/1.2.2": {
+   "file": "qa.validation.xaml.extensions.1.2.2.nupkg",
+   "sha256": "e81d98f4878459b6ce2a5b4d602fbf1f14a17fe43995a812eb83524a2f120cbc",
+   "size": 13534
+  },
+  "qa.validation.xaml.extensions/1.3.0": {
+   "file": "qa.validation.xaml.extensions.1.3.0.nupkg",
+   "sha256": "5435d890fac77d8d822894f39eb123e94df84f8bc1127f585b929f942db2e063",
+   "size": 21583
+  },
+  "qa.validation.xaml.extensions/1.3.0-portable8": {
+   "file": "qa.validation.xaml.extensions.1.3.0-portable8.nupkg",
+   "sha256": "e61e5e99253ec3d952ca8b1c18f0cce01e22df2620268ac43b08a4cf03d163a1",
+   "size": 21633
+  },
+  "qa.validation.xaml.extensions/1.4.0": {
+   "file": "qa.validation.xaml.extensions.1.4.0.nupkg",
+   "sha256": "96fa9d50285ee6ce0da39a0636b8943e5f5f7860b80fe6eac99ce1e6f6791cca",
+   "size": 11919
+  },
+  "qa.validation.xaml.extensions/1.4.2": {
+   "file": "qa.validation.xaml.extensions.1.4.2.nupkg",
+   "sha256": "d6b76f57707a7124fdd68956ea6dd8f62648e7e63df678e5166d19389684f7c1",
+   "size": 11941
+  },
+  "qa.validation.xaml.extensions/1.4.3": {
+   "file": "qa.validation.xaml.extensions.1.4.3.nupkg",
+   "sha256": "1748e4738ef066a862922f069843c077c8656e4a414e2ecd6f51590e01a460c7",
+   "size": 11578
+  },
+  "qa.validation.xaml.extensions/1.4.3-beta": {
+   "file": "qa.validation.xaml.extensions.1.4.3-beta.nupkg",
+   "sha256": "e9fa278725515aec95871df39ba1d4e55e66337aa6be4b2f0d11fb4c514c4f4f",
+   "size": 11598
+  },
+  "qa.validation.xaml.extensions/1.5.0": {
+   "file": "qa.validation.xaml.extensions.1.5.0.nupkg",
+   "sha256": "16b4c264bbe93e6f6010cfdc5a6a9c9892bd9ca4ba4fcfef44cdabda9484c41c",
+   "size": 11750
+  },
+  "qa.validation.xaml/1.0.4": {
+   "file": "qa.validation.xaml.1.0.4.nupkg",
+   "sha256": "8724e807bb49b3b1ba1e6ce043152b693cfdf00f0e702cb049680312382de5f3",
+   "size": 49255
+  },
+  "qa.validation.xaml/1.1.0": {
+   "file": "qa.validation.xaml.1.1.0.nupkg",
+   "sha256": "20b4d2f65f1b0cf4a92a327dfdd2638484565c74a491312dc18334dd397c4725",
+   "size": 50303
+  },
+  "qa.validation.xaml/1.2.0": {
+   "file": "qa.validation.xaml.1.2.0.nupkg",
+   "sha256": "a6fc828398d2c75c87b29e6c68dd59492642755daedbf4e6c93e7a91b458dbec",
+   "size": 51896
+  },
+  "qa.validation.xaml/1.2.1": {
+   "file": "qa.validation.xaml.1.2.1.nupkg",
+   "sha256": "e06361f9bcd606e1a76af964c8578d49f1dabbd5d24f68d2d8139ed001762b91",
+   "size": 51042
+  },
+  "qa.validation.xaml/1.2.2": {
+   "file": "qa.validation.xaml.1.2.2.nupkg",
+   "sha256": "5af9e029185b763044865c74b000d9ba66e6bfa85a5ba60fb6a4dfc39b58426f",
+   "size": 51199
+  },
+  "qa.validation.xaml/1.3.0": {
+   "file": "qa.validation.xaml.1.3.0.nupkg",
+   "sha256": "d78464a06897c2f732bd968b348fbeace2358f62aae82e3b655ca646cbba7a6e",
+   "size": 90226
+  },
+  "qa.validation.xaml/1.3.0-portable8": {
+   "file": "qa.validation.xaml.1.3.0-portable8.nupkg",
+   "sha256": "592c589508698b210432143a4c7096db0f9e773655134b86dc09adcf54809edb",
+   "size": 89237
+  },
+  "qa.validation.xaml/1.4.0": {
+   "file": "qa.validation.xaml.1.4.0.nupkg",
+   "sha256": "ce2b9d413f9c6404c2be75df88475759991962784451377ccd417611761d1ca0",
+   "size": 50017
+  },
+  "qa.validation.xaml/1.4.3": {
+   "file": "qa.validation.xaml.1.4.3.nupkg",
+   "sha256": "6bf4733680897a3022c76e3ce530d6e84eb3344009971e356043b8d0b7780a48",
+   "size": 46755
+  },
+  "qa.validation.xaml/1.4.3-beta": {
+   "file": "qa.validation.xaml.1.4.3-beta.nupkg",
+   "sha256": "db8aa589d7ef6885fe45bdbad796f58b1936da231c8e51146866fcaac163f715",
+   "size": 46774
+  },
+  "qa.validation.xaml/1.5.0": {
+   "file": "qa.validation.xaml.1.5.0.nupkg",
+   "sha256": "824233e9481a1458765903aaa6e5d7b82fd3f247dfadd35ec0725302848b86d2",
+   "size": 46767
+  },
+  "qa.visitstatistic.helper/1.0.0": {
+   "file": "qa.visitstatistic.helper.1.0.0.nupkg",
+   "sha256": "338ad8be78744945787b68f374c57cae4331c14f3dcd280f60295a3ae071d7bd",
+   "size": 4442
+  },
+  "qa.visitstatistic/1.0.0": {
+   "file": "qa.visitstatistic.1.0.0.nupkg",
+   "sha256": "205944b5111abb5a7d29820a8c911934ffef6b6c551f84d3254447c440ebc6c3",
+   "size": 12150
+  },
+  "qa.visitstatistic/1.0.0.1": {
+   "file": "qa.visitstatistic.1.0.0.1.nupkg",
+   "sha256": "43776d49dc190d791994295fe9a5cbaa1c56e84b5b7660fce91d5cd4e769795d",
+   "size": 12267
+  },
+  "qa.visitstatistic/1.0.0.2": {
+   "file": "qa.visitstatistic.1.0.0.2.nupkg",
+   "sha256": "2a5e5cd1499350d3b2d85f4b12e97ccfb0a0189c1e9c6067ddfc5c8aa7fc0ba5",
+   "size": 13004
+  },
+  "qp.configurationservice.client/0.1.0": {
+   "file": "qp.configurationservice.client.0.1.0.nupkg",
+   "sha256": "4a7128b2cc98980e895167cf3b6ed3c3530b2d3c1a2c43c9fbc4bf74df8fdb4a",
+   "size": 8030
+  },
+  "qp.configurationservice.client/0.2.0": {
+   "file": "qp.configurationservice.client.0.2.0.nupkg",
+   "sha256": "57708e6c18e6beef2eb1375d8d6406ba1870d806b8e23effc5f81382cb8d8fde",
+   "size": 8359
+  },
+  "qp.configurationservice.client/0.3.0": {
+   "file": "qp.configurationservice.client.0.3.0.nupkg",
+   "sha256": "34730342e30fa1ba9850f6711b6909901d6839625c1880662c43cebb4bf6430f",
+   "size": 10088
+  },
+  "qp.configurationservice.client/0.3.1": {
+   "file": "qp.configurationservice.client.0.3.1.nupkg",
+   "sha256": "3c343af73941348cff275b94a918cb6dd6bcf3631ef6a531ca6cc63971fa654b",
+   "size": 10089
+  },
+  "qp8.entityframework6.aspnetcore/1.3.0": {
+   "file": "qp8.entityframework6.aspnetcore.1.3.0.nupkg",
+   "sha256": "1a0395d5e8846003f49523fd4b197cc7422126b71b35dc41f208156704a5c8eb",
+   "size": 54336
+  },
+  "qp8.entityframework6.aspnetcore/1.3.1": {
+   "file": "qp8.entityframework6.aspnetcore.1.3.1.nupkg",
+   "sha256": "ce31a32b98cf1bf220b6aa8baa978c0472737960eba39c76a2e6bdd7ff156afb",
+   "size": 52798
+  },
+  "qp8.entityframework6.aspnetcore/1.3.2": {
+   "file": "qp8.entityframework6.aspnetcore.1.3.2.nupkg",
+   "sha256": "30bb527168e4c1b317a3aa8693c3ff8a4db866a987ba0305eed1826599cc1f2a",
+   "size": 53057
+  },
+  "qp8.entityframework6.aspnetcore/1.3.4": {
+   "file": "qp8.entityframework6.aspnetcore.1.3.4.nupkg",
+   "sha256": "68a004f7c35c4cac167a07981ebe049c4c9087f2abe62217a5d97db170aaf0e7",
+   "size": 53186
+  },
+  "qp8.entityframework6.aspnetcore/1.3.5": {
+   "file": "qp8.entityframework6.aspnetcore.1.3.5.nupkg",
+   "sha256": "d6064d04d0c0008b57ea3d6638a43b5280ec62f0f372abcf4d83911c05077854",
+   "size": 55222
+  },
+  "qp8.entityframework6.aspnetcore/1.3.6": {
+   "file": "qp8.entityframework6.aspnetcore.1.3.6.nupkg",
+   "sha256": "9dc38880d3541872c8d0eeee297e25925ca948b1ceaa1c80c78612f35258e6b6",
+   "size": 53107
+  },
+  "qp8.entityframework6.aspnetcore/1.4.0": {
+   "file": "qp8.entityframework6.aspnetcore.1.4.0.nupkg",
+   "sha256": "e034763189aa5eb64790289bddcb906cd3c61236f51b1905a24c0c9c6c78b4b1",
+   "size": 40872
+  },
+  "qp8.entityframework6.aspnetcore/1.4.1": {
+   "file": "qp8.entityframework6.aspnetcore.1.4.1.nupkg",
+   "sha256": "f14c0656b2f02b6657f161467a1905002765e8771d17c60ac95b640218703772",
+   "size": 40871
+  },
+  "qp8.entityframework6.legacy/1.3.4": {
+   "file": "qp8.entityframework6.legacy.1.3.4.nupkg",
+   "sha256": "27b0cda298090de6d4ca29003cfb0670c9d383a639b5e5ad057432d1b4bc2124",
+   "size": 52529
+  },
+  "qp8.entityframework6.legacy/1.3.5": {
+   "file": "qp8.entityframework6.legacy.1.3.5.nupkg",
+   "sha256": "ae74e6fe5c3f10e9920bc3e1e3b85b66086e7d2c53afddd54cf3504e5af3aa62",
+   "size": 54504
+  },
+  "qp8.entityframework6/1.2.0": {
+   "file": "qp8.entityframework6.1.2.0.nupkg",
+   "sha256": "8d51754a33f6f496824872fe1686b7215430d3fc10d7eb789e722a180c30ba4d",
+   "size": 56914
+  },
+  "qp8.entityframework6/1.2.1": {
+   "file": "qp8.entityframework6.1.2.1.nupkg",
+   "sha256": "d2da330460a036c06fac61b7e671b37aaa557fcfaa437d98231b88caae6d52f1",
+   "size": 56933
+  },
+  "qp8.entityframework6/1.2.2": {
+   "file": "qp8.entityframework6.1.2.2.nupkg",
+   "sha256": "8c77e85ef5413f510f94e6048baa2980b4dc56b45311cb81caf75eba926caceb",
+   "size": 56894
+  },
+  "qp8.entityframework6/1.3.0": {
+   "file": "qp8.entityframework6.1.3.0.nupkg",
+   "sha256": "2c2b7dcb15719b1050a36ca4f8c7285d697d986da526dcd4ba443e7644b53181",
+   "size": 54217
+  },
+  "qp8.entityframework6/1.3.1": {
+   "file": "qp8.entityframework6.1.3.1.nupkg",
+   "sha256": "188b35ffb0769070411b15d54b2d00cc90d184bcc8e48b32c4a28fe9157cc849",
+   "size": 52687
+  },
+  "qp8.entityframework6/1.3.2": {
+   "file": "qp8.entityframework6.1.3.2.nupkg",
+   "sha256": "5090fea5db3cb1669772e7059575ac8c91f208eaff95c5178719209308eab853",
+   "size": 52688
+  },
+  "qp8.entityframework6/1.3.4": {
+   "file": "qp8.entityframework6.1.3.4.nupkg",
+   "sha256": "a7394bb71073fcfb300e212d180d4f6de215dd6a53c53b487e715251d4172bb5",
+   "size": 52900
+  },
+  "qp8.entityframework6/1.3.5": {
+   "file": "qp8.entityframework6.1.3.5.nupkg",
+   "sha256": "19a621efa2ffdc81897b96ba65300c3456512d47e45c10bbc5035f3815f64264",
+   "size": 54954
+  },
+  "qp8.entityframework6/1.3.6": {
+   "file": "qp8.entityframework6.1.3.6.nupkg",
+   "sha256": "94a7ec19fcf6db68ff72ca81d631f47bb1e66f44149d21e563decc63e18d7bae",
+   "size": 52505
+  },
+  "qp8.entityframework6/1.4.0": {
+   "file": "qp8.entityframework6.1.4.0.nupkg",
+   "sha256": "cca20f82ff3aae55c1f8f09e246787de5ec3bdb7d8355038ed270f83f464182d",
+   "size": 40712
+  },
+  "qp8.entityframework6/1.4.1": {
+   "file": "qp8.entityframework6.1.4.1.nupkg",
+   "sha256": "f9ac0e9013d82a91363d3fd122dbc5c8ad12ac037243beafc1f11655ea674739",
+   "size": 40712
+  },
+  "qp8.entityframeworkcore/6.1.0-beta1": {
+   "file": "qp8.entityframeworkcore.6.1.0-beta1.nupkg",
+   "sha256": "76d7355ed75c83abb81430f99c88754473704f0664bed6a5aeed5d7d4e8a76e3",
+   "size": 87242
+  },
+  "qp8.entityframeworkcore/6.1.0-beta2": {
+   "file": "qp8.entityframeworkcore.6.1.0-beta2.nupkg",
+   "sha256": "487f3fe631e4f060483d07d325b594a7828eac1d7751e0ab2d7ba02f294cb114",
+   "size": 87260
+  },
+  "qp8.entityframeworkcore/6.1.0-beta3": {
+   "file": "qp8.entityframeworkcore.6.1.0-beta3.nupkg",
+   "sha256": "b5fe000358ccf6e782dbe7c7a10268ba269eef5feabb8c771606a706e4ee1850",
+   "size": 87240
+  },
+  "qp8.entityframeworkcore/6.1.0-beta4": {
+   "file": "qp8.entityframeworkcore.6.1.0-beta4.nupkg",
+   "sha256": "04f1d315467728769207350e08c52b08839438669274f9af747920a1247ab483",
+   "size": 87242
+  },
+  "qp8.entityframeworkcore/6.1.0-beta5": {
+   "file": "qp8.entityframeworkcore.6.1.0-beta5.nupkg",
+   "sha256": "e94e799b40d1a0c6fbadc9aed885995ff9a7926c33503100eea074ca666e04b2",
+   "size": 88149
+  },
+  "qp8.entityframeworkcore/6.1.0-beta6": {
+   "file": "qp8.entityframeworkcore.6.1.0-beta6.nupkg",
+   "sha256": "8fb2555b2ccaaf489610dd36e55cf26f0b9bd8d3e7310901fd81f6b62b2b7faf",
+   "size": 87660
+  },
+  "qp8.entityframeworkcore/8.0.0": {
+   "file": "qp8.entityframeworkcore.8.0.0.nupkg",
+   "sha256": "0adabedb4dab9ee73ef4f770ace07043fb27097fafbfa93b5b86c4c8848c764f",
+   "size": 87658
+  },
+  "qp8.entityframeworkcore/8.0.0-beta1": {
+   "file": "qp8.entityframeworkcore.8.0.0-beta1.nupkg",
+   "sha256": "f14e0cdb67c5003f82d5ec1cd7db25ccdb847b8774b09f21259c83884aa9e75c",
+   "size": 87187
+  },
+  "qp8.entityframeworkcore/8.0.0-beta2": {
+   "file": "qp8.entityframeworkcore.8.0.0-beta2.nupkg",
+   "sha256": "af5275e488ee3edb7a463fecbde385e5d6d1b5fa003f8dd34c789667f6e590c6",
+   "size": 87238
+  },
+  "qp8.entityframeworkcore/8.0.0-beta3": {
+   "file": "qp8.entityframeworkcore.8.0.0-beta3.nupkg",
+   "sha256": "23dd6ef56f01c66c8e686e2137cb6c07ed9ee51462a2dbda7d8719f2c7ac7536",
+   "size": 87674
+  },
+  "qp8.entityframeworkcore/8.0.1": {
+   "file": "qp8.entityframeworkcore.8.0.1.nupkg",
+   "sha256": "2c57443f2ff74f6e507f4a46dbe595551dd0148b0cbb05c4f70307e1fe5d36f1",
+   "size": 87657
+  },
+  "qp8.infrastructure.logging.autofac/2.1.0": {
+   "file": "qp8.infrastructure.logging.autofac.2.1.0.nupkg",
+   "sha256": "e4e71081ff93b6025f5d9409c93c748e8dc9c1291ec1fddb3005874f0963081d",
+   "size": 4606
+  },
+  "qp8.infrastructure.logging.autofac/2.2.0": {
+   "file": "qp8.infrastructure.logging.autofac.2.2.0.nupkg",
+   "sha256": "a45f2145f45b57cd160fd107ea38700d39ea271a6c4b07ad435d35584d5873d8",
+   "size": 7159
+  },
+  "qp8.infrastructure.logging.prtgmonitoring.unity/2.1.0": {
+   "file": "qp8.infrastructure.logging.prtgmonitoring.unity.2.1.0.nupkg",
+   "sha256": "c60fe0473780eb6799fe3b114f5312dbc11105d50a4660ac4a24e9239bdc7490",
+   "size": 5016
+  },
+  "qp8.infrastructure.logging.prtgmonitoring.unity/2.2.0": {
+   "file": "qp8.infrastructure.logging.prtgmonitoring.unity.2.2.0.nupkg",
+   "sha256": "971f10ca458d448018d4c6c799083c158099259c16eba413a1e55c29af9e1806",
+   "size": 7886
+  },
+  "qp8.infrastructure.logging.prtgmonitoring/2.1.0": {
+   "file": "qp8.infrastructure.logging.prtgmonitoring.2.1.0.nupkg",
+   "sha256": "bf8b8eb71a75ec5097a96268184a5d96ee4bdf4a59d621571b0da8349b433e74",
+   "size": 8322
+  },
+  "qp8.infrastructure.logging.prtgmonitoring/2.2.0": {
+   "file": "qp8.infrastructure.logging.prtgmonitoring.2.2.0.nupkg",
+   "sha256": "830cc7806cd852e2a2ba96cb7b4c1708d7f20075773537d5019dc671b3b582bb",
+   "size": 14514
+  },
+  "qp8.infrastructure.logging.unity/2.1.0": {
+   "file": "qp8.infrastructure.logging.unity.2.1.0.nupkg",
+   "sha256": "275ea2494750f36666c600298b08729cd6b09a338b0654331b374cd13c255e5d",
+   "size": 4685
+  },
+  "qp8.infrastructure.logging.unity/2.2.0": {
+   "file": "qp8.infrastructure.logging.unity.2.2.0.nupkg",
+   "sha256": "4dc26e6e4d5bf23e3d79225979a1e5bef75c31452d475d04434446b9f04120e6",
+   "size": 7304
+  },
+  "qp8.infrastructure.logging/1.0.0": {
+   "file": "qp8.infrastructure.logging.1.0.0.nupkg",
+   "sha256": "1ce492a21c173c60d9a4a3e1831f49cc3d61cb9925bf8ade6ef6a6073ebb3600",
+   "size": 7690
+  },
+  "qp8.infrastructure.logging/1.1.0": {
+   "file": "qp8.infrastructure.logging.1.1.0.nupkg",
+   "sha256": "b722f824c2d355c028fb6ee8fde52eff747d8bc2d44ab65681e1c507e354bbc2",
+   "size": 8700
+  },
+  "qp8.infrastructure.logging/1.1.1": {
+   "file": "qp8.infrastructure.logging.1.1.1.nupkg",
+   "sha256": "1dc6eed23fa737a2f3d28c67aaa92dd282966845f95d554dd6cc815fbb1d6f7f",
+   "size": 8767
+  },
+  "qp8.infrastructure.logging/2.1.0": {
+   "file": "qp8.infrastructure.logging.2.1.0.nupkg",
+   "sha256": "916bc09c83f0e0abf64d8c207afdbb7ac62b37fcfebddff511b7591883887106",
+   "size": 7844
+  },
+  "qp8.infrastructure.logging/2.2.0": {
+   "file": "qp8.infrastructure.logging.2.2.0.nupkg",
+   "sha256": "a548801b29b897983d937766ada7ddb4afd4dc870b9ce07a4c3a323caeab6194",
+   "size": 13679
+  },
+  "qp8.infrastructure.testtools/1.0.0": {
+   "file": "qp8.infrastructure.testtools.1.0.0.nupkg",
+   "sha256": "5228b18262bb3b8aac420b928d9eab469a83d04465540457919e12ffb3cc50c7",
+   "size": 6904
+  },
+  "qp8.infrastructure.testtools/1.1.0": {
+   "file": "qp8.infrastructure.testtools.1.1.0.nupkg",
+   "sha256": "ee450322ff2f72c5573f93746a087ab536ac00ab86a471572adc7bdf7be6106f",
+   "size": 6969
+  },
+  "qp8.infrastructure.testtools/1.1.1": {
+   "file": "qp8.infrastructure.testtools.1.1.1.nupkg",
+   "sha256": "838d06eb89e8a30df384d8d5c079c5fb718111f500bcca3eeec7e09590a70099",
+   "size": 6848
+  },
+  "qp8.infrastructure.web.aspnet/2.1.0": {
+   "file": "qp8.infrastructure.web.aspnet.2.1.0.nupkg",
+   "sha256": "156a3ab33ef2c184d44f3cc19d5a62a4b91baa5383ebaa4a14acedb777c87575",
+   "size": 5439
+  },
+  "qp8.infrastructure.web.aspnet/2.2.0": {
+   "file": "qp8.infrastructure.web.aspnet.2.2.0.nupkg",
+   "sha256": "07b87c9b14a7eb144f5e8d400cccab4f21078f33d3db80fce5abaa68c67cdee6",
+   "size": 5491
+  },
+  "qp8.infrastructure.web/2.2.0": {
+   "file": "qp8.infrastructure.web.2.2.0.nupkg",
+   "sha256": "5e9295caca1d78d42eb21e031d51a7a16473b682fd8feb98fc4a870cb66cad65",
+   "size": 11661
+  },
+  "qp8.infrastructure.web/2.2.1": {
+   "file": "qp8.infrastructure.web.2.2.1.nupkg",
+   "sha256": "931eb24528a792713ac4108804362ed2804ec697370bc320f52b791806c9d624",
+   "size": 11683
+  },
+  "qp8.infrastructure.web/2.3.0": {
+   "file": "qp8.infrastructure.web.2.3.0.nupkg",
+   "sha256": "d2b209ce70b4aae86e73b93e9bd126f1e6abda72ed0fd56bc502f6d12c4a9fd0",
+   "size": 6874
+  },
+  "qp8.infrastructure.web/2.3.1": {
+   "file": "qp8.infrastructure.web.2.3.1.nupkg",
+   "sha256": "36f1aed0dec7fa584a2d263c392df8068f4c31394af551303c396e33cb49c56a",
+   "size": 6861
+  },
+  "qp8.infrastructure.web/2.3.4": {
+   "file": "qp8.infrastructure.web.2.3.4.nupkg",
+   "sha256": "fec7c033e8b283187ef29e3691a707dec9d6192123ccda83745cf155b89eb487",
+   "size": 6870
+  },
+  "qp8.infrastructure.web/2.3.4-beta1": {
+   "file": "qp8.infrastructure.web.2.3.4-beta1.nupkg",
+   "sha256": "ee63c1e7caa2ec6d7751f87fe8f3d6e4f029f5f458b70301209b5f5d9f273329",
+   "size": 6891
+  },
+  "qp8.infrastructure.web/2.3.5": {
+   "file": "qp8.infrastructure.web.2.3.5.nupkg",
+   "sha256": "75081bb632c81451e4b6be2a05ad0a1c60a92443dedd8ee7598b8c03c05f00ac",
+   "size": 6870
+  },
+  "qp8.infrastructure.web/2.3.6": {
+   "file": "qp8.infrastructure.web.2.3.6.nupkg",
+   "sha256": "a95a2966f3fd7337cd52929552878d6c13c482328c8ab934847c9671d66104a6",
+   "size": 6872
+  },
+  "qp8.infrastructure.web/2.3.7": {
+   "file": "qp8.infrastructure.web.2.3.7.nupkg",
+   "sha256": "a3640ce266a8629e9046b061c7fd2d0d033f829f72bd4ed2fb0559a38a35db20",
+   "size": 6872
+  },
+  "qp8.infrastructure.web/2.3.8": {
+   "file": "qp8.infrastructure.web.2.3.8.nupkg",
+   "sha256": "f497afbd44f901ab1ae4e42d0e7c0d204f5ebf3b61d3cb64121580d9e28ad9a0",
+   "size": 8331
+  },
+  "qp8.infrastructure.web/2.4.0": {
+   "file": "qp8.infrastructure.web.2.4.0.nupkg",
+   "sha256": "708c245641973ee36b83eff7c88e82608152b3d6c38b6713e42868f409a21944",
+   "size": 7034
+  },
+  "qp8.infrastructure/2.2.0": {
+   "file": "qp8.infrastructure.2.2.0.nupkg",
+   "sha256": "653995df7e93e808dbe742b225d17e0dcc3383fab9fdb410ceb785544b4ff404",
+   "size": 9837
+  },
+  "qp8.infrastructure/2.2.1": {
+   "file": "qp8.infrastructure.2.2.1.nupkg",
+   "sha256": "0303bb504b3f94c9fcdfee8889a1fa8b8cb44075d581752c26bbc3c7328e4362",
+   "size": 9838
+  },
+  "qp8.infrastructure/2.3.0": {
+   "file": "qp8.infrastructure.2.3.0.nupkg",
+   "sha256": "2464e02ca6f7c4099155fc20f6c76b9545be615251651f04a945750b2a66a3ad",
+   "size": 10229
+  },
+  "qp8.infrastructure/2.3.1": {
+   "file": "qp8.infrastructure.2.3.1.nupkg",
+   "sha256": "5cc52aab43252b2b09fa9fb3f7fa582fefa97be30335bdb81a51d0143b96028b",
+   "size": 10240
+  },
+  "qp8.infrastructure/2.3.4": {
+   "file": "qp8.infrastructure.2.3.4.nupkg",
+   "sha256": "bd20d94e78e8abd5f3bc9aaaa59afe305fc5f2216325fd4d422bcc410cd618c9",
+   "size": 10246
+  },
+  "qp8.infrastructure/2.3.4-beta1": {
+   "file": "qp8.infrastructure.2.3.4-beta1.nupkg",
+   "sha256": "e23700bb3dc0eaca16e21d3e992ec9028fa1db43f1db318e21988d69b965fbef",
+   "size": 10269
+  },
+  "qp8.infrastructure/2.3.5": {
+   "file": "qp8.infrastructure.2.3.5.nupkg",
+   "sha256": "0580256f8e9d12406936f2982c3ffc02ae47115f06c48f1f1ff19318d6151a81",
+   "size": 10324
+  },
+  "qp8.infrastructure/2.3.6": {
+   "file": "qp8.infrastructure.2.3.6.nupkg",
+   "sha256": "2a68587b27cf8ecaf4b0f138b6170e89f27692bc49ce0869847e9ebecb1edc30",
+   "size": 10325
+  },
+  "qp8.infrastructure/2.3.7": {
+   "file": "qp8.infrastructure.2.3.7.nupkg",
+   "sha256": "cbc869e8212a86530b53f81eb2c5f865069f62618b44db592d9773a294b0894e",
+   "size": 10326
+  },
+  "qp8.infrastructure/2.3.8": {
+   "file": "qp8.infrastructure.2.3.8.nupkg",
+   "sha256": "c7c663c0895041ae8304bb052e49e587fc82067221f9d37da820fdb36df623c0",
+   "size": 11563
+  },
+  "qp8.infrastructure/2.4.0": {
+   "file": "qp8.infrastructure.2.4.0.nupkg",
+   "sha256": "b555935d28cb15c24b7d6cb9df407970286be73c0aedb1abce6e65ac3f88c7d0",
+   "size": 10284
+  },
+  "qp8.infrastucture.testtools/1.0.0": {
+   "file": "qp8.infrastucture.testtools.1.0.0.nupkg",
+   "sha256": "50136968166a75274f6ced03c459db6194ef10e44f3f9d5d6988e2d4e70a8f2b",
+   "size": 5127
+  },
+  "qp8.infrastucture/1.0.0": {
+   "file": "qp8.infrastucture.1.0.0.nupkg",
+   "sha256": "96db7c82f9d68b28119b621a5f88abd741d090dfbcaa22a34ea48ef13fa303e7",
+   "size": 5885
+  },
+  "qp8.plugins.contract/1.0.0": {
+   "file": "qp8.plugins.contract.1.0.0.nupkg",
+   "sha256": "fa9dfc5fb252585a9dcd85bcb7423af9f80e5a07e7741d0d29ad7232659736fa",
+   "size": 4558
+  },
+  "qp8.plugins.contract/1.0.1": {
+   "file": "qp8.plugins.contract.1.0.1.nupkg",
+   "sha256": "e9dd0e3f1428de318abe5a5c79e959f03e93fb6a86781ec77c90e24843f2155b",
+   "size": 4648
+  },
+  "qp8.plugins.contract/1.1.0": {
+   "file": "qp8.plugins.contract.1.1.0.nupkg",
+   "sha256": "24a159d1c4cdead819ce02510480c432dc78774fae662677b34e909c1063c0c2",
+   "size": 4726
+  },
+  "qp8.plugins.contract/1.2.0": {
+   "file": "qp8.plugins.contract.1.2.0.nupkg",
+   "sha256": "eef1cad8937d80a4b92546442c36d788d0ba92222a281e90a13357110e0e7e0b",
+   "size": 4895
+  },
+  "qp8backendapi.interaction/1.0.0": {
+   "file": "qp8backendapi.interaction.1.0.0.nupkg",
+   "sha256": "c3cfef9c8e36bf8579b86bb04f3f0c75aebc25adad9bec9139cf3b354f024101",
+   "size": 15195
+  },
+  "qp8backendapi.interaction/1.0.1": {
+   "file": "qp8backendapi.interaction.1.0.1.nupkg",
+   "sha256": "bc871c3ca59dbff6f7c0cf4c52cef9c5e768c84b1b86c4913292dbebd9cdaf38",
+   "size": 9450
+  },
+  "qp8backendapi.interaction/1.0.2": {
+   "file": "qp8backendapi.interaction.1.0.2.nupkg",
+   "sha256": "68b9f93766c1766d4582c22f23ebb5a437d79621f614bdf20f00e3f1e5bba2f6",
+   "size": 9448
+  },
+  "qp8backendapi.interaction/1.0.3": {
+   "file": "qp8backendapi.interaction.1.0.3.nupkg",
+   "sha256": "cf34b216095f51620662f1e183ca8008fc545555365a7d59804b64fae7d3a307",
+   "size": 12996
+  },
+  "qp8backendapi.interaction/1.0.4": {
+   "file": "qp8backendapi.interaction.1.0.4.nupkg",
+   "sha256": "d2677eaef0f5091738a7c03fe25a9db7362f15c3d312584c9d83d8d85b6318e0",
+   "size": 13024
+  },
+  "qp8backendapi.interaction/1.0.5": {
+   "file": "qp8backendapi.interaction.1.0.5.nupkg",
+   "sha256": "b4208546e685f3f6450997bdab1bf6f6fe7d90a02a0e3665deb3c112d4e5c745",
+   "size": 13026
+  },
+  "qp8backendapi.interaction/1.1.1": {
+   "file": "qp8backendapi.interaction.1.1.1.nupkg",
+   "sha256": "bb03be91fd9a6b0acdc74412b764c27612e56e8fad742b6fe15d9a98f38d3da8",
+   "size": 13988
+  },
+  "qpdatalayer/1.0.0": {
+   "file": "qpdatalayer.1.0.0.nupkg",
+   "sha256": "123e2b956f942ac1783c6f16421e8b9026a583518abeefd895c6db2ab6329761",
+   "size": 29055
+  },
+  "quantumart.aspnetcore/6.1.0": {
+   "file": "quantumart.aspnetcore.6.1.0.nupkg",
+   "sha256": "fa04fd4e460758be1a3e35eaf4daadea487872c7e93e0dc4afbfee78c4220c9b",
+   "size": 123608
+  },
+  "quantumart.aspnetcore/6.1.0-beta8": {
+   "file": "quantumart.aspnetcore.6.1.0-beta8.nupkg",
+   "sha256": "de563dd577250362db73befc9a99379f26089a96e14ebd0bce9dbd9710d6cca9",
+   "size": 123514
+  },
+  "quantumart.aspnetcore/6.1.1": {
+   "file": "quantumart.aspnetcore.6.1.1.nupkg",
+   "sha256": "d22502c5ba8812a541b2c607fe87d892d3f30beac24e4f48ad2e20ac76caaf0e",
+   "size": 123585
+  },
+  "quantumart.aspnetcore/6.1.2": {
+   "file": "quantumart.aspnetcore.6.1.2.nupkg",
+   "sha256": "a85ddd1aaf0428c0126ab9c8d74926422a6866f13d73130bc0e4a0aa95a245dd",
+   "size": 123766
+  },
+  "quantumart.aspnetcore/6.1.3": {
+   "file": "quantumart.aspnetcore.6.1.3.nupkg",
+   "sha256": "1a5f7c5fda704bc3bee09c0d2f61ca07afb9d8e667d8e2fda37562ed78d47781",
+   "size": 123823
+  },
+  "quantumart.aspnetcore/6.2.0": {
+   "file": "quantumart.aspnetcore.6.2.0.nupkg",
+   "sha256": "e71e5b7048d25b5e7e4a52851dfe246366d029a66fb38bf3886c15b1563944db",
+   "size": 122495
+  },
+  "quantumart.aspnetcore/6.2.1": {
+   "file": "quantumart.aspnetcore.6.2.1.nupkg",
+   "sha256": "47c10920f1e354a1174fe09848a8f203cb18c8bd6cbb8079b9a7a275d0d31e7d",
+   "size": 122527
+  },
+  "quantumart.aspnetcore/6.2.2": {
+   "file": "quantumart.aspnetcore.6.2.2.nupkg",
+   "sha256": "2f5fff92ee64516ef16dfe555a111e5b2bf407c27a67ce776b5da345d6946c61",
+   "size": 122515
+  },
+  "quantumart.aspnetcore/6.3.0": {
+   "file": "quantumart.aspnetcore.6.3.0.nupkg",
+   "sha256": "36bcb6acbc639ccd53a3d685e5fb679f9e5d32b408d47e49ac222edf1e8c75b5",
+   "size": 122556
+  },
+  "quantumart.aspnetcore/6.3.1": {
+   "file": "quantumart.aspnetcore.6.3.1.nupkg",
+   "sha256": "c5d397368cb21c3d47adfca4ffab3fe7278984a4dc8b27e069d311ab0282063e",
+   "size": 122553
+  },
+  "quantumart.aspnetcore/6.3.2": {
+   "file": "quantumart.aspnetcore.6.3.2.nupkg",
+   "sha256": "7cf01819571fd84f1cc3558a529fb0fbcf85e0557aa6355f22d98c6e910ba075",
+   "size": 122548
+  },
+  "quantumart.qp8.assembling.t4/1.0.0": {
+   "file": "quantumart.qp8.assembling.t4.1.0.0.nupkg",
+   "sha256": "7a49e1a469d98c8ebd074185faae6f1094fded1ccf8e3d328ad79d82e0781ee1",
+   "size": 28531
+  },
+  "quantumart.qp8.assembling/1.0.10": {
+   "file": "quantumart.qp8.assembling.1.0.10.nupkg",
+   "sha256": "53361c06620148df45cda5bda8f736f3aace945a735581b036dbb1408c475bc8",
+   "size": 130760
+  },
+  "quantumart.qp8.assembling/1.0.10-beta1": {
+   "file": "quantumart.qp8.assembling.1.0.10-beta1.nupkg",
+   "sha256": "ebb9f085fcc897422841ac7304890328014bf719076a9ffce589939314dc6a09",
+   "size": 130801
+  },
+  "quantumart.qp8.assembling/1.0.10-beta2": {
+   "file": "quantumart.qp8.assembling.1.0.10-beta2.nupkg",
+   "sha256": "9e127d4f57a5c37a640e5bc7b6f0b2e86bc834b7a9f1a1213f6b0c42384442f3",
+   "size": 130793
+  },
+  "quantumart.qp8.assembling/1.0.9": {
+   "file": "quantumart.qp8.assembling.1.0.9.nupkg",
+   "sha256": "34b2818939ba3369f7ec882ca8b7cb7f094e8b3ddc34e941d8e220380f8b0124",
+   "size": 130741
+  },
+  "quantumart.qp8.assembling/1.1.0": {
+   "file": "quantumart.qp8.assembling.1.1.0.nupkg",
+   "sha256": "fe3bb8436860a4cc9cea325aa21b06358020b80f7b05e0eb658bc5eff98c698e",
+   "size": 66635
+  },
+  "quantumart.qp8.assembling/1.1.1": {
+   "file": "quantumart.qp8.assembling.1.1.1.nupkg",
+   "sha256": "263b0bd90f72761696940db169b779643c39caed1532ec3cccc5c8690ea6760c",
+   "size": 66707
+  },
+  "quantumart.qp8.assembling/1.1.2": {
+   "file": "quantumart.qp8.assembling.1.1.2.nupkg",
+   "sha256": "097d43f60c330c952bbfad83937e58a61c96d75e9342de1f1fc404364adb6bcc",
+   "size": 67129
+  },
+  "quantumart.qp8.assembling/1.2.0": {
+   "file": "quantumart.qp8.assembling.1.2.0.nupkg",
+   "sha256": "609a33f679ed0c3bd9904dab3629d94ac9ed5e339519d36a9db2f47873a809e1",
+   "size": 67085
+  },
+  "quantumart.qp8.assembling/1.2.1": {
+   "file": "quantumart.qp8.assembling.1.2.1.nupkg",
+   "sha256": "96d81aa967853771d40a7269a8e458f66c040f62373b804d3fc65ae868323e09",
+   "size": 67093
+  },
+  "quantumart.qp8.assembling/1.3.0": {
+   "file": "quantumart.qp8.assembling.1.3.0.nupkg",
+   "sha256": "e91d39dc66a222621c73783127486ad6fa6a8ca6054ea660fe3e3365b266c513",
+   "size": 67095
+  },
+  "quantumart.qp8.assembling/1.3.1": {
+   "file": "quantumart.qp8.assembling.1.3.1.nupkg",
+   "sha256": "136f8c129a638a3e4f0f17174123af95cb5915ffd946500980e4d959139aac95",
+   "size": 67098
+  },
+  "quantumart.qp8.bll/3.5.4": {
+   "file": "quantumart.qp8.bll.3.5.4.nupkg",
+   "sha256": "6b87e60ec8985042ef9d9013adb669fe39fd6d7d1aa04a371de5b458c3de4c0f",
+   "size": 1144116
+  },
+  "quantumart.qp8.bll/3.5.5": {
+   "file": "quantumart.qp8.bll.3.5.5.nupkg",
+   "sha256": "2f617afbd2a81be74ac9c2ea534f436611dd9d946878e1c26f16bef6a05faa97",
+   "size": 1145257
+  },
+  "quantumart.qp8.bll/3.5.6": {
+   "file": "quantumart.qp8.bll.3.5.6.nupkg",
+   "sha256": "7dd9b46f58eb21adae7fa8be0bb56aadbcea168b69e7f8fd5de13b8a498d64f8",
+   "size": 1145255
+  },
+  "quantumart.qp8.bll/3.5.7": {
+   "file": "quantumart.qp8.bll.3.5.7.nupkg",
+   "sha256": "5ae1bc0bc3e94ddb92d6741c6eb34b0452562412e953ab940f12e9cac36109a5",
+   "size": 1145280
+  },
+  "quantumart.qp8.bll/3.6.0": {
+   "file": "quantumart.qp8.bll.3.6.0.nupkg",
+   "sha256": "ad37f81dacdbe2d12939fab770665ac6a94f0907ca3f057558236624208f8c70",
+   "size": 1132236
+  },
+  "quantumart.qp8.bll/3.6.1": {
+   "file": "quantumart.qp8.bll.3.6.1.nupkg",
+   "sha256": "3f152ec17e3fd5a74874365dd64f3ea4c46f1dbcd1a9b0c25e3172e6bb961b14",
+   "size": 1132873
+  },
+  "quantumart.qp8.bll/3.6.2": {
+   "file": "quantumart.qp8.bll.3.6.2.nupkg",
+   "sha256": "136dd735b7013d6393e17cafe72f1f967abde9e3a28427225ec17d4edd41eaec",
+   "size": 1133036
+  },
+  "quantumart.qp8.bll/3.6.3": {
+   "file": "quantumart.qp8.bll.3.6.3.nupkg",
+   "sha256": "a996aee718d4f16b431f1878b2465ebf05547ed5d18bccf173b35175f068ada8",
+   "size": 1133098
+  },
+  "quantumart.qp8.bll/3.6.4": {
+   "file": "quantumart.qp8.bll.3.6.4.nupkg",
+   "sha256": "898d07f254fcfcb6cf4fe18e8be2b32433e7dddb9884640c0260188f56b035a0",
+   "size": 1134003
+  },
+  "quantumart.qp8.bll/3.6.5": {
+   "file": "quantumart.qp8.bll.3.6.5.nupkg",
+   "sha256": "405d26e34297431cec2dc6eb79d7334c5cea2bc2aceeed44f5fec7878be360b9",
+   "size": 1134017
+  },
+  "quantumart.qp8.bll/3.6.6": {
+   "file": "quantumart.qp8.bll.3.6.6.nupkg",
+   "sha256": "9726122cfab5ecf41a4ab7e1196fa186817495f631af99bd25a38460351ac04a",
+   "size": 1134025
+  },
+  "quantumart.workflow.integration.qp/0.1.1-alpha": {
+   "file": "quantumart.workflow.integration.qp.0.1.1-alpha.nupkg",
+   "sha256": "a62b57ecea2f0a43786f41462f5268a1703c10492e6b2f7ebf6eb1084189ef57",
+   "size": 14138
+  },
+  "quantumart.workflow.integration.qp/0.1.2-alpha": {
+   "file": "quantumart.workflow.integration.qp.0.1.2-alpha.nupkg",
+   "sha256": "c4b69ed06a7e87d62221c198d6b640ef1d9836b78f3c9279fa73835cc7499398",
+   "size": 14143
+  },
+  "quantumart.workflow.integration.qp/1.0.0": {
+   "file": "quantumart.workflow.integration.qp.1.0.0.nupkg",
+   "sha256": "7d723cb74d092e54b2b503fc810fffa4ad03385b6306cb20893c4fe0f26a5145",
+   "size": 14118
+  },
+  "quantumart.workflow.integration.qp/1.0.1": {
+   "file": "quantumart.workflow.integration.qp.1.0.1.nupkg",
+   "sha256": "3b545124def47f3ea0de8b77631ccbab0dc4220a01424778abbe5ff00cf5d27a",
+   "size": 14130
+  },
+  "quantumart.workflow.integration.qp/1.0.2": {
+   "file": "quantumart.workflow.integration.qp.1.0.2.nupkg",
+   "sha256": "9adc00ad6a93b451abdd911d18522f6156b5f6d5f0d612b5d24ce52a4dab5b9a",
+   "size": 14420
+  },
+  "quantumart.workflow.integration.qp/1.0.2-beta1": {
+   "file": "quantumart.workflow.integration.qp.1.0.2-beta1.nupkg",
+   "sha256": "8321c46677949e80bf8ed8504055093bd09989c252e07dc5e45e4942e8a3ddd6",
+   "size": 14173
+  },
+  "quantumart.workflow.integration.qp/1.0.2-beta2": {
+   "file": "quantumart.workflow.integration.qp.1.0.2-beta2.nupkg",
+   "sha256": "0ea5cb4b937a76c91185267acc3a4582abd8f45600a8c22d0aa76c30346a2c49",
+   "size": 14458
+  },
+  "quantumart.workflow.integration.qp/1.1.0": {
+   "file": "quantumart.workflow.integration.qp.1.1.0.nupkg",
+   "sha256": "1eb1021b43f03060fc89f0c918a313378abf4670a94c1a0f5b4a3340f7c4186c",
+   "size": 14550
+  },
+  "quantumart.workflow.integration.qp/1.1.0-beta1": {
+   "file": "quantumart.workflow.integration.qp.1.1.0-beta1.nupkg",
+   "sha256": "75472188a83d2db5865810e8c37e2e1966bdac06e68f6726225cd57a23c49936",
+   "size": 14887
+  },
+  "quantumart.workflow.integration.qp/1.1.0-beta2": {
+   "file": "quantumart.workflow.integration.qp.1.1.0-beta2.nupkg",
+   "sha256": "682b1d1f80cea8a1d17048645c08b14fcbca5a89576ae58f7e35bca24bb5c1bd",
+   "size": 14605
+  },
+  "quantumart.workflow.taskservice/0.1.0": {
+   "file": "quantumart.workflow.taskservice.0.1.0.nupkg",
+   "sha256": "056ad40c6e24216f8bd91819c788d9f8ee51afb70285393cb86068992589c73e",
+   "size": 21745
+  },
+  "quantumart.workflow.taskservice/0.1.1-alpha": {
+   "file": "quantumart.workflow.taskservice.0.1.1-alpha.nupkg",
+   "sha256": "09b5ab16d70088b8a5a3f5910b351c6799db9f3f12f0e074700714bd3ff9284e",
+   "size": 24206
+  },
+  "quantumart.workflow.taskservice/1.0.0": {
+   "file": "quantumart.workflow.taskservice.1.0.0.nupkg",
+   "sha256": "60ef5dffcd23bd467faa24e0b9c5566b68466f10feaf682e49de5b977e4f7fa9",
+   "size": 25593
+  },
+  "quantumart.workflow.taskservice/1.0.1": {
+   "file": "quantumart.workflow.taskservice.1.0.1.nupkg",
+   "sha256": "c54428733bf6c8916161cc44678ef274eba27ba430ad2b4acc49342c8fe58fac",
+   "size": 25577
+  },
+  "quantumart.workflow.taskservice/1.0.2": {
+   "file": "quantumart.workflow.taskservice.1.0.2.nupkg",
+   "sha256": "c0268201d5ae9aef23dc714831db6bf118184fa56922d4ba12d3b297044d98ea",
+   "size": 26932
+  },
+  "quantumart.workflow.taskservice/1.0.2-beta1": {
+   "file": "quantumart.workflow.taskservice.1.0.2-beta1.nupkg",
+   "sha256": "b6664020d04d5fbaae16c487c5f7938aad0377eab78ca096dd1da5ca7e02ee27",
+   "size": 26681
+  },
+  "quantumart.workflow.taskservice/1.0.2-beta2": {
+   "file": "quantumart.workflow.taskservice.1.0.2-beta2.nupkg",
+   "sha256": "1600d278d2a36e983a7ee32b9f6f77cd20031e90b1a1231e27653569a45845cd",
+   "size": 26959
+  },
+  "quantumart.workflow.taskservice/1.1.0": {
+   "file": "quantumart.workflow.taskservice.1.1.0.nupkg",
+   "sha256": "9c80df6e143d990262d4a4afbf7c55b2ea61ae3ebb411d48bd09e314c7fb20c2",
+   "size": 26851
+  },
+  "quantumart.workflow.taskservice/1.1.0-beta1": {
+   "file": "quantumart.workflow.taskservice.1.1.0-beta1.nupkg",
+   "sha256": "7f89fda8ff804907a76a77d9b478086b18b5296ee18c99b0d654bd89c8af86ce",
+   "size": 27214
+  },
+  "quantumart.workflow.taskservice/1.1.0-beta2": {
+   "file": "quantumart.workflow.taskservice.1.1.0-beta2.nupkg",
+   "sha256": "991920eb76b85bb6018294496d6056bb0a053fe6a75b0063aa54194e4a80beb3",
+   "size": 26895
+  },
+  "quantumart.workflow/0.1.0": {
+   "file": "quantumart.workflow.0.1.0.nupkg",
+   "sha256": "c442a300d685ca909c36b3865bec3f8a42f0bbbc63d130973b62bd8f9b4fb1c6",
+   "size": 14907
+  },
+  "quantumart.workflow/0.1.1-alpha": {
+   "file": "quantumart.workflow.0.1.1-alpha.nupkg",
+   "sha256": "30742f5572d16b0f33cddd7ed58b07660f2a66899bfb09ee66c943f95163c309",
+   "size": 17356
+  },
+  "quantumart.workflow/1.0.0": {
+   "file": "quantumart.workflow.1.0.0.nupkg",
+   "sha256": "8e653cb78bbc1a323d9544af8d038c64f3aa8297d30b63ee4a282da14eac9d3f",
+   "size": 18803
+  },
+  "quantumart.workflow/1.0.1": {
+   "file": "quantumart.workflow.1.0.1.nupkg",
+   "sha256": "e4d7ff848d2669e1440ff69967d95e83620815ff3c3a06c30c0c60c74f495c23",
+   "size": 18782
+  },
+  "quantumart.workflow/1.0.2": {
+   "file": "quantumart.workflow.1.0.2.nupkg",
+   "sha256": "86278c5e0228ac137604fd1fc75c3c649479feee3433e776c955027713e75851",
+   "size": 20717
+  },
+  "quantumart.workflow/1.0.2-beta1": {
+   "file": "quantumart.workflow.1.0.2-beta1.nupkg",
+   "sha256": "6119885de980da43fe129d6833b9a4a0dd9e2fc1a0535528b02da54753c74ff9",
+   "size": 19871
+  },
+  "quantumart.workflow/1.0.2-beta2": {
+   "file": "quantumart.workflow.1.0.2-beta2.nupkg",
+   "sha256": "c4211df54bcf0fdbcb675520c98c523dbf0e029a8340c569481e31d5e9b8337f",
+   "size": 20736
+  },
+  "quantumart.workflow/1.1.0": {
+   "file": "quantumart.workflow.1.1.0.nupkg",
+   "sha256": "f879e76bef6d960b0681214fb42f77211aae89a97ff7288ccaec862aa2a9ce4c",
+   "size": 20608
+  },
+  "quantumart.workflow/1.1.0-beta1": {
+   "file": "quantumart.workflow.1.1.0-beta1.nupkg",
+   "sha256": "a519284a0f140907a57cb8a10645be0d56cab3d54b811adfd5555786779f5035",
+   "size": 20790
+  },
+  "quantumart.workflow/1.1.0-beta2": {
+   "file": "quantumart.workflow.1.1.0-beta2.nupkg",
+   "sha256": "68307b8d3086602e46ffad7205bc744a00efa766c38c70be92157dea3bce1ded",
+   "size": 20633
+  },
+  "quantumart/4.0.10": {
+   "file": "quantumart.4.0.10.nupkg",
+   "sha256": "29e8f4b0ced645261338f9425d1cc1af6e0cf33baeb1aaa7efb3b151263e7827",
+   "size": 294102
+  },
+  "quantumart/4.0.11": {
+   "file": "quantumart.4.0.11.nupkg",
+   "sha256": "bdd0e84d616c54fd46063007626035154a58ee4dc882491f871d1e07c2fc0981",
+   "size": 295502
+  },
+  "quantumart/4.0.11-beta1": {
+   "file": "quantumart.4.0.11-beta1.nupkg",
+   "sha256": "d6b19d9a60c0b715a7bddb7ff8c62d3804157b3f07152cd797d814da7ff529df",
+   "size": 294163
+  },
+  "quantumart/4.0.11-beta2": {
+   "file": "quantumart.4.0.11-beta2.nupkg",
+   "sha256": "2d5c80ae9fca9e0f05ddc85119bb27a5bfcf583cef293a9000330f1d854e55a8",
+   "size": 294177
+  },
+  "quantumart/4.0.11-beta3": {
+   "file": "quantumart.4.0.11-beta3.nupkg",
+   "sha256": "543c825cbbcae2e6e7944e327ad53fae2338c4174ba1113c767c22a73fcda1fd",
+   "size": 294170
+  },
+  "quantumart/4.0.11-beta4": {
+   "file": "quantumart.4.0.11-beta4.nupkg",
+   "sha256": "f3d1587f076e45cddfc4a1ffd082859d07095c3237263745382b7be543eb0562",
+   "size": 294172
+  },
+  "quantumart/4.0.11-beta5": {
+   "file": "quantumart.4.0.11-beta5.nupkg",
+   "sha256": "a665712f175916047145731b9c8b0195cd61168e21a499cad2061def59642efa",
+   "size": 295583
+  },
+  "quantumart/4.0.5": {
+   "file": "quantumart.4.0.5.nupkg",
+   "sha256": "e99f511f7623022fa02cf23e893ee3d2983806addc59c1b9fc82b260297e1a17",
+   "size": 291000
+  },
+  "quantumart/4.0.6": {
+   "file": "quantumart.4.0.6.nupkg",
+   "sha256": "5ca2bd051afe426d07e7d8ffba6bf46722bf577afb07ac1dca7e27a2d0e58be1",
+   "size": 518473
+  },
+  "quantumart/4.0.7": {
+   "file": "quantumart.4.0.7.nupkg",
+   "sha256": "c2718b9d8ddcad0529a626e4d40c8f512f1cc3eea062c3951d73a995fb05845a",
+   "size": 522840
+  },
+  "quantumart/4.0.8": {
+   "file": "quantumart.4.0.8.nupkg",
+   "sha256": "df13ef7e755e5620f5b83d8ad174755dcbdcc29cc08fd2f6a9011225a565930e",
+   "size": 293835
+  },
+  "seleniumextension/1.0.10": {
+   "file": "seleniumextension.1.0.10.nupkg",
+   "sha256": "724a1b8b9e590bb50256ddec29cc4e54be5367a3d0b8711677eb3cd0404f3e8f",
+   "size": 23569172
+  },
+  "seleniumextension/1.0.11": {
+   "file": "seleniumextension.1.0.11.nupkg",
+   "sha256": "ea5d1dce399595aa70320cd25d184155d4bb7e4910d2a42bd764c7a5063bde48",
+   "size": 23569807
+  },
+  "seleniumextension/1.0.12": {
+   "file": "seleniumextension.1.0.12.nupkg",
+   "sha256": "500b2bf22aaea3121fe597129977ee7642772a22bb70c2068c53d1d8f5d3f38e",
+   "size": 23569299
+  },
+  "seleniumextension/1.0.13": {
+   "file": "seleniumextension.1.0.13.nupkg",
+   "sha256": "a511d7e563d187e8dc5e7ebb9132e13b8fd610834a2285559a59f1c10bb849a7",
+   "size": 23569309
+  },
+  "seleniumextension/1.0.8": {
+   "file": "seleniumextension.1.0.8.nupkg",
+   "sha256": "7598a0415284f6e71aadbd7e0b8f61194d865d194c467e7c2a33dd70bad9ad1e",
+   "size": 23105206
+  },
+  "seleniumextension/1.0.9": {
+   "file": "seleniumextension.1.0.9.nupkg",
+   "sha256": "3c595f16b2664f1eef48abf9c73ac19f50a1c875b2693e66240ef8cd6ca4a5f0",
+   "size": 23569160
+  },
+  "seleniumextension/1.1.0": {
+   "file": "seleniumextension.1.1.0.nupkg",
+   "sha256": "71888411a50928bda4f14f329b1075ec82eddb059e2173420c7b93f9d97dbd0c",
+   "size": 14492
+  },
+  "seleniumextension/1.1.1": {
+   "file": "seleniumextension.1.1.1.nupkg",
+   "sha256": "7b8a86b4f44f71d8f82f0a2cf2b393e3bae2e264fbf8d3d8fd9e35b0db14f3d8",
+   "size": 14446
+  },
+  "seleniumextension/1.1.2": {
+   "file": "seleniumextension.1.1.2.nupkg",
+   "sha256": "011528d5370689564ad93d634e83f4504d2c03fce349450069b7645f4c3f1646",
+   "size": 14705
+  },
+  "seleniumextension/1.1.3": {
+   "file": "seleniumextension.1.1.3.nupkg",
+   "sha256": "451be778675e116b3aa04f05c4b239e6482d9d25d8618f7f51391153d1416abc",
+   "size": 15007
+  },
+  "seleniumextension/1.1.4": {
+   "file": "seleniumextension.1.1.4.nupkg",
+   "sha256": "70dae8637d374dc26bab5608d0da8995c0ea46563165e2ef7abb7d8c404cd9e0",
+   "size": 14994
+  },
+  "servernameheadermodule/1.0.0": {
+   "file": "servernameheadermodule.1.0.0.nupkg",
+   "sha256": "a92e6c1208307277f2046630f4026ceb1d78535248caabae4f38d004a8686662",
+   "size": 3992
+  },
+  "servernameheadermodule/1.0.0.1": {
+   "file": "servernameheadermodule.1.0.0.1.nupkg",
+   "sha256": "940a56289158cf14170378288301247f2913c15cc98af204041487800b405560",
+   "size": 3993
+  },
+  "servernameheadermodule/1.0.0.2": {
+   "file": "servernameheadermodule.1.0.0.2.nupkg",
+   "sha256": "97c4f136567d9dec6198eefcfe69e4562ad0d25ec8a63512d18296445cb2fc2d",
+   "size": 4000
+  },
+  "websphere.mq.net/7.5.0.4": {
+   "file": "websphere.mq.net.7.5.0.4.nupkg",
+   "sha256": "a6eaa382767152283efde593aef856dd8b4fc8367eebe318f081ebba84b8c996",
+   "size": 356741
+  }
+ }
+}

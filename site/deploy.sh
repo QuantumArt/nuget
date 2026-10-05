@@ -102,7 +102,9 @@ GOT=0
 while IFS= read -r url; do
     [ -n "$url" ] || continue
     f="$(basename "$url")"
-    # [ -s ] вместо [ -f ]: нулевой файл от прерванной закачки не считаем.
+    # Проверка СТРОГАЯ и только unzip: python zipfile доверчив и пропускает
+    # файл с мусором внутри архива (testzip() вернёт None). unzip -t такой
+    # файл отвергает кодом 1. Не заменяй unzip на python -m zipfile.
     if [ -s "$f" ] && unzip -tqq "$f" >/dev/null 2>&1; then
         GOT=$((GOT+1))
         continue
@@ -110,19 +112,33 @@ while IFS= read -r url; do
     # Хост из манифеста не используем: вместо него ставим ORIGIN_HOST, а адрес
     # закрепляем через --resolve на ORIGIN_IP. Путь после /v3/package/ одинаков.
     path="${url#*nuget.qsupport.ru}"
+    # Качаем во временный файл и переименовываем атомарно.
+    #
+    # Почему не прямо в "$f": если закачку прервать и запустить заново, не
+    # успев удалить старый файл, ИЛИ если два curl пишут в один путь
+    # (прерванная фоновая задача не всегда умирает), получается файл с
+    # мусором ВНУТРИ архива. Такой файл:
+    #   - проходит python zipfile (testzip() == None, архив «читается»),
+    #   - но не проходит unzip -t (код возврата 1).
+    # Именно так был испорчен seleniumextension.1.0.12 на 8 388 239 байт.
+    # Поэтому проверка строгая — на unzip, не на python.
+    #
     # --max-time 900: SeleniumExtension 1.0.8–1.0.13 весит по 20+ МБ и на
     # дефолтных 30s curl стабильно обрывается, оставляя обрезанный zip.
     # Остальные пакеты в среднем 26 КБ.
     if curl -sS -f --max-time 900 --retry 3 --retry-delay 2 \
         --resolve "$ORIGIN_HOST:443:$ORIGIN_IP" \
-        -o "$f" "https://${ORIGIN_HOST}${path}"; then
-        if ! unzip -tqq "$f" >/dev/null 2>&1; then
+        -o "$f.part" "https://${ORIGIN_HOST}${path}"; then
+        if unzip -tqq "$f.part" >/dev/null 2>&1; then
+            mv -f "$f.part" "$f"
+        else
             echo "   ⚠️  битый архив, удаляю: $f"
-            rm -f "$f"
+            rm -f "$f.part"
         fi
         GOT=$((GOT+1))
     else
         echo "   ❌ не скачался: $f"
+        rm -f "$f.part"
     fi
     [ $((GOT % 25)) -eq 0 ] && echo "   ... $GOT / $TOTAL"
 done < "$PACKAGE_LIST"
