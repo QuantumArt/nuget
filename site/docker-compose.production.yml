@@ -35,7 +35,11 @@ services:
     volumes:
       - "../baget-data:/var/baget"
     healthcheck:
-      test: ["CMD-SHELL", "wget --spider -q http://127.0.0.1/v3/index.json || exit 1"]
+      # curl, а НЕ wget: в образе BaGet (dotnet aspnet, Debian-база) wget
+      # отсутствует, есть только /usr/bin/curl. Healthcheck на wget падал бы
+      # всегда и метил контейнер как unhealthy при полностью рабочем фиде —
+      # ровно то, что случилось на VPS.
+      test: ["CMD-SHELL", "curl -sf -o /dev/null http://127.0.0.1/v3/index.json || exit 1"]
       interval: 30s
       timeout: 5s
       start_period: 20s

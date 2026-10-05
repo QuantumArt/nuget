@@ -164,8 +164,28 @@ echo "📤 Step 4: Pushing packages into the local feed..."
 # Это НЕ поломка, такой пакет просто уже в фиде.
 PUSHED=0
 SKIPPED=0
-for f in "$NUPKG_DIR"/*.nupkg; do
-    [ -f "$f" ] || continue
+# Идём по МАНИФЕСТУ, а не по файлам в каталоге: в URL манифеста id и версия
+# уже разделены. По имени файла их восстановить нельзя — идентификаторы
+# содержат цифры (qp8.infrastucture, qp8backendapi.interaction), и разбор по
+# первому числовому сегменту давал id='qp', ver='8.infrastucture.1.0.0'.
+while IFS= read -r url; do
+    [ -n "$url" ] || continue
+    name="$(basename "$url")"
+    f="$NUPKG_DIR/$name"
+    if [ ! -s "$f" ]; then
+        echo "   ⚠️  нет файла, пропускаю: $name"
+        continue
+    fi
+    path="${url#*nuget.qsupport.ru}"
+    # Сначала спрашиваем фид: есть ли уже эта версия. Без этой проверки
+    # повторный запуск выгружал бы заново все файлы (некоторые по 20+ МБ)
+    # ради 409. HEAD стоит копейки.
+    code=$(curl -s -o /dev/null -w '%{http_code}' -I --max-time 30 \
+        "$FEED_URL${path}")
+    if [ "$code" = "200" ]; then
+        SKIPPED=$((SKIPPED+1))
+        continue
+    fi
     if curl -sS -f --max-time 300 -X PUT \
         -H "X-NuGet-ApiKey: " \
         -F "package=@$f" \
@@ -175,7 +195,7 @@ for f in "$NUPKG_DIR"/*.nupkg; do
         SKIPPED=$((SKIPPED+1))
     fi
     [ $(( (PUSHED+SKIPPED) % 25 )) -eq 0 ] && echo "   ... $((PUSHED+SKIPPED)) обработано (залито $PUSHED, уже было $SKIPPED)"
-done
+done < "$PACKAGE_LIST"
 echo "   залито: $PUSHED, уже было в фиде: $SKIPPED"
 
 # ── Шаг 5. Проверка ─────────────────────────────────────────────────────────
