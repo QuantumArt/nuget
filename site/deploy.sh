@@ -34,6 +34,19 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 ORIGIN_HOST="${ORIGIN_HOST:-nuget.qsupport.ru}"
 ORIGIN_IP="${ORIGIN_IP:-91.216.147.7}"
 PACKAGE_LIST="${PACKAGE_LIST:-$SCRIPT_DIR/packages-11x.txt}"
+# Резолвим манифест в абсолютный путь СРАЗУ, до любых cd.
+# Дальше скрипт переходит в каталог пакетов (cd "$NUPKG_DIR"), и относительный
+# путь из переменной окружения там перестаёт существовать:
+#     PACKAGE_LIST=./packages-full.txt ./deploy.sh
+#     → ./deploy.sh: line 118: ./packages-full.txt: No such file or directory
+# Путь из окружения почти всегда задают относительным, поэтому страховка
+# обязательна, а не косметика.
+if [ ! -f "$PACKAGE_LIST" ]; then
+    echo "❌ манифест пакетов не найден: $PACKAGE_LIST" >&2
+    echo "   (задан через PACKAGE_LIST; по умолчанию $SCRIPT_DIR/packages-11x.txt)" >&2
+    exit 2
+fi
+PACKAGE_LIST="$(cd "$(dirname "$PACKAGE_LIST")" && pwd)/$(basename "$PACKAGE_LIST")"
 FEED_URL="${FEED_URL:-http://127.0.0.1:3022}"
 # Ключ публикации из .env рядом с compose. Пусто = фид открыт для пуша.
 # dotenv не всегда подгружается compose, читаем сами.
