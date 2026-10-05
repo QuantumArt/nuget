@@ -146,25 +146,87 @@ for i in $(seq 1 40); do
     sleep 1
 done
 
-# ── Шаг 3. Скачать пакеты с исходного фида ───────────────────────────────────
-echo "⬇️  Step 3: Downloading packages from $ORIGIN_HOST (pinned to $ORIGIN_IP)"
+# ── Шаг 3. Проверить локальные файлы и докачать недостающие ───────────────────
+# Заголовок раньше назывался «Downloading», и это вводило в заблуждение: при
+# повторном запуске скрипт НИЧЕГО не качает, а только сверяет уже скачанное.
+echo "🔎 Step 3: Checking local packages in $NUPKG_DIR"
 mkdir -p "$NUPKG_DIR"
+
+# Сверка целиком идёт одним проходом на python: он читает каждый файл один раз
+# и печатает ТОЛЬКО те, которые надо докачать. Раньше на каждый файл звался
+# `unzip -t` из bash — те же 4+ секунды, но 629 отдельных проверок и ни одного
+# счётчика, из-за чего шаг и выглядел повторной загрузкой.
+#
+# Сверка строгая и идёт по sha256 против эталона, а не по признаку zip:
+# python zipfile пропускает файл с мусором внутри архива (testzip() == None),
+# а сравнение хеша ловит любое отличие побайтово. Проверка по хешу к тому же
+# дешевле: unzip -t распаковывает весь архив, sha256 только читает байты.
+NEEDED="$NUPKG_DIR/.need-download"
+if [ -f "$SCRIPT_DIR/expected/manifest-629.json" ]; then
+    python3 - "$PACKAGE_LIST" "$NUPKG_DIR" "$SCRIPT_DIR/expected/manifest-629.json" > "$NEEDED" <<'PYEOF'
+import hashlib, json, os, sys
+manifest, pkgdir, etalon_path = sys.argv[1:4]
+by_file = {}
+try:
+    d = json.load(open(etalon_path))
+    for v in d.get('versions', {}).values():
+        by_file[v['file']] = v['sha256']
+except Exception:
+    pass
+total = ok = 0
+for line in open(manifest):
+    url = line.strip()
+    if not url:
+        continue
+    total += 1
+    name = url.rsplit('/', 1)[-1]
+    p = os.path.join(pkgdir, name)
+    want = by_file.get(name)
+    if want:
+        # эталон есть: побайтовая сверка, строже любого zip-теста
+        try:
+            with open(p, 'rb') as fh:
+                if hashlib.sha256(fh.read()).hexdigest() == want:
+                    ok += 1
+                    continue
+        except OSError:
+            pass
+    else:
+        # версии нет в эталоне (например, доливка полной истории) — архивная
+        # проверка через unzip, из python zipfile она ненадёжна
+        r = os.system('unzip -tqq %s >/dev/null 2>&1' % __import__('shlex').quote(p))
+        if r == 0 and os.path.getsize(p) > 0 if os.path.exists(p) else False:
+            ok += 1
+            continue
+    print(url)   # этот URL надо докачать
+sys.stderr.write('   локально годных: %d из %d\n' % (ok, total))
+PYEOF
+else
+    echo "   (эталона нет — проверяю архивы через unzip)"
+    : > "$NEEDED"
+    while IFS= read -r url; do
+        [ -n "$url" ] || continue
+        f="$NUPKG_DIR/$(basename "$url")"
+        if [ -s "$f" ] && unzip -tqq "$f" >/dev/null 2>&1; then :; else echo "$url" >> "$NEEDED"; fi
+    done < "$PACKAGE_LIST"
+    echo "   локально годных: $((TOTAL - $(wc -l < "$NEEDED"))) из $TOTAL" >&2
+fi
+
+NEED_COUNT=$(wc -l < "$NEEDED")
+if [ "$NEED_COUNT" -eq 0 ]; then
+    echo "   ✅ все $TOTAL пакетов уже на месте, скачивать нечего"
+else
+    echo "   ⬇️  нужно докачать: $NEED_COUNT из $TOTAL (с $ORIGIN_HOST)"
+fi
+
 cd "$NUPKG_DIR"
 
-# Манифест уже содержит готовые URL к .nupkg — регистрацию перебирать не нужно.
-# Источник отдаёт nupkg анонимно, без токена.
-# TOTAL уже посчитан выше — там же сработала защита от полной истории.
+# Источник отдаёт nupkg анонимно, без токена. TOTAL посчитан выше — там же
+# сработала защита от полной истории.
 GOT=0
 while IFS= read -r url; do
     [ -n "$url" ] || continue
     f="$(basename "$url")"
-    # Проверка СТРОГАЯ и только unzip: python zipfile доверчив и пропускает
-    # файл с мусором внутри архива (testzip() вернёт None). unzip -t такой
-    # файл отвергает кодом 1. Не заменяй unzip на python -m zipfile.
-    if [ -s "$f" ] && unzip -tqq "$f" >/dev/null 2>&1; then
-        GOT=$((GOT+1))
-        continue
-    fi
     # Хост из манифеста не используем: вместо него ставим ORIGIN_HOST, а адрес
     # закрепляем через --resolve на ORIGIN_IP. Путь после /v3/package/ одинаков.
     path="${url#*nuget.qsupport.ru}"
@@ -177,7 +239,7 @@ while IFS= read -r url; do
     #   - проходит python zipfile (testzip() == None, архив «читается»),
     #   - но не проходит unzip -t (код возврата 1).
     # Именно так был испорчен seleniumextension.1.0.12 на 8 388 239 байт.
-    # Поэтому проверка строгая — на unzip, не на python.
+    # Докачанный файл тоже проверяется unzip -t, а не python zipfile.
     #
     # --max-time 900: SeleniumExtension 1.0.8–1.0.13 весит по 20+ МБ и на
     # дефолтных 30s curl стабильно обрывается, оставляя обрезанный zip.
@@ -196,9 +258,14 @@ while IFS= read -r url; do
         echo "   ❌ не скачался: $f"
         rm -f "$f.part"
     fi
-    [ $((GOT % 25)) -eq 0 ] && echo "   ... $GOT / $TOTAL"
-done < "$PACKAGE_LIST"
-echo "   скачано/проверено: $GOT из $TOTAL"
+    [ $((GOT % 25)) -eq 0 ] && echo "   ... докачано $GOT из $NEED_COUNT"
+done < "$NEEDED"
+if [ "$GOT" -gt 0 ]; then
+    echo "   докачано: $GOT из $NEED_COUNT"
+else
+    echo "   докачивать было нечего"
+fi
+rm -f "$NEEDED"
 
 # ── Шаг 4. Залить пакеты в клон ─────────────────────────────────────────────
 echo "📤 Step 4: Pushing packages into the local feed..."
