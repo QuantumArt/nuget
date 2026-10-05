@@ -5,3 +5,15 @@
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# BaGet local instance
+baget-data-v2/
+baget-data/
+nupkgs/
+
+# Secrets — никогда в индекс
+.credentials.env
+.secrets/
+
+# macOS
+.DS_Store

@@ -1,0 +1,42 @@
+services:
+  baget:
+    image: loicsharma/baget:latest
+    container_name: nuget-baget
+    restart: unless-stopped
+    # 127.0.0.1 — как у остальных сайтов на этом VPS: наружу торчит только
+    # хостовый nginx (TLS + reverse proxy), контейнер слушает только локально.
+    # Порт 3022 — соседний с downloads (3021) и sidus (3020). Занятые на момент
+    # настройки: 3001, 3010, 3020, 3021, 5000, 7700, 8090, 9117.
+    # Проверь `docker ps` перед первым запуском на случай, если что-то изменилось.
+    ports:
+      - "127.0.0.1:3022:80"
+    environment:
+      # ВНИМАНИЕ, две грабли, обе проверены на практике:
+      #
+      # 1. Ключ конфига — Storage:Path, а НЕ FileStorage:Path. Официальный
+      #    Docker-гайд BaGet предлагает FileStorage__Path, но эта версия движка
+      #    читает путь из секции Storage. С FileStorage__Path переменная молча
+      #    игнорируется, пакеты пишутся в /app/packages — внутрь слоя
+      #    контейнера. Фид при этом РАБОТАЕТ, ошибки не видно, и всё теряется
+      #    при первом же `docker rm`. С Storage:Path пишет в подключённый том.
+      #
+      # 2. SQLite-база тоже обязана быть в томе. По умолчанию
+      #    Data Source=baget.db — рядом с бинарём, то есть опять в слое
+      #    контейнера. Без явного пути индекс и метаданные не переживут
+      #    пересоздание контейнера.
+      #
+      # BaGet сам дописывает "packages" к Storage:Path, поэтому фактический
+      # путь внутри тома — /var/baget/packages/packages/<id>/<version>/.
+      # Это нормально, данные на месте; не ищи по /var/baget/packages/<id>.
+      - "Storage:Type=FileSystem"
+      - "Storage:Path=/var/baget/packages"
+      - "Database:Type=Sqlite"
+      - "Database:ConnectionString=Data Source=/var/baget/baget.db"
+    volumes:
+      - "../baget-data:/var/baget"
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider -q http://127.0.0.1/v3/index.json || exit 1"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
