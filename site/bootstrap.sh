@@ -23,6 +23,12 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 PACKAGE_DIR="${PACKAGE_DIR:-$PROJECT_DIR/packages}"
 FEED_URL="${FEED_URL:-http://127.0.0.1:3022}"
+# Ключ публикации из .env рядом с compose. Пусто = фид открыт для пуша.
+# dotenv не всегда подгружается compose, читаем сами.
+if [ -z "${BAGET_APIKEY:-}" ] && [ -f "$SCRIPT_DIR/.env" ]; then
+    set -a; . "$SCRIPT_DIR/.env"; set +a
+fi
+NUPKG_KEY="${BAGET_APIKEY:-}"
 COMPOSE_FILE="$SCRIPT_DIR/docker-compose.production.yml"
 CONTAINER="nuget-baget"
 ETALON="$SCRIPT_DIR/expected/manifest-629.json"
@@ -111,7 +117,7 @@ while IFS= read -r u; do
     # HEAD-ом: уже залитую версию не выгружаем заново.
     code=$(curl -s -o /dev/null -w '%{http_code}' -I --max-time 30 "$FEED_URL${path}")
     if [ "$code" = "200" ]; then SKIPPED=$((SKIPPED+1)); continue; fi
-    if curl -sS -f --max-time 300 -X PUT -H "X-NuGet-ApiKey: " \
+    if curl -sS -f --max-time 300 -X PUT -H "X-NuGet-ApiKey: $NUPKG_KEY" \
         -F "package=@$f" "$FEED_URL/api/v2/package" >/dev/null 2>&1; then
         PUSHED=$((PUSHED+1))
     else

@@ -35,6 +35,12 @@ ORIGIN_HOST="${ORIGIN_HOST:-nuget.qsupport.ru}"
 ORIGIN_IP="${ORIGIN_IP:-91.216.147.7}"
 PACKAGE_LIST="${PACKAGE_LIST:-$SCRIPT_DIR/packages-11x.txt}"
 FEED_URL="${FEED_URL:-http://127.0.0.1:3022}"
+# Ключ публикации из .env рядом с compose. Пусто = фид открыт для пуша.
+# dotenv не всегда подгружается compose, читаем сами.
+if [ -z "${BAGET_APIKEY:-}" ] && [ -f "$SCRIPT_DIR/.env" ]; then
+    set -a; . "$SCRIPT_DIR/.env"; set +a
+fi
+NUPKG_KEY="${BAGET_APIKEY:-}"
 COMPOSE_FILE="$SCRIPT_DIR/docker-compose.production.yml"
 NUPKG_DIR="$PROJECT_DIR/nupkgs"
 CONTAINER="nuget-baget"
@@ -187,7 +193,7 @@ while IFS= read -r url; do
         continue
     fi
     if curl -sS -f --max-time 300 -X PUT \
-        -H "X-NuGet-ApiKey: " \
+        -H "X-NuGet-ApiKey: $NUPKG_KEY" \
         -F "package=@$f" \
         "$FEED_URL/api/v2/package" >/dev/null 2>&1; then
         PUSHED=$((PUSHED+1))

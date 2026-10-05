@@ -16,6 +16,12 @@ nupkgs/
 # Secrets — никогда в индекс
 .credentials.env
 .secrets/
+# Ключ публикации BaGet (BAGET_APIKEY) — генерируется на каждом сервере
+.env
 
 # macOS
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
