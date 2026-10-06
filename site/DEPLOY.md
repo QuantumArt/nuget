@@ -25,6 +25,45 @@
 
 ---
 
+## Логи
+
+**Логи нельзя смонтировать как том.** Это не файл внутри контейнера, а файл
+на хосте `/var/lib/docker/containers/<id>/<id>-json.log`, путь к которому
+задаёт демон, а не compose. Volume физически туда не дотягивается — это
+проверено, а не предположено.
+
+Что уже настроено — **ротация**, чтобы логи не съели общий диск VPS:
+
+```yaml
+logging:
+  driver: json-file
+  options: { max-size: "10m", max-file: "3" }
+```
+
+Проверить, что применилось:
+
+```bash
+docker inspect nuget-baget --format '{{json .HostConfig.LogConfig}}'
+docker logs --tail 50 nuget-baget
+```
+
+### Если всё-таки нужен файл в /tmp
+
+Цена: `docker logs` перестаёт работать, и ротации у файла нет — он растёт
+бесконечно, пока следишь сам.
+
+```yaml
+    entrypoint: ["sh", "-c", "dotnet BaGet.dll >>/tmp/baget.log 2>&1"]
+    volumes:
+      - "../baget-data:/var/baget"
+      - "/tmp:/tmp"
+```
+
+**Не рекомендуется.** Теряется `docker logs`, а `deploy.sh` и `bootstrap.sh`
+на него опираются, когда фид не поднялся. Лучше читать лог через
+`docker logs nuget-baget | tail`, а для долгого хранения — `docker cp`
+в нужное место.
+
 ## Ключ публикации (`ApiKey`)
 
 По умолчанию BaGet запускается с пустым `ApiKey` — **пуш открыт для всех**.

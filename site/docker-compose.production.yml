@@ -63,6 +63,19 @@ services:
       - "Database:ConnectionString=Data Source=/var/baget/baget.db"
     volumes:
       - "../baget-data:/var/baget"
+    # Ротация логов. Без неё драйвер json-file растёт без ограничения и на
+    # боевом VPS рано или поздно съедает диск — а диск там общий с соседними
+    # сайтами, и кончится он не у нас.
+    #
+    # Логи НЕ монтируются как том: это файл на хосте
+    # /var/lib/docker/containers/<id>/<id>-json.log, путь к которому задаёт
+    # ДЕМОН, а не compose. Volume физически туда не дотягивается.
+    # Если нужен именно файл в /tmp — см. site/DEPLOY.md §Логи.
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     healthcheck:
       # curl, а НЕ wget: в образе BaGet (dotnet aspnet, Debian-база) wget
       # отсутствует, есть только /usr/bin/curl. Healthcheck на wget падал бы
