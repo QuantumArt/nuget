@@ -2,7 +2,7 @@
 """
 verify_migration.py — машинная проверка клона NuGet-фида после переключения DNS.
 
-Сравнивает живой клон с эталоном `site/expected/manifest-629.json`, который
+Сравнивает живой клон с эталоном `site/expected/manifest-full.json`, который
 собран с боевого оригинала (sha256 каждой версии).
 
 Что проверяется:
@@ -37,7 +37,7 @@ import urllib.request
 
 # Порог достоверности: меньше этого — прогон считается недостоверным (код 2),
 # а не успешным. Подробности в DEPLOY-SPEC §9.1.
-MIN_VERSIONS = 600
+MIN_VERSIONS = 5700      # 10% от 5870: ниже этого прогон недостоверен
 MIN_PACKAGES = 85
 
 
@@ -296,7 +296,7 @@ def main():
     ap.add_argument("--feed", default="https://nuget.qsupport.ru",
                     help="URL клона (после переключения DNS)")
     ap.add_argument("--expected", default=None,
-                    help="эталон JSON; по умолчанию site/expected/manifest-629.json")
+                    help="эталон JSON; по умолчанию site/expected/manifest-full.json")
     ap.add_argument("--ca-bundle", default=None)
     ap.add_argument("--insecure", action="store_true")
     ap.add_argument("--sample", type=int, default=None,
@@ -318,7 +318,7 @@ def main():
 
     here = os.path.dirname(os.path.abspath(__file__))   # site/tools/
     site_dir = os.path.dirname(here)                    # site/
-    default_expected = os.path.join(site_dir, "expected", "manifest-629.json")
+    default_expected = os.path.join(site_dir, "expected", "manifest-full.json")
     expected_path = args.expected or default_expected
     if not os.path.exists(expected_path):
         sys.stderr.write(f"Эталон не найден: {expected_path}\n")

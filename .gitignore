@@ -12,6 +12,7 @@
 # источник правды, её в git держим намеренно.
 baget-data/
 nupkgs/
+nupkgs-full/
 
 # Secrets — никогда в индекс
 .credentials.env
