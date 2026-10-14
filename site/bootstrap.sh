@@ -31,7 +31,7 @@ fi
 NUPKG_KEY="${BAGET_APIKEY:-}"
 COMPOSE_FILE="$SCRIPT_DIR/docker-compose.production.yml"
 CONTAINER="nuget-baget"
-ETALON="$SCRIPT_DIR/expected/manifest-629.json"
+ETALON="$SCRIPT_DIR/expected/manifest-full.json"
 
 cd "$SCRIPT_DIR"
 
@@ -124,7 +124,7 @@ while IFS= read -r u; do
         SKIPPED=$((SKIPPED+1))
     fi
     [ $(( (PUSHED+SKIPPED) % 50 )) -eq 0 ] && echo "   ... $((PUSHED+SKIPPED)) обработано"
-done < "$SCRIPT_DIR/packages-11x.txt"
+done < "$SCRIPT_DIR/packages-full.txt"
 echo "   залито: $PUSHED, уже было: $SKIPPED"
 
 # ── Шаг 4. Приёмка ──────────────────────────────────────────────────────────
