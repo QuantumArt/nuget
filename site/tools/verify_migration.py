@@ -270,9 +270,27 @@ def verify_no_extras(feed, ctx, expected_packages, rep, opener=None):
         except Exception:
             pass
     extra = sorted(seen - set(expected_packages))
-    # «Лишние» — не находка, а шум: отмечаем предупреждением, не провалом.
-    if extra:
-        rep.warn("пакеты сверх эталона", f"{extra}")
+    # Зеркало nuget.org включено, поэтому публичные пакеты в фиде — законное
+    # содержимое, а не мусор: они попадают туда по запросу и кэшируются.
+    # Предупреждать о них бессмысленно, оно срабатывало на каждом прогоне.
+    #
+    # Сверхэталонными считаются только ВНУТРЕННИЕ пакеты: если в фиде появился
+    # QA.*/QP8.*/QuantumArt.*, которого нет в эталоне, — это настоящая
+    # находка (чужой пакет, потерянный или подложенный).
+    def is_internal(pid):
+        return pid.startswith(("qa.", "qp", "quantumart", "nlog.quantumart",
+                              "qp8backendapi"))
+
+    unexpected_internal = [p for p in extra if is_internal(p)]
+    mirrored_public = [p for p in extra if not is_internal(p)]
+
+    if unexpected_internal:
+        rep.warn("внутренние пакеты сверх эталона", f"{unexpected_internal}")
+    if mirrored_public:
+        # Это ожидаемо при включённом Mirror — отмечаем количественно,
+        # чтобы было видно, как зеркало наполняет фид.
+        rep.warn(f"в фиде {len(mirrored_public)} публичных пакетов из зеркала "
+                 f"(норма для Mirror; пример: {mirrored_public[:3]})", "")
     return extra
 
 
