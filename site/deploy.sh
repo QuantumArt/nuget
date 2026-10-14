@@ -31,9 +31,17 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 # Источник .nupkg: имя для SNI + закреплённый IP оригинала. Именно эта пара
 # делает скрипт идемпотентным относительно переключения DNS — см. шапку файла.
+# TLS/SNI-имя. Оно же в манифестах, и по нему идёт сверка сертификата:
+# у боевого сервера CN=nuget.qsupport.ru, поэтому именно это имя проверяется.
 ORIGIN_HOST="${ORIGIN_HOST:-nuget.qsupport.ru}"
 ORIGIN_IP="${ORIGIN_IP:-91.216.147.7}"
-PACKAGE_LIST="${PACKAGE_LIST:-$SCRIPT_DIR/packages-11x.txt}"
+# Сервер переехал на имя nugetold.qsupport.ru, но сертификат остался с CN
+# nuget.qsupport.ru — прямой https://nugetold.qsupport.ru ругается на
+# несовпадение имени. Поэтому маршрутизация делается заголовком Host, а
+# URL/SNI остаётся настоящим: цепочка и имя проверяются как обычно, -k не
+# нужен. Отключать проверку TLS здесь не придётся.
+ORIGIN_ROUTE_HOST="${ORIGIN_ROUTE_HOST:-nugetold.qsupport.ru}"
+PACKAGE_LIST="${PACKAGE_LIST:-$SCRIPT_DIR/packages-full.txt}"
 # Резолвим манифест в абсолютный путь СРАЗУ, до любых cd.
 # Дальше скрипт переходит в каталог пакетов (cd "$NUPKG_DIR"), и относительный
 # путь из переменной окружения там перестаёт существовать:
@@ -43,7 +51,7 @@ PACKAGE_LIST="${PACKAGE_LIST:-$SCRIPT_DIR/packages-11x.txt}"
 # обязательна, а не косметика.
 if [ ! -f "$PACKAGE_LIST" ]; then
     echo "❌ манифест пакетов не найден: $PACKAGE_LIST" >&2
-    echo "   (задан через PACKAGE_LIST; по умолчанию $SCRIPT_DIR/packages-11x.txt)" >&2
+    echo "   (задан через PACKAGE_LIST; по умолчанию $SCRIPT_DIR/packages-full.txt)" >&2
     exit 2
 fi
 PACKAGE_LIST="$(cd "$(dirname "$PACKAGE_LIST")" && pwd)/$(basename "$PACKAGE_LIST")"
@@ -58,25 +66,23 @@ COMPOSE_FILE="$SCRIPT_DIR/docker-compose.production.yml"
 NUPKG_DIR="$PROJECT_DIR/nupkgs"
 CONTAINER="nuget-baget"
 
-# ── Защита от случайной загрузки полной истории ─────────────────────────────
-# Фид живёт на 629 версиях (по 11 на пакет). Манифест packages-full.txt
-# содержит все 5870 и весит вчетверо больше — запускать его нужно осознанно.
-# Без этой проверки одна опечатка или команда из старой инструкции молча
-# запускала получасовую загрузку, которую потом приходилось прерывать.
-DEFAULT_LINES=$(wc -l < "$SCRIPT_DIR/packages-11x.txt")
+# ── Защита от бессмысленно большого манифеста ────────────────────────────────
+# По умолчанию тянется ВСЯ история (packages-full.txt, 5870 версий) — так
+# решено после того, как урезанная до 11 версий на пакет выдача упала на
+# QA.FamilyTree.DAL.QP: QA.DotNetCore.Caching >= 3.1.8, а 3.1.8 стоит на
+# позиции 180 из 280 и в лимит 100 тоже не попадала.
+#
+# Здесь ловим не «большой», а НЕОЖИДАННЫЙ манифест: если подсунут что-то
+# заметно крупнее эталона, об этом лучше узнать до получасовой загрузки.
+DEFAULT_LINES=$(wc -l < "$SCRIPT_DIR/packages-full.txt")
 TOTAL=$(wc -l < "$PACKAGE_LIST")
-if [ "$TOTAL" -gt $(( DEFAULT_LINES * 2 )) ] && [ -z "${ASSUME_YES:-}" ]; then
-    echo "⚠️  В манифесте $TOTAL версий, а по умолчанию $DEFAULT_LINES."
-    echo "   Это примерно $(( TOTAL * 30 / 1024 )) МБ и долгий прогон."
-    echo "   Фид сейчас полон на $DEFAULT_LINES версиях; доливка нужна только"
-    echo "   если сборки падают на версиях старше 11 от последней."
+if [ "$TOTAL" -gt $(( DEFAULT_LINES + 100 )) ] && [ -z "${ASSUME_YES:-}" ]; then
+    echo "⚠️  В манифесте $TOTAL версий, а эталон содержит $DEFAULT_LINES."
+    echo "   Похоже на опечатку в пути. Продолжать?"
     if [ -t 0 ]; then
-        printf "   Продолжить? напишите yes: "
+        printf "   напишите yes: "
         read -r ans
-        if [ "$ans" != "yes" ]; then
-            echo "Отменено."
-            exit 1
-        fi
+        [ "$ans" = "yes" ] || { echo "Отменено."; exit 1; }
     else
         echo "   Неинтерактивный режим. Для подтверждения задайте ASSUME_YES=1."
         exit 2
@@ -86,7 +92,7 @@ fi
 cd "$SCRIPT_DIR"
 
 echo "🚀 Starting NuGet feed deploy..."
-echo "   origin: $ORIGIN_HOST (pinned to $ORIGIN_IP)"
+echo "   origin: $ORIGIN_ROUTE_HOST via $ORIGIN_HOST (pinned to $ORIGIN_IP)"
 echo "   package list: $(basename "$PACKAGE_LIST") ($(wc -l < "$PACKAGE_LIST") версий)"
 echo
 
@@ -236,7 +242,7 @@ NEED_COUNT=$(wc -l < "$NEEDED")
 if [ "$NEED_COUNT" -eq 0 ]; then
     echo "   ✅ все $TOTAL пакетов уже на месте, скачивать нечего"
 else
-    echo "   ⬇️  нужно докачать: $NEED_COUNT из $TOTAL (с $ORIGIN_HOST)"
+    echo "   ⬇️  нужно докачать: $NEED_COUNT из $TOTAL (с $ORIGIN_ROUTE_HOST)"
 fi
 
 cd "$NUPKG_DIR"
@@ -266,6 +272,7 @@ while IFS= read -r url; do
     # Остальные пакеты в среднем 26 КБ.
     if curl -sS -f --max-time 900 --retry 3 --retry-delay 2 \
         --resolve "$ORIGIN_HOST:443:$ORIGIN_IP" \
+        -H "Host: $ORIGIN_ROUTE_HOST" \
         -o "$f.part" "https://${ORIGIN_HOST}${path}"; then
         if unzip -tqq "$f.part" >/dev/null 2>&1; then
             mv -f "$f.part" "$f"
