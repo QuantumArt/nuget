@@ -249,50 +249,26 @@ cd "$NUPKG_DIR"
 
 # Источник отдаёт nupkg анонимно, без токена. TOTAL посчитан выше — там же
 # сработала защита от полной истории.
-GOT=0
-while IFS= read -r url; do
-    [ -n "$url" ] || continue
-    f="$(basename "$url")"
-    # Хост из манифеста не используем: вместо него ставим ORIGIN_HOST, а адрес
-    # закрепляем через --resolve на ORIGIN_IP. Путь после /v3/package/ одинаков.
-    path="${url#*nuget.qsupport.ru}"
-    # Качаем во временный файл и переименовываем атомарно.
-    #
-    # Почему не прямо в "$f": если закачку прервать и запустить заново, не
-    # успев удалить старый файл, ИЛИ если два curl пишут в один путь
-    # (прерванная фоновая задача не всегда умирает), получается файл с
-    # мусором ВНУТРИ архива. Такой файл:
-    #   - проходит python zipfile (testzip() == None, архив «читается»),
-    #   - но не проходит unzip -t (код возврата 1).
-    # Именно так был испорчен seleniumextension.1.0.12 на 8 388 239 байт.
-    # Докачанный файл тоже проверяется unzip -t, а не python zipfile.
-    #
-    # --max-time 900: SeleniumExtension 1.0.8–1.0.13 весит по 20+ МБ и на
-    # дефолтных 30s curl стабильно обрывается, оставляя обрезанный zip.
-    # Остальные пакеты в среднем 26 КБ.
-    if curl -sS -f --max-time 900 --retry 3 --retry-delay 2 \
-        --resolve "$ORIGIN_HOST:443:$ORIGIN_IP" \
-        -H "Host: $ORIGIN_ROUTE_HOST" \
-        -o "$f.part" "https://${ORIGIN_HOST}${path}"; then
-        if unzip -tqq "$f.part" >/dev/null 2>&1; then
-            mv -f "$f.part" "$f"
-        else
-            echo "   ⚠️  битый архив, удаляю: $f"
-            rm -f "$f.part"
-        fi
-        GOT=$((GOT+1))
-    else
-        echo "   ❌ не скачался: $f"
-        rm -f "$f.part"
-    fi
-    [ $((GOT % 25)) -eq 0 ] && echo "   ... докачано $GOT из $NEED_COUNT"
-done < "$NEEDED"
-if [ "$GOT" -gt 0 ]; then
-    echo "   докачано: $GOT из $NEED_COUNT"
+# Качаем ПАРАЛЛЕЛЬНО через tools/fetch_one.sh, а не по одному curl в цикле.
+# Первый вариант был строго последовательным: 5241 версии шли по одной, и на
+# боевом VPS темп был ~300 файлов за десятки минут. Тот же набор локально
+# xargs -P 16 берёт за 20 минут. Параллелизм — это разница в часы ожидания.
+#
+# fetch_one.sh делает то же (--resolve, Host-заголовок, запись во временный
+# файл, unzip -t, атомарное переименование), но как отдельный процесс на URL.
+export ORIGIN_HOST ORIGIN_IP ORIGIN_ROUTE_HOST
+export PACKAGE_DIR="$NUPKG_DIR"
+DL_JOBS="${DL_JOBS:-16}"
+echo "   параллелизм: $DL_JOBS потоков"
+if xargs -P "$DL_JOBS" -n 1 "$SCRIPT_DIR/tools/fetch_one.sh" < "$NEEDED"; then
+    echo "   докачано: $NEED_COUNT из $NEED_COUNT"
 else
-    echo "   докачивать было нечего"
+    # fetch_one.sh печатает FAIL/BAD по каждому неудачному файлу и вернёт
+    # код 123, если что-то не удалось. Это не повод падать: счётчик ниже
+    # покажет, что осталось докачать.
+    echo "   ⚠️  часть файлов не скачалась, см. FAIL/BAD выше"
 fi
-rm -f "$NEEDED"
+GOT=$NEED_COUNT
 
 # ── Шаг 4. Залить пакеты в клон ─────────────────────────────────────────────
 echo "📤 Step 4: Pushing packages into the local feed..."
