@@ -287,10 +287,14 @@ def verify_no_extras(feed, ctx, expected_packages, rep, opener=None):
     if unexpected_internal:
         rep.warn("внутренние пакеты сверх эталона", f"{unexpected_internal}")
     if mirrored_public:
-        # Это ожидаемо при включённом Mirror — отмечаем количественно,
-        # чтобы было видно, как зеркало наполняет фид.
-        rep.warn(f"в фиде {len(mirrored_public)} публичных пакетов из зеркала "
-                 f"(норма для Mirror; пример: {mirrored_public[:3]})", "")
+        # Зеркало выключено 2026-10-27 (см. DEPLOY.md, раздел «Зеркало
+        # nuget.org»), поэтому публичные пакеты в фиде — это остатки от
+        # эпохи зеркала, а не норма. Их надо вычистить, иначе фид продолжает
+        # держать чужое содержимое и отдавать его по запросу.
+        rep.warn(f"в фиде {len(mirrored_public)} публичных пакетов — остатки "
+                 f"от эпохи зеркала (зеркало выключено 2026-10-27); "
+                 f"вычистить: tools/purge_mirror_cache.sh; "
+                 f"пример: {mirrored_public[:3]}", "")
     return extra
 
 
