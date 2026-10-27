@@ -77,6 +77,10 @@ services:
       # Если зеркало понадобится снова — обязательно вместе с
       # site/tools/purge_mirror_cache.sh, иначе диск забьётся опять.
       - "Mirror:Enabled=false"
+      # Чтобы включить зеркало обратно — раскомментируй ОБЕ строки: и эту,
+      # и Mirror:Enabled. С одной включённой, без источника, зеркало не
+      # заработает. И обязательно site/tools/purge_mirror_cache.sh, иначе
+      # диск забьётся снова (см. раздел «Зеркало nuget.org» в DEPLOY.md).
       # Mirror:PackageSource=https://api.nuget.org/v3/index.json
       # Mirror:Legacy — это протокол v2. Источник у нас v3, поэтому не включаем.
 
