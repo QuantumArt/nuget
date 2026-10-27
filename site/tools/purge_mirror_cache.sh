@@ -246,18 +246,73 @@ db, mirror = sys.argv[1], sys.argv[2]
 bad = {l.strip().lower() for l in open(mirror) if l.strip()}
 if not bad:
     print("   нечего чистить"); raise SystemExit
+
 con = sqlite3.connect(db)
-con.execute('pragma foreign_keys=on')
+# Проверку внешних ключей выключаем на время правки: порядок удаления
+# родителей и детей задаём сами (ниже), а SQLite по умолчанию не даёт
+# удалить Packages, пока на него ссылаются PackageTypes /
+# TargetFrameworks / PackageDependencies.
+con.execute("pragma foreign_keys=off")
 ph = ",".join("?" * len(bad))
-for t in [r[0] for r in con.execute("select name from sqlite_master where type='table'")]:
-    cols = [r[1] for r in con.execute(f'pragma table_info("{t}")')]
-    colmap = {c.lower(): c for c in cols}
-    if 'id' not in colmap:
+
+def cols(t):
+    return {c.lower(): c for c in [r[1] for r in con.execute(f'pragma table_info("{t}")')]}
+
+def tables():
+    return [r[0] for r in con.execute(
+        "select name from sqlite_master where type='table' and name not like 'sqlite_%'")]
+
+pk_cols = cols("Packages")
+id_col = pk_cols.get("id")
+key_col = pk_cols.get("key", "Key")
+if not id_col:
+    print("   ❌ в Packages нет колонки Id — прерываюсь"); raise SystemExit(1)
+
+keys = [r[0] for r in con.execute(
+    f'select "{key_col}" from "Packages" where lower("{id_col}") in ({ph})', tuple(bad))]
+print(f"   удаляем записей пакетов: {len(keys)}")
+pk_ph = ",".join("?" * len(keys)) if keys else "NULL"
+
+# ── Дети: удаляем по внешнему ключу на Packages ─────────────────────────────
+for t in tables():
+    if t == "Packages":
         continue
-    cur = con.execute(f'delete from "{t}" where lower("{colmap["id"]}") in ({ph})', tuple(bad))
-    if cur.rowcount:
-        print(f'   {t}: удалено {cur.rowcount}')
+    c = cols(t)
+    for fk in con.execute(f'pragma foreign_key_list("{t}")'):
+        parent, child_col, parent_col = fk[2], fk[3], fk[4]
+        if parent != "Packages" or child_col.lower() not in c:
+            continue
+        cur = con.execute(
+            f'delete from "{t}" where "{c[child_col.lower()]}" in ({pk_ph})', tuple(keys))
+        if cur.rowcount:
+            print(f'   {t} (fk {child_col} -> {parent}.{parent_col}): удалено {cur.rowcount}')
+
+# ── Родители ────────────────────────────────────────────────────────────────
+cur = con.execute(f'delete from "Packages" where lower("{id_col}") in ({ph})', tuple(bad))
+print(f'   Packages: удалено {cur.rowcount}')
+
+# ── Сироты: строки детей, чей родитель уже не существует ──────────────────
+for t in tables():
+    if t == "Packages":
+        continue
+    c = cols(t)
+    for fk in con.execute(f'pragma foreign_key_list("{t}")'):
+        parent, child_col = fk[2], fk[3]
+        if parent != "Packages" or child_col.lower() not in c:
+            continue
+        cur = con.execute(
+            f'delete from "{t}" where "{c[child_col.lower()]}" is null or '
+            f'"{c[child_col.lower()]}" not in (select "{key_col}" from "Packages")')
+        if cur.rowcount:
+            print(f'   {t}: удалено сирот {cur.rowcount}')
+
 con.commit()
+con.execute("pragma foreign_keys=on")
+viol = list(con.execute("pragma foreign_key_check"))
+print(f"   проверка внешних ключей: нарушений {len(viol)}")
+if viol:
+    for v in viol[:5]:
+        print("   ⚠️", v)
 con.close()
 print("   БД сохранена")
 PY
